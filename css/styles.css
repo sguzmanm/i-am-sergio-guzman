@@ -15,15 +15,16 @@ p {
 }
 
 .rounded-circle {
-    border: solid black 1px;
+    border: solid #0D0C09 1px;
 }
 
-.timeline-stop {
+.timeline {
     border-left: dotted #3B5E8C 5pt;
 }
 
-.arrow-right {
-    position: relative;
-    top: 15pt;
-    border-top: solid#0D0C09 5pt;
+.timeline-stop {
+    border-top: dotted #0D0C09 5pt;
+    margin-top: 20pt;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
