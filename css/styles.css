@@ -1,0 +1,29 @@
+.colors {
+    color: #F0F0F2 #3B5E8C #5B7BA6 #82B0D9 #0D0C09;
+}
+
+body {
+    background-color: #F0F0F2;
+}
+
+p {
+    color: #0D0C09;
+}
+
+.card-active {
+    background-color: #82B0D9;
+}
+
+.rounded-circle {
+    border: solid black 1px;
+}
+
+.timeline-stop {
+    border-left: dotted #3B5E8C 5pt;
+}
+
+.arrow-right {
+    position: relative;
+    top: 15pt;
+    border-top: solid#0D0C09 5pt;
+}
