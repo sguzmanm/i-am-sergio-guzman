@@ -10,7 +10,7 @@ const NUM_LEVELS = 3;
 /**
  * On load event
  */
-window.onload = e => {
+window.onload = () => {
   loadSkillChartData();
 };
 
