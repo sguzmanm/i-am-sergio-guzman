@@ -47,9 +47,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarToggler">
         <a class="navbar-brand" href="index.html#profile">Sergio Guzmán</a>
-        <ul class="navbar-nav mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html"
+        <ul class="navbar-nav mt-2 mt-lg-0 ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#profile"
               >Home <span class="sr-only">(current)</span></a
             >
           </li>
@@ -60,71 +60,166 @@
             <a class="nav-link" href="index.html#skills">Skills</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Experience</a>
+            <a class="nav-link active" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
       </div>
     </nav>
 
     <!--Work experience-->
-    <div class="container">
+    <div class="container" id="experience">
+      <div class="row timeline-header">
+        <div class="col-12 text-center">
+          <h2>
+            Work Experience
+          </h2>
+          <p>
+            This is my formal work experience, with the companies I've been an
+            employee of. Just follow the timeline.
+          </p>
+        </div>
+      </div>
       <div class="row timeline">
         <div class="col-12 timeline-stop pl-2 pl-md-4">
-          <h3>Monitor de Cupitaller</h3>
-          <h4>Universidad de Los Andes Junio-Diciembre 2017</h4>
+          <h3>Differential Calculus Undergraduate Assistant</h3>
+          <h4>Universidad de Los Andes June 2016-December 2017</h4>
           <ul>
             <li>
-              Asesoría de estudiantes con problemas de programación básica en
-              Java
+              Give classes to students in order to solve problems and issues
+              related to the subject.
+            </li>
+            <li>
+              Workshop and exams grading.
             </li>
           </ul>
         </div>
         <div class="col-12 timeline-stop pl-2 pl-md-4">
-          <h3>Monitor de Investigación UnaCloud</h3>
-          <h4>Universidad de Los Andes Enero-Junio 2018</h4>
+          <h3>Cupitaller Undegraduate Assistant</h3>
+          <h4>Universidad de Los Andes June-December 2017</h4>
           <ul>
             <li>
-              Creación de un API REST para las funcionalidades de UnaCloud
-            </li>
-            <li>Libreria de conexión en Java con el API creado</li>
-          </ul>
-        </div>
-        <div class="col-12 timeline-stop pl-2 pl-md-4">
-          <h3>Monitor de Investigación UnaCloud</h3>
-          <h4>Universidad de Los Andes Junio-Diciembre 2018</h4>
-          <ul>
-            <li>
-              Análisis y reparación de concurrencia en despliegues de múltiples
-              máquinas virtuales en un computador
+              Solve questions from students during appoints, related to basic
+              programming concepts in Java.
             </li>
           </ul>
         </div>
         <div class="col-12 timeline-stop pl-2 pl-md-4">
-          <h3>Practicante de Desarrollo de Software</h3>
-          <h4>Takeda/Baxalta Colombia S.A.S. Enero-Julio 2019</h4>
+          <h3>UnaCloud Undergraduate Research Assistant</h3>
+          <h4>Universidad de Los Andes January-June 2018</h4>
           <ul>
-            <li>Desarrollo de sitios web con Vue y React JS</li>
             <li>
-              Automatización de campañas de email marketing responsivas con MJML
-              e IBM Watson Campaign Automation
+              Creation of a REST API for exposing UnaCloud functionalities
             </li>
-            <li>Localizacion de aplicaciones móviles globales</li>
+            <li>Connection library to the created REST API using Java</li>
           </ul>
         </div>
         <div class="col-12 timeline-stop pl-2 pl-md-4">
-          <h3>Desarrollador PT</h3>
-          <h4>Truora Julio 2019-Hoy</h4>
+          <h3>UnaCloud Undergraduate Research Assistant</h3>
+          <h4>Universidad de Los Andes June-December 2018</h4>
           <ul>
-            <li>Programacion en Go</li>
             <li>
-              Recollección de datos de antecedes de bases de datos
-              internacionales
+              Analysis and fix of the concurrence in deployments of multiple
+              virtual machines (in VirtualBox) on one computer, through VBox
+              command line directly.
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 timeline-stop pl-2 pl-md-4">
+          <h3>Software Development Intern</h3>
+          <h4>Takeda/Baxalta Colombia S.A.S. January-July 2019</h4>
+          <ul>
+            <li>Development of websites using Vue JS and React JS</li>
+            <li>
+              Automation of responsive email campaigns with MJML and IBM Watsom
+              Campaign Automation
+            </li>
+            <li>
+              Import of mobile global apps to the context of Colombia, Perú and
+              Ecuador
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 timeline-stop pl-2 pl-md-4">
+          <h3>Part Time Software Developer</h3>
+          <h4>Truora July 2019-Hoy</h4>
+          <ul>
+            <li>Golang Backend Programming</li>
+            <li>
+              Data retrieval of background checks of persons, companies and
+              vehicles, from national and international data bases
             </li>
           </ul>
         </div>
       </div>
     </div>
 
+    <!--Footer-->
+    <footer id="contact">
+      <div class="container">
+        <div class="row align-items-center text-center">
+          <div class="col-12">
+            <h1>Contact me</h1>
+            <p>
+              If I can help you with any project you have in mind, any idea
+              lurking behind, any bug, any design decision, etc, please contact
+              me. I am open to helping others in what I can
+            </p>
+          </div>
+          <div class="col-3 offset-md-2 col-md-2">
+            <a href="mailto:s.guzmanm98@gmail.com">
+              <img
+                src="/img/icons/mail.png"
+                class="img-fluid callback-link rounded-circle mail"
+                alt="Mail envelope icon"
+              />
+            </a>
+          </div>
+          <div class="col-3 col-md-2">
+            <a
+              href="https://www.linkedin.com/in/sergio-guzm%C3%A1n-6232ba149/"
+              target="_blank"
+            >
+              <img
+                src="/img/icons/linkedin.png"
+                class="img-fluid callback-link rounded-circle linkedin"
+                alt="Linked In icon"
+              />
+            </a>
+          </div>
+          <div class="col-3 col-md-2">
+            <a href="https://github.com/sguzmanm" target="_blank">
+              <img
+                src="/img/icons/github.png"
+                class="img-fluid callback-link rounded-circle"
+                alt="Github icon"
+              />
+            </a>
+          </div>
+          <div class="col-3 col-md-2">
+            <a href="https://twitter.com/sguzmanm1" target="_blank">
+              <img
+                src="/img/icons/twitter.png"
+                class="img-fluid callback-link rounded-circle twitter"
+                alt="Twitter icon"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center text-center">
+        <div class="col-12">
+          <img
+            src="/img/logo.png"
+            alt="Web page logo, it has the letters SGM for my full name"
+          />
+        </div>
+      </div>
+    </footer>
+    <!--Custom JS-->
+    <script src="js/smoothscroll.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script

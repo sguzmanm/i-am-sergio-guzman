@@ -2,29 +2,143 @@
     color: #F0F0F2 #3B5E8C #5B7BA6 #82B0D9 #0D0C09;
 }
 
+/**
+* General tag config
+*/
+
 body {
     background-color: #F0F0F2;
+    background: url('/img/bg.jpg') no-repeat;
+    background-size: cover;
 }
 
 p {
     color: #0D0C09;
 }
 
+h1, h2, h3 {
+    color: #3B5E8C;
+}
+
+/**
+* Alert sections
+*/
+
+.alert {
+    background-color: #82B0D9;
+    text-align: center;
+    font-family: 'Helvetica';
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/**
+* Custom inline links
+*/
+
+a.custom-link, a:visited.custom-link {
+    color: inherit;
+    font-weight: bolder;
+}
+
+a:hover.custom-link {
+    color: #F0F0F2;
+    text-decoration: none;
+}
+
+/**
+* Cards
+*/
+
+.card {
+    background-color: #F0F0F2;
+}
+
 .card-active {
     background-color: #82B0D9;
 }
+
+/**
+* Hobbies
+*/
+
+.hobby {
+    margin-top: 8pt;
+    margin-bottom: 8pt;
+    text-align: center;
+}
+
+/**
+* Reqrite of bootstrap default rounded circle
+*/
 
 .rounded-circle {
     border: solid #0D0C09 1px;
 }
 
+/**
+* Callback link color
+*/
+
+.callback-link:hover {
+    background-color: #3B5E8C;
+}
+
+/**
+* Chart labels
+*/
+
+.chart-label {
+    font-size: 2em;
+    font-family: 'Arial';
+}
+
+/**
+* Timelines
+*/
+
 .timeline {
     border-left: dotted #3B5E8C 5pt;
 }
 
+.timeline-header {
+    border-bottom: dotted #3B5E8C 5pt;
+    border-right: dotted #3B5E8C 5pt;
+}
+
+.timeline-header p {
+    font-size: 1.5em;
+}
+
 .timeline-stop {
     border-top: dotted #0D0C09 5pt;
+    display: inline;
     margin-top: 20pt;
     margin-bottom: 0;
     padding-bottom: 0;
+}
+
+/*
+* Social media icons
+*/
+
+.mail {
+    background-color: #F0F0F2;
+}
+
+.twitter {
+    background-color: #38A1F3;
+}
+
+.linkedin {
+    background-color: #0077B5;
+}
+
+/**
+* Footer
+*/
+
+footer {
+    margin-top: 15pt;
+    background-color: #F0F0F2;
 }

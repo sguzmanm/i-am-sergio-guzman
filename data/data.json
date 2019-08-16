@@ -1,0 +1,78 @@
+{
+  "programmingLanguages": {
+    "id": "programming-skills-chart",
+    "data": [
+      {
+        "skill": "Java",
+        "level": 90
+      },
+      {
+        "skill": "Python",
+        "level": 60
+      },
+      {
+        "skill": "Golang",
+        "level": 40
+      },
+      {
+        "skill": "Javascript",
+        "level": 30
+      },
+      {
+        "skill": "C# for Unity",
+        "level": 50
+      },
+      {
+        "skill": "C",
+        "level": 25
+      },
+      {
+        "skill": "C++",
+        "level": 10
+      }
+    ]
+  },
+  "frontendTechnologies": {
+    "id": "frontend-skills-chart",
+    "data": [
+      {
+        "skill": "React JS",
+        "level": 40
+      },
+      {
+        "skill": "Vue JS",
+        "level": 60
+      }
+    ]
+  },
+  "operatingSystems": {
+    "id": "operating-systems-chart",
+    "data": [
+      {
+        "skill": "Windows",
+        "level": 80
+      },
+      {
+        "skill": "Linux",
+        "level": 70
+      },
+      {
+        "skill": "Windows",
+        "level": 60
+      }
+    ]
+  },
+  "otherTechnologies": {
+    "id": "other-technologies-chart",
+    "data": [
+      {
+        "skill": "Unity",
+        "level": 40
+      },
+      {
+        "skill": "MJML",
+        "level": 80
+      }
+    ]
+  }
+}

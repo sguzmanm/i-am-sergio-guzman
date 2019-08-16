@@ -47,9 +47,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarToggler">
         <a class="navbar-brand" href="#profile">Sergio Guzmán</a>
-        <ul class="navbar-nav mt-2 mt-lg-0">
+        <ul class="navbar-nav mt-2 mt-lg-0 ml-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html"
+            <a class="nav-link active" href="#profile"
               >Home <span class="sr-only">(current)</span></a
             >
           </li>
@@ -60,7 +60,10 @@
             <a class="nav-link" href="#skills">Skills</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="experience.html">Experience</a>
+            <a class="nav-link" href="experience.html#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -68,25 +71,26 @@
     <!--Main container-->
     <main>
       <!--Who I am-->
-      <div class="container pt-3" id="profile">
+      <div class="container pt-1" id="profile">
         <!--Profile pic -->
         <div class="row justify-content-center">
-          <div class="col-12 text-center">
-            <p>I am</p>
+          <div class="col-12 col-md-6 text-center">
             <img
               src="/img/profile-pic.png"
               alt="Sergio Guzman Profile Pic"
               class="img-fluid rounded-circle"
             />
           </div>
+        </div>
+        <div class="row justify-content-center">
           <div class="col-12 col-sm-6 col-md-8 text-center">
             <h2>Sergio Guzmán Mayorga</h2>
             <h3>Today: PT SW Developer at Truora Inc</h3>
           </div>
         </div>
         <!--Hobbies-->
-        <div class="row">
-          <div class="col-12 col-md-4 text-center">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-4 hobby">
             <div class="row align-items-center">
               <div class="col-6 col-sm-4 col-md-12 order-1 order-md-1">
                 <img
@@ -105,7 +109,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-4 text-center">
+          <div class="col-12 col-md-4 hobby">
             <div class="row align-items-center">
               <div class="col-6 col-sm-4 col-md-12 order-2 order-md-1">
                 <img
@@ -122,7 +126,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-4 text-center">
+          <div class="col-12 col-md-4 hobby">
             <div class="row align-items-center">
               <div class="col-6 col-sm-4 col-md-12 order-1 order-md-1">
                 <img
@@ -141,7 +145,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-4 text-center">
+          <div class="col-12 col-md-4 hobby">
             <div class="row align-items-center">
               <div class="col-6 col-sm-4 col-md-12 order-2 order-md-1">
                 <img
@@ -159,7 +163,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-4 text-center">
+          <div class="col-12 col-md-4 hobby">
             <div class="row align-items-center">
               <div class="col-6 col-sm-4 col-md-12 order-1 order-md-1">
                 <img
@@ -178,7 +182,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-4 text-center">
+          <div class="col-12 col-md-4 hobby">
             <div class="row align-items-center">
               <div class="col-6 col-sm-4 col-md-12 order-2 order-md-1">
                 <img
@@ -200,11 +204,13 @@
       </div>
 
       <!--Projects-->
-      <div class="container-fluid alert">
-        And this is what I've been doing for 4 years
+      <div class="container-fluid alert" id="projects">
+        And this is what I've been doing for 4 years. You can also check my work
+        experience
+        <a class="custom-link" href="experience.html" target="_blank">here</a>
       </div>
       <!--Project cards-->
-      <div class="container-fluid" id="projects">
+      <div class="container-fluid">
         <div class="card-columns">
           <!--UnaCloud-->
           <div class="card card-active">
@@ -226,12 +232,12 @@
                 its API REST and a connection lirary built in Java.
               </p>
               <div class="container">
-                <div class="row">
-                  <div class="col-4">
-                    <a href="https://github.com/sguzmanm/Andes">
+                <div class="row align-items-center">
+                  <div class="offset-4 col-4">
+                    <a href="https://github.com/sguzmanm/Andes" target="_blank">
                       <img
                         src="/img/icons/github.png"
-                        class="img-fluid"
+                        class="img-fluid callback-link rounded-circle"
                         alt="Github icon"
                       />
                     </a>
@@ -254,16 +260,31 @@
               </p>
               <ul class="card-text">
                 <li>
-                  <a href="http://stage.enfermedaddefabry.com.co/"></a> Fabry:
+                  <a
+                    class="custom-link"
+                    href="http://stage.enfermedaddefabry.com.co/"
+                    target="_blank"
+                    >Fabry:</a
+                  >
                   Made in Vue JS.
                 </li>
                 <li>
-                  <a href="http://stage.enfermedaddegaucher.com.co/"></a>
-                  Gaucher Awareness: Made with React JS.
+                  <a
+                    class="custom-link"
+                    href="http://stage.enfermedaddegaucher.com.co/"
+                    target="_blank"
+                    >Gaucher Awareness:</a
+                  >
+                  Made with React JS.
                 </li>
                 <li>
-                  <a href="http://stage.pienseaeh.com/"></a> Know Hereditary
-                  Angioedema: Made with HTML and JQuery.
+                  <a
+                    class="custom-link"
+                    href="http://stage.pienseaeh.com/"
+                    target="_blank"
+                    >Know Hereditary Angioedema:</a
+                  >
+                  Made with HTML and JQuery.
                 </li>
               </ul>
               <p class="card-text">
@@ -287,12 +308,75 @@
                 hard to train the algorithm it was stopped.
               </p>
               <div class="container">
-                <div class="row">
-                  <div class="col-4">
-                    <a href="https://github.com/sguzmanm/Andes">
+                <div class="row align-items-center">
+                  <div class="offset-4 col-4">
+                    <a href="https://github.com/sguzmanm/Andes" target="_blank">
                       <img
                         src="/img/icons/github.png"
-                        class="img-fluid"
+                        class="img-fluid callback-link rounded-circle"
+                        alt="Github icon"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Act In Space -->
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="/img/actinspace.jpg"
+              alt="Takeda logo"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Pecheo: Act In Space Hackathon (2018)
+              </h5>
+              <p class="card-text">
+                With my group we ideated a fuel optimization system using ESA
+                technology from space stations. We were among the top 6 ideas.
+              </p>
+            </div>
+          </div>
+          <!-- Datos DC -->
+          <div class="card">
+            <img
+              class="card-img-top"
+              src="/img/datosdc.png"
+              alt="Takeda logo"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                3R: Datos DC Hackathon (2018)
+              </h5>
+              <p class="card-text">
+                With my team, we developed a map for recyclers in Bogotá to
+                optimize their routes and track their movements.
+              </p>
+            </div>
+          </div>
+          <!-- Y4PT Transport Hackathon -->
+          <div class="card card-active">
+            <img class="card-img-top" src="/img/y4pt.png" alt="Takeda logo" />
+            <div class="card-body">
+              <h5 class="card-title">
+                Senehack: Y4PT Transport Hackathon (2018)
+              </h5>
+              <p class="card-text">
+                With my team, we developed an app for matching cyclists and
+                walkers to go together to different locations in Bogotá.
+              </p>
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="offset-4 col-4">
+                    <a
+                      href="https://github.com/Jularenas/SeneHack"
+                      target="_blank"
+                    >
+                      <img
+                        src="/img/icons/github.png"
+                        class="img-fluid callback-link rounded-circle"
                         alt="Github icon"
                       />
                     </a>
@@ -305,13 +389,87 @@
       </div>
 
       <!--Skills-->
-      <div class="container" id="skills">
-        <h1>Here are the skills I would like to have hahahah</h1>
+      <div class="container-fluid alert" id="skills">
+        And this is what I'm kinda good at
+      </div>
+      <div class="container">
+        <div class="chart-label">Programming languages</div>
+        <div id="programming-skills-chart"></div>
+        <div class="chart-label">Frontend technologies</div>
+        <div id="frontend-skills-chart"></div>
+        <div class="chart-label">Used Operative Systems</div>
+        <div id="operating-systems-chart"></div>
+        <div class="chart-label">Others</div>
+        <div id="other-technologies-chart"></div>
       </div>
     </main>
 
+    <!--Footer-->
+    <footer id="contact">
+      <div class="container">
+        <div class="row align-items-center text-center">
+          <div class="col-12">
+            <h1>Contact me</h1>
+            <p>
+              If I can help you with any project you have in mind, any idea
+              lurking behind, any bug, any design decision, etc, please contact
+              me. I am open to helping others in what I can
+            </p>
+          </div>
+          <div class="col-3 offset-md-2 col-md-2">
+            <a href="mailto:s.guzmanm98@gmail.com">
+              <img
+                src="/img/icons/mail.png"
+                class="img-fluid callback-link rounded-circle mail"
+                alt="Mail envelope icon"
+              />
+            </a>
+          </div>
+          <div class="col-3 col-md-2">
+            <a
+              href="https://www.linkedin.com/in/sergio-guzm%C3%A1n-6232ba149/"
+              target="_blank"
+            >
+              <img
+                src="/img/icons/linkedin.png"
+                class="img-fluid callback-link rounded-circle linkedin"
+                alt="Linked In icon"
+              />
+            </a>
+          </div>
+          <div class="col-3 col-md-2">
+            <a href="https://github.com/sguzmanm" target="_blank">
+              <img
+                src="/img/icons/github.png"
+                class="img-fluid callback-link rounded-circle"
+                alt="Github icon"
+              />
+            </a>
+          </div>
+          <div class="col-3 col-md-2">
+            <a href="https://twitter.com/sguzmanm1" target="_blank">
+              <img
+                src="/img/icons/twitter.png"
+                class="img-fluid callback-link rounded-circle twitter"
+                alt="Twitter icon"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center text-center">
+        <div class="col-12">
+          <img
+            src="/img/logo.png"
+            alt="Web page logo, it has the letters SGM for my full name"
+          />
+        </div>
+      </div>
+    </footer>
+
     <!--Custom JS-->
     <script src="js/smoothscroll.js"></script>
+    <script src="js/skillschart.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script

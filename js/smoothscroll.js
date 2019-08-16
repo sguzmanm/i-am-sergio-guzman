@@ -2,6 +2,8 @@
 
 const activeClass = "active";
 const scrollableClasses = [".nav-link", ".navbar-brand"];
+const bootstrapOffset = 40;
+
 let links = document.querySelectorAll(scrollableClasses);
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -23,6 +25,7 @@ function setupAnchorBehavior(e, respond = null) {
  * Setup the active tab link
  */
 function setupActiveTab(link) {
+  console.log(link);
   // Remove all active links
   links.forEach(el => el.classList.remove(activeClass));
   // Add current active link
@@ -35,7 +38,6 @@ function setupActiveTab(link) {
  * @param {*} respond Link from which the page is loaded
  */
 function scrollAnchors(link, e, respond = null) {
-  console.log("Target", respond ? respond.href : link.getAttribute("href"));
   const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
   // Get target
   var targetID = respond
@@ -47,7 +49,7 @@ function scrollAnchors(link, e, respond = null) {
   // Prevent default link anchoring
   e.preventDefault();
 
-  const originalTop = distanceToTop(targetAnchor);
+  const originalTop = distanceToTop(targetAnchor) - bootstrapOffset;
   // Smooth scroll
   window.scrollBy({
     top: originalTop,
@@ -58,7 +60,7 @@ function scrollAnchors(link, e, respond = null) {
   const checkIfDone = setInterval(function() {
     const atBottom =
       window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
-    if (distanceToTop(targetAnchor) === 0 || atBottom) {
+    if (distanceToTop(targetAnchor) - bootstrapOffset === 0 || atBottom) {
       targetAnchor.tabIndex = "-1";
       targetAnchor.focus();
       window.history.pushState("", "", targetID);
