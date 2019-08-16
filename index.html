@@ -15,17 +15,23 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <!--Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Aldrich|Lato|Syncopate&display=swap"
+      rel="stylesheet"
+    />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/styles.css" />
     <!-- Adequate meta tags for page description-->
     <title>Sergio Guzmán´s portfolio</title>
+    <meta name="author" content="Sergio Guzmán Mayorga, software developer" />
     <meta
-      charset="author"
-      content="Sergio Guzmán Mayorga, software developer"
+      name="description"
+      content="Web page to showcase my work and skills to the world"
     />
     <meta
-      charset="description"
-      content="Web page to showcase my work and skills to the world"
+      name="keywords"
+      content="HTML,CSS,JavaScript,Developer,Portfolio,College,Student"
     />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -71,7 +77,7 @@
     <!--Main container-->
     <main>
       <!--Who I am-->
-      <div class="container pt-1" id="profile">
+      <div class="container first-container" id="profile">
         <!--Profile pic -->
         <div class="row justify-content-center">
           <div class="col-12 col-md-6 text-center">
@@ -85,7 +91,7 @@
         <div class="row justify-content-center">
           <div class="col-12 col-sm-6 col-md-8 text-center">
             <h2>Sergio Guzmán Mayorga</h2>
-            <h3>Today: PT SW Developer at Truora Inc</h3>
+            <h3>Today: Colombian PT SW Developer at Truora Inc</h3>
           </div>
         </div>
         <!--Hobbies-->
@@ -102,7 +108,7 @@
               <div class="col-6 col-sm-8 col-md-12 order-2 order-md-2">
                 <h4>College Student at Universidad de Los Andes</h4>
                 <p>
-                  I am at my eight semester of college, currently seeing three
+                  I am at my eight semester of college, currently taking three
                   subjects. After this the only thing left is another semester
                   of thesis.
                 </p>
@@ -351,8 +357,8 @@
                 3R: Datos DC Hackathon (2018)
               </h5>
               <p class="card-text">
-                With my team, we developed a map for recyclers in Bogotá to
-                optimize their routes and track their movements.
+                With my team, we developed a map for recyclers in Bogotá,
+                Colombia to optimize their routes and track their movements.
               </p>
             </div>
           </div>
@@ -365,7 +371,8 @@
               </h5>
               <p class="card-text">
                 With my team, we developed an app for matching cyclists and
-                walkers to go together to different locations in Bogotá.
+                walkers to go together to different locations in Bogotá,
+                Colombia.
               </p>
               <div class="container">
                 <div class="row align-items-center">
@@ -393,9 +400,9 @@
         And this is what I'm kinda good at
       </div>
       <div class="container">
-        <div class="chart-label">Programming languages</div>
+        <div class="chart-label">Programming Languages</div>
         <div id="programming-skills-chart"></div>
-        <div class="chart-label">Frontend technologies</div>
+        <div class="chart-label">Frontend Technologies</div>
         <div id="frontend-skills-chart"></div>
         <div class="chart-label">Used Operative Systems</div>
         <div id="operating-systems-chart"></div>
@@ -407,7 +414,7 @@
     <!--Footer-->
     <footer id="contact">
       <div class="container">
-        <div class="row align-items-center text-center">
+        <div class="row align-items-center text-center no-gutters">
           <div class="col-12">
             <h1>Contact me</h1>
             <p>
@@ -420,7 +427,7 @@
             <a href="mailto:s.guzmanm98@gmail.com">
               <img
                 src="/img/icons/mail.png"
-                class="img-fluid callback-link rounded-circle mail"
+                class="img-fluid callback-link"
                 alt="Mail envelope icon"
               />
             </a>
@@ -432,7 +439,7 @@
             >
               <img
                 src="/img/icons/linkedin.png"
-                class="img-fluid callback-link rounded-circle linkedin"
+                class="img-fluid callback-link"
                 alt="Linked In icon"
               />
             </a>
@@ -441,7 +448,7 @@
             <a href="https://github.com/sguzmanm" target="_blank">
               <img
                 src="/img/icons/github.png"
-                class="img-fluid callback-link rounded-circle"
+                class="img-fluid callback-link"
                 alt="Github icon"
               />
             </a>
@@ -450,19 +457,19 @@
             <a href="https://twitter.com/sguzmanm1" target="_blank">
               <img
                 src="/img/icons/twitter.png"
-                class="img-fluid callback-link rounded-circle twitter"
+                class="img-fluid callback-link"
                 alt="Twitter icon"
               />
             </a>
           </div>
         </div>
-      </div>
-      <div class="row align-items-center text-center">
-        <div class="col-12">
-          <img
-            src="/img/logo.png"
-            alt="Web page logo, it has the letters SGM for my full name"
-          />
+        <div class="row align-items-center text-center">
+          <div class="col-12">
+            <img
+              src="/img/logo.png"
+              alt="Web page logo, it has the letters SGM for my full name"
+            />
+          </div>
         </div>
       </div>
     </footer>

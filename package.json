@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/sguzmanm/i-am-sergio-guzman#readme",
   "devDependencies": {
+    "eslint": "^6.1.0",
     "eslinter": "^3.2.1"
   }
 }
