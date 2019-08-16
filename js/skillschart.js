@@ -19,7 +19,11 @@ window.onload = () => {
  */
 function loadSkillChartData() {
   let request = new XMLHttpRequest();
-  request.open("GET", "../json/data.json", true);
+  request.open(
+    "GET",
+    "https://sguzmanm.github.io/i-am-sergio-guzman/json/data.json",
+    true
+  );
 
   request.onload = function() {
     if (request.status == 200) {
