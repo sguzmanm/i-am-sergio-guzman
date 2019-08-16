@@ -19,7 +19,7 @@ window.onload = () => {
  */
 function loadSkillChartData() {
   let request = new XMLHttpRequest();
-  request.open("GET", "/data/data.json", true);
+  request.open("GET", "./data/data.json", true);
 
   request.onload = function() {
     if (request.status == 200) {
