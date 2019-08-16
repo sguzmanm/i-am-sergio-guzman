@@ -8,7 +8,7 @@
 
 body {
   background-color: #f0f0f2;
-  background: url("/img/bg.jpg") no-repeat;
+  background: url("./img/bg.jpg") no-repeat;
   background-size: cover;
   font-family: "Lato", sans-serif;
 }
