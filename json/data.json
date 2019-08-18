@@ -66,6 +66,10 @@
     "id": "other-technologies-chart",
     "data": [
       {
+        "skill": "Git",
+        "level": 60
+      },
+      {
         "skill": "Unity",
         "level": 40
       },

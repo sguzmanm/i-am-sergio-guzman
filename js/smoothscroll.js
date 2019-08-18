@@ -1,12 +1,19 @@
 "use strict";
 
+// Constant for navbar classes
 const activeClass = "active";
 const scrollableClasses = [".nav-link", ".navbar-brand"];
-const bootstrapOffset = 40;
 
+// Constants for bootstrap props
+const bootstrapOffset = 40;
+const bootstrapButtonTogglerId = "btn-navbar-toggler";
+const bootstrapTogglerId = "toggler";
+
+// Link variables
 let links = document.querySelectorAll(scrollableClasses);
 let currentLink = null;
 
+// DOMContentLoaded listener
 document.addEventListener("DOMContentLoaded", function() {
   setupLinkBehavior();
 });
@@ -30,6 +37,20 @@ function setupActiveTab(link) {
   links.forEach(el => el.classList.remove(activeClass));
   // Add current active link
   link.classList.add(activeClass);
+  // Close mobile navbar if toggled
+  let btnToggler = document.querySelector(
+    "#" + bootstrapButtonTogglerId + "[aria-expanded=true]"
+  );
+
+  if (!btnToggler) return;
+
+  let toggler = document.querySelector("#" + bootstrapTogglerId);
+  let aria = document.createAttribute("aria-expanded");
+  aria.value = "false";
+
+  toggler.attributes.setNamedItem(aria);
+  toggler.classList.remove("show");
+  btnToggler.classList.add("collapsed");
 }
 
 /**
