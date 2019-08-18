@@ -75,7 +75,7 @@ function newSkill(skill) {
   skillBar.style.backgroundColor = level;
   skillBar.style.width = skill.level + "%";
   skillBar.style.margin = "5pt";
-  skillBar.innerHTML = skill.skill;
+  skillBar.innerHTML = `${skill.skill} <br>${skill.level}%`;
 
   return skillBar;
 }
