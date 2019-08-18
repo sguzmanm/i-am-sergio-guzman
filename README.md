@@ -17,7 +17,7 @@ Since it is a static webpage you can either:
 I personally tested this page using "reload". Make sure you have npm setup and type this on a terminal to install "reload":
 
 ```
-npm install reload
+npm install -g reload
 ```
 
 When its finished, go to the project root and type:
@@ -37,7 +37,7 @@ npm install
 And later
 
 ```
-eslint js/
+./node_modules/.bin/eslint js/
 ```
 
 ## Authors
