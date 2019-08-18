@@ -4,7 +4,7 @@
 
 ## Goal and technologies
 
-The aim for this project is to show employees and work partners (previous, current and/or future) what I have done and what are my skills in software development. In order to accomplish this, I created a static webpage using standard web technologies (HTML5,CSS3 and vanilla JS) and Bootstrap (only its CSS stylesheets). Bootstrap helps with the responsiveness of the website with its 12 column grid and adaptable navigation bar.
+The aim for this project is to show employees and work partners (previous, current and/or future) what I have done and what are my skills in software development. In order to accomplish this, I created a static webpage using standard web technologies (HTML5,CSS3 and vanilla JS) and Bootstrap. Bootstrap helps with the responsiveness of the website with its 12 column grid and adaptable navigation bar.
 
 ## How to run
 
