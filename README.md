@@ -48,7 +48,15 @@ eslint js/
 
 - I am Sergio Guzmán: https://github.com/sguzmanm/i-am-sergio-guzman
 
-## Screenshot
+## Screenshots
+
+### Home
+
+![Home page image](./preview/home.png "Home page")
+
+### Experience
+
+![Experience page image](./preview/experience.png "Experience page image")
 
 ## MIT License
 

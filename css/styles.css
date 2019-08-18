@@ -8,7 +8,7 @@
 
 body {
   background-color: #f0f0f2;
-  background: url("./img/bg.jpg") no-repeat;
+  background: url("../img/bg.jpg") no-repeat;
   background-size: cover;
   font-family: "Lato", sans-serif;
 }
@@ -17,9 +17,7 @@ p {
   color: #0d0c09;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   color: #3b5e8c;
 }
 
@@ -39,8 +37,7 @@ h3 {
 * Custom inline links
 */
 
-a.custom-link,
-a:visited.custom-link {
+a.custom-link, a:visited.custom-link {
   color: inherit;
   font-weight: bolder;
   text-decoration: underline;
