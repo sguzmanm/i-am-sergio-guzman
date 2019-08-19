@@ -1,5 +1,74 @@
 [
   {
+    "name": "Morning",
+    "startTime": "00:00",
+    "endTime": "11:59",
+    "profilePic": "../img/profile-pic-morning.png",
+    "css": {
+      "color": {
+        "p,h4": "#0d0c09",
+        "h1,h2,h3": "#F48D1C"
+      },
+      "background-color": {
+        ".alert": "#EB923C",
+        ".card": "#FFDAA1",
+        ".card-active": "#EB923C",
+        ".callback-link:hover": "#FFDAA1,#FFA143",
+        "footer": "#FFDAA1"
+      },
+      "background": {
+        "body": "url('../img/bg-morning.jpg') no-repeat"
+      },
+      "background-size": {
+        "body": "cover"
+      },
+      "border-left": {
+        ".timeline": "#FFA143 dotted 5pt"
+      },
+      "border-bottom": {
+        ".timeline-header": "#FFA143 dotted 5pt"
+      },
+      "border-right": {
+        ".timeline-header": "#FFA143 dotted 5pt"
+      }
+    }
+  },
+  {
+    "name": "Afternoon",
+    "startTime": "8:00",
+    "endTime": "17:59",
+    "profilePic": "../img/profile-pic-afternoon.png",
+    "css": {
+      "color": {
+        "p,h4": "#0d0c09",
+        "h1,h2,h3": "#295B02"
+      },
+
+      "background-color": {
+        ".alert": "#3B8E01",
+        ".card": "#E9ECF3",
+        ".card-active": "#3B8E01",
+        ".callback-link:hover": "#E9ECF3,#295B02",
+        "footer": "#E9ECF3"
+      },
+      "background": {
+        "body": "url('../img/bg-afternoon.jpg') no-repeat"
+      },
+      "background-size": {
+        "body": "cover"
+      },
+      "border-left": {
+        ".timeline": "#295B02 dotted 5pt"
+      },
+      "border-bottom": {
+        ".timeline-header": "#295B02 dotted 5pt"
+      },
+      "border-right": {
+        ".timeline-header": "#295B02 dotted 5pt"
+      }
+    }
+  },
+  {
     "name": "Night",
     "startTime": "18:00",
     "endTime": "23:59",
@@ -22,14 +91,14 @@
       "background-size": {
         "body": "cover"
       },
-      "border-left-color": {
-        ".timeline": "#3b5e8c"
+      "border-left": {
+        ".timeline": "#3b5e8c dotted 5pt"
       },
-      "border-bottom-color": {
-        ".timeline-header": "#3b5e8c"
+      "border-bottom": {
+        ".timeline-header": "#3b5e8c dotted 5pt"
       },
-      "border-right-color": {
-        ".timeline-header": "#3b5e8c"
+      "border-right": {
+        ".timeline-header": "#3b5e8c dotted 5pt"
       }
     }
   }

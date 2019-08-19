@@ -102,6 +102,19 @@
           <div class="col-12 col-sm-6 col-md-8 text-center">
             <h2>I am Sergio Guzmán Mayorga</h2>
             <h3>Today: Colombian PT SW Developer at Truora Inc</h3>
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn btn-success"
+              data-toggle="modal"
+              data-target="#moodModal"
+            >
+              Check my moods
+            </button>
+            <!--Reset mood-->
+            <button type="button" class="btn btn-warning" onclick="checkMood()">
+              My current mood
+            </button>
           </div>
         </div>
         <!--Hobbies-->
@@ -483,6 +496,81 @@
       </div>
     </footer>
 
+    <!--Mood change modal-->
+    <div
+      class="modal fade"
+      id="moodModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="moodModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-dark">
+            <h5 class="modal-title text-light" id="moodModalLabel">
+              Check my moods
+            </h5>
+            <button
+              type="button"
+              class="close text-light"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div
+                class="row align-items-center justify-content-start text-center"
+              >
+                <div class="col-12 col-md-4">
+                  <h2>Morning</h2>
+                  <img
+                    src="img/profile-pic-morning.png"
+                    alt="Profile pic for morning mood"
+                    class="img-fluid"
+                  />
+                  <p>I am a lazy person at mornings mostly</p>
+                  <button class="btn btn-success" onclick="checkMood(0)">
+                    Check
+                  </button>
+                </div>
+                <div class="col-12 col-md-4">
+                  <h2>Afternoon</h2>
+                  <img
+                    src="img/profile-pic-afternoon.png"
+                    alt="Profile pic for afternoon mood"
+                    class="img-fluid"
+                  />
+                  <p>
+                    I am an active person when I have free time, walking around
+                    and talking with people
+                  </p>
+                  <button class="btn btn-success" onclick="checkMood(1)">
+                    Check
+                  </button>
+                </div>
+                <div class="col-12 col-md-4">
+                  <h2>Night</h2>
+                  <img
+                    src="img/profile-pic.png"
+                    alt="Profile pic for night mood"
+                    class="img-fluid"
+                  />
+                  <p>Either programming, playing videogames or going out</p>
+                  <button class="btn btn-success" onclick="checkMood(2)">
+                    Check
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!--Bootstrap JS-->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -500,6 +588,7 @@
       crossorigin="anonymous"
     ></script>
     <!--Custom JS-->
-    <script src="./js/moods.js"></script>
+    <script src="./js/browsermodifications.js"></script>
+    <script src="./js/skillschart.js"></script>
   </body>
 </html>

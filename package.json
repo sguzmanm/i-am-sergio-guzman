@@ -18,5 +18,6 @@
   "homepage": "https://github.com/sguzmanm/i-am-sergio-guzman#readme",
   "devDependencies": {
     "eslint": "^6.2.0"
-  }
+  },
+  "dependencies": {}
 }

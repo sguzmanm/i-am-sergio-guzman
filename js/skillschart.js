@@ -2,9 +2,10 @@
 /**
  * Constants for bar designation
  */
-const LEVEL_LOW = "#82B0D9";
-const LEVEL_MID = "#3B5E8C";
-const LEVEL_HIGH = "#0D0C09";
+const LEVEL_LOW = "#0d0c09";
+const LEVEL_MID = "#82b0d9";
+const LEVEL_HIGH = "#33A645";
+
 const NUM_LEVELS = 3;
 
 /**
@@ -37,13 +38,13 @@ function loadSkillChartData() {
         });
       }
     } else {
-      // Although unlinely, we reached an answer different from 200
+      // Although unlikely, we reached an answer different from 200
       handleError();
     }
   };
 
   request.onerror = function() {
-    // Although unlinely, we reached an answer different from 200
+    // Although unlikely, we reached an answer different from 200
     handleError();
   };
 

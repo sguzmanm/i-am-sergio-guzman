@@ -6,6 +6,8 @@
 
 The aim for this project is to show employees and work partners (previous, current and/or future) what I have done and what are my skills in software development. In order to accomplish this, I created a static webpage using standard web technologies (HTML5,CSS3 and vanilla JS) and Bootstrap. Bootstrap helps with the responsiveness of the website with its 12 column grid and adaptable navigation bar.
 
+As a cool feature, depending on the current hour of your browser you will see a different design for the webpage. You can also change this with the @Change moods@ functionality close to the profile picture.
+
 ## How to run
 
 Since it is a static webpage you can either:
