@@ -153,7 +153,7 @@ function loadMoodsData() {
 // Check the selected mood
 function checkMood(mood) {
   // If no mood provided check against the current date
-  if (!mood || mood === "" || isNaN(parseInt(mood, 10))) {
+  if (mood === undefined || mood === "" || isNaN(parseInt(mood, 10))) {
     for (let key in moodsData) {
       let startTime = moodsData[key].startTime.split(":");
       let endTime = moodsData[key].endTime.split(":");
