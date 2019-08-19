@@ -19,11 +19,24 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function setupLinkBehavior() {
+  setupActiveLink();
   links.forEach(function(link) {
     link.onclick = setupAnchorBehavior;
   });
 }
 
+// Look at current route and set the current link to active
+function setupActiveLink() {
+  let parts = document.URL.split("#");
+  let hash = parts.length > 1 ? parts[1] : "profile";
+
+  let links = document.querySelectorAll("a[href='#" + hash + "']");
+  links.forEach(link => {
+    link.classList.add("active");
+  });
+}
+
+// Setup all anchor behavior
 function setupAnchorBehavior(e, respond = null) {
   setupActiveTab(this);
   scrollAnchors(this, e, respond);
