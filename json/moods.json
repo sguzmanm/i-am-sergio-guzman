@@ -3,7 +3,7 @@
     "name": "Morning",
     "startTime": "00:00",
     "endTime": "11:59",
-    "profilePic": "../img/profile-pic-morning.png",
+    "profilePic": "https://sguzmanm.github.io/i-am-sergio-guzman/img/profile-pic-morning.png",
     "css": {
       "color": {
         "p,h4": "#0d0c09",
@@ -17,7 +17,7 @@
         "footer": "#FFDAA1"
       },
       "background": {
-        "body": "url('../img/bg-morning.jpg') no-repeat"
+        "body": "url('https://sguzmanm.github.io/i-am-sergio-guzman/img/bg-morning.jpg') no-repeat"
       },
       "background-size": {
         "body": "cover"
@@ -37,7 +37,7 @@
     "name": "Afternoon",
     "startTime": "8:00",
     "endTime": "17:59",
-    "profilePic": "../img/profile-pic-afternoon.png",
+    "profilePic": "https://sguzmanm.github.io/i-am-sergio-guzman/img/profile-pic-afternoon.png",
     "css": {
       "color": {
         "p,h4": "#0d0c09",
@@ -52,7 +52,7 @@
         "footer": "#E9ECF3"
       },
       "background": {
-        "body": "url('../img/bg-afternoon.jpg') no-repeat"
+        "body": "url('https://sguzmanm.github.io/i-am-sergio-guzman/img/bg-afternoon.jpg') no-repeat"
       },
       "background-size": {
         "body": "cover"
@@ -72,7 +72,7 @@
     "name": "Night",
     "startTime": "18:00",
     "endTime": "23:59",
-    "profilePic": "../img/profile-pic.png",
+    "profilePic": "https://sguzmanm.github.io/i-am-sergio-guzman/img/profile-pic.png",
     "css": {
       "color": {
         "p,h4": "#0d0c09",
@@ -86,7 +86,7 @@
         "footer": "#f0f0f2"
       },
       "background": {
-        "body": "url('../img/bg.jpg') no-repeat"
+        "body": "url('https://sguzmanm.github.io/i-am-sergio-guzman/img/bg.jpg') no-repeat"
       },
       "background-size": {
         "body": "cover"
