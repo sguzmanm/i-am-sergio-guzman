@@ -72,6 +72,7 @@ function setupActiveTab(link) {
   let aria = document.createAttribute("aria-expanded");
   aria.value = "false";
 
+  // Setup toggler attributes
   toggler.attributes.setNamedItem(aria);
   toggler.classList.remove("show");
   btnToggler.classList.add("collapsed");
@@ -129,7 +130,11 @@ function scrollAnchors(link, e, respond = null) {
 // Load mood data
 function loadMoodsData() {
   let request = new XMLHttpRequest();
-  request.open("GET", "../json/moods.json", true);
+  request.open(
+    "GET",
+    "https://sguzmanm.github.io/i-am-sergio-guzman/json/moods.json",
+    true
+  );
 
   request.onload = function() {
     if (request.status == 200) {
