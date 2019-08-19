@@ -28,7 +28,7 @@ function loadSkillChartData() {
   request.onload = function() {
     if (request.status == 200) {
       // Success!
-      var skillData = JSON.parse(request.responseText);
+      let skillData = JSON.parse(request.responseText);
       for (let key in skillData) {
         let skillChart = document.getElementById(skillData[key].id);
         skillData[key].data.forEach(element => {

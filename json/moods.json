@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Night",
+    "startTime": "18:00",
+    "endTime": "23:59",
+    "profilePic": "../img/profile-pic.png",
+    "css": {
+      "color": {
+        "p,h4": "#0d0c09",
+        "h1,h2,h3": "#3b5e8c"
+      },
+      "background-color": {
+        ".alert": "#82b0d9",
+        ".card": "#f0f0f2",
+        ".card-active": "#82b0d9",
+        ".callback-link:hover": "#f0f0f2,#3b5e8c",
+        "footer": "#f0f0f2"
+      },
+      "background": {
+        "body": "url('../img/bg.jpg') no-repeat"
+      },
+      "background-size": {
+        "body": "cover"
+      },
+      "border-left-color": {
+        ".timeline": "#3b5e8c"
+      },
+      "border-bottom-color": {
+        ".timeline-header": "#3b5e8c"
+      },
+      "border-right-color": {
+        ".timeline-header": "#3b5e8c"
+      }
+    }
+  }
+]

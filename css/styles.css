@@ -2,6 +2,50 @@
   color: #f0f0f2 #3b5e8c #5b7ba6 #82b0d9 #0d0c09;
 }
 
+/* Color Theme Swatches in Hex */
+
+.portfolio-1-hex {
+  color: #5947C3;
+}
+
+.portfolio-2-hex {
+  color: #E9ECF3;
+}
+
+.portfolio-3-hex {
+  color: #3B8E01;
+}
+
+.portfolio-4-hex {
+  color: #307501;
+}
+
+.portfolio-5-hex {
+  color: #295B02;
+}
+
+/* Color Theme Swatches in Hex */
+
+.Portfolio-1-hex {
+  color: #EB923C;
+}
+
+.Portfolio-2-hex {
+  color: #FFDAA1;
+}
+
+.Portfolio-3-hex {
+  color: #FFA143;
+}
+
+.Portfolio-4-hex {
+  color: #FFF7F5;
+}
+
+.Portfolio-5-hex {
+  color: #F48D1C;
+}
+
 /**
 * General tag config
 */
@@ -13,7 +57,7 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-p {
+p, h4 {
   color: #0d0c09;
 }
 
