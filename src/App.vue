@@ -1,20 +1,57 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
+    <div id="nav" v-if="!isMainPage">
+      <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+    <router-view id="router-view" />
+    <img class="profile" :src="`${require('@/assets/' + profilePic)}`" />
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      profilePic: "profile-pic.jpg"
+    };
+  },
+  computed: {
+    isMainPage() {
+      return window.location.href === "";
+    }
+  }
+};
+</script>
+
 <style>
+:root {
+  --background-color: #272932;
+  --text-color: #e7ecef;
+  --highlight-color: #5bc0eb;
+  --highlight-color-2: #f4d35e;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  padding: 20px;
+}
+
+#app a {
+  color: var(--highlight-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#app a:hover,
+a:visited {
+  color: var(--highlight-color-2);
+  text-decoration: none;
 }
 
 #nav {
@@ -28,5 +65,19 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+#router-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.profile {
+  display: block;
+  border-radius: 50%;
+  width: 20%;
+  margin: auto;
 }
 </style>
