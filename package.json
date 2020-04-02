@@ -1,11 +1,9 @@
 {
   "name": "i-am-sergio-guzman",
-  "version": "1.0.0",
+  "version": "0.1.0",
+  "private": true,
   "description": "\"I am Sergio Guzmán\" is a webpage project for the Web Development class @ Uniandes (Fall 2019), to showcase my skills as a software developer to anyone that is interested. It has my work experience, hobbies, skills, contact information and previous projects.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sguzmanm/i-am-sergio-guzman.git"
@@ -16,8 +14,33 @@
     "url": "https://github.com/sguzmanm/i-am-sergio-guzman/issues"
   },
   "homepage": "https://github.com/sguzmanm/i-am-sergio-guzman#readme",
-  "devDependencies": {
-    "eslint": "^6.2.0"
+  "scripts": {
+    "serve": "vue-cli-service serve --mode production",
+    "serve:staging": "vue-cli-service serve --mode development",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@vue/composition-api": "^0.5.0",
+    "core-js": "^3.6.4",
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.5",
+    "vue-typed-js": "^0.1.2",
+    "vuex": "^3.1.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.2.0",
+    "@vue/cli-plugin-eslint": "~4.2.0",
+    "@vue/cli-plugin-router": "~4.2.0",
+    "@vue/cli-plugin-vuex": "~4.2.0",
+    "@vue/cli-service": "~4.2.0",
+    "@vue/eslint-config-airbnb": "^5.0.2",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-vue": "^6.1.2",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
+  }
 }
