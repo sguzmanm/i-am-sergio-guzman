@@ -3,7 +3,7 @@
     <div class="panel">
       <p>
         Hello, I am
-        <a href="<%= BASE_URL %>cv_latam.docx">Sergio Guzmán Mayorga</a>,
+        <a :href="`${publicPath}cv_latam.docx`">Sergio Guzmán Mayorga</a>,
         passionate SW Developer currently at {{ 'TRUORA INC' }}. You can find a
         lot of <router-link to="/">interesting projects</router-link> I´ve
         worked on the last couple of years, alongside my
@@ -17,8 +17,16 @@
 </template>
 
 <script>
+import { ref } from '@vue/composition-api';
+
 export default {
+
   name: 'Home',
+  setup() {
+    const publicPath = ref(process.env.BASE_URL);
+
+    return { publicPath };
+  },
 };
 </script>
 

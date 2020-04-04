@@ -5,22 +5,28 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view id="router-view" />
-    <img class="profile" :src="`${require('@/assets/' + profilePic)}`" />
+    <div class="profile">
+      <button>
+        <font-awesome-icon icon="user-secret" size="3x" />
+      </button>
+      <img :src="`${require('@/assets/' + profilePic)}`" />
+    </div>
   </div>
 </template>
 
 <script>
-
 import { ref, computed } from '@vue/composition-api';
+import { useState } from 'vuex-composition-helpers/dist';
 
 export default {
-  setup(props, ctx) {
+  setup(props, { root }) {
     const profilePic = ref('profile-pic.jpg');
     const isMainPage = computed(() => {
-      const { history } = ctx.root.$router;
+      const { history } = root.$router;
       return history.current && history.current.path === '/';
     });
-    return { profilePic, isMainPage };
+    const { currentMood } = useState(root.$store, ['currentMood']);
+    return { profilePic, isMainPage, currentMood };
   },
 };
 </script>
@@ -76,9 +82,36 @@ a:visited {
 }
 
 .profile {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile img {
   border-radius: 50%;
   width: 20%;
-  margin: auto;
+}
+
+.profile button {
+  position: relative;
+  top: 20px;
+  z-index: 1;
+
+  padding: 5px 20px;
+
+  background-color: var(--highlight-color-2);
+  color: var(--background-color);
+  border: none;
+  border-radius: 50% 50% 0 0;
+  cursor: pointer;
+}
+
+.profile button:hover {
+  -webkit-box-shadow: 10px 10px 31px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 31px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 31px 0px rgba(0, 0, 0, 0.75);
+
+  color: var(--text-color);
 }
 </style>
