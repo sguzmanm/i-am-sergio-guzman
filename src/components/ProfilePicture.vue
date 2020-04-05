@@ -1,11 +1,11 @@
 <template>
-    <div class="profile">
-      <button>
-        <i :class="faIcon"></i>
-        <!-- uses solid style -->
-      </button>
-      <img :src="`${require('@/assets/' + profilePic)}`" />
-    </div>
+  <div class="profile">
+    <button>
+      <i :class="faIcon"></i>
+      <!-- uses solid style -->
+    </button>
+    <img :src="`${require('@/assets/' + profilePic)}`" />
+  </div>
 </template>
 
 <script>
@@ -19,7 +19,6 @@ export default {
 </script>
 
 <style scoped>
-
 .profile {
   display: flex;
   flex-direction: column;
@@ -29,7 +28,7 @@ export default {
 
 .profile img {
   border-radius: 50%;
-  width: 20%;
+  width: 15%;
 }
 
 .profile button {

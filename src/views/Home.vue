@@ -40,4 +40,16 @@ export default {
   line-height: 150%;
   text-align: center;
 }
+
+.panel a,
+a:visited {
+  color: var(--highlight-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.panel a:hover {
+  color: var(--highlight-color-2);
+  text-decoration: none;
+}
 </style>

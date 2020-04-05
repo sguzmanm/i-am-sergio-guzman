@@ -1,7 +1,7 @@
 <template>
     <div class="nav" v-if="!isMainPage">
       <div class="nav__container right">
-        <router-link class="nav__regular" to="/work-and-projects">Work and projects</router-link>
+        <router-link class="nav__regular" to="/work-and-projects" exact>Work and projects</router-link>
       </div>
       <div class="nav__profile">
           <button>
@@ -12,7 +12,7 @@
           </router-link>
       </div>
       <div class="nav__container left">
-        <router-link class="nav__regular" to="/life-experiences">Life experiences</router-link>
+        <router-link class="nav__regular" to="/life-experiences" exact>Life experiences</router-link>
       </div>
     </div>
 </template>
@@ -30,7 +30,8 @@ export default {
 <style scoped>
 
 .nav {
-  padding: 30px;
+  padding: 0;
+  margin: 0;
   display:flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -38,7 +39,7 @@ export default {
 }
 
 .nav__container{
-  flex:2;
+  flex:3;
 }
 
 .nav__regular {
@@ -46,7 +47,8 @@ export default {
   padding: 20px;
   border-radius:10%;
 
-  color: var(--background-color);
+  color: var(--highlight-color);
+  text-decoration: none;
 }
 
 .nav__regular:hover {
@@ -54,7 +56,15 @@ export default {
   background-color: var(--highlight-color);
 }
 
+.nav__regular.router-link-active,.nav__regular.router-link-exact-active{
+  color: var(--text-color);
+  background-color: var(--highlight-color);
+}
+
 .nav__profile {
+  padding:0;
+  margin:0;
+
   flex:1;
   display: flex;
   flex-direction: column;
@@ -73,7 +83,7 @@ export default {
   z-index: 1;
 
   padding: 5px 20px;
-  font-size: 30px;
+  font-size: 20px;
 
   background-color: var(--highlight-color-2);
   color: var(--background-color);

@@ -1,0 +1,210 @@
+[
+  {
+    "name": "Programming Languages",
+    "skills": [
+      {
+        "title": "JS",
+        "level": 60
+      },
+      {
+        "title": "Golang",
+        "level": 80
+      },
+      {
+        "title": "Java",
+        "level": 40
+      },
+      {
+        "title": "Python",
+        "level": 20
+      },
+      {
+        "title": "C#",
+        "level": 30
+      },
+      {
+        "title": "Kotlin",
+        "level": 70
+      },
+      {
+        "title": "C/C++",
+        "level": 20
+      },
+      {
+        "title": "Shell",
+        "level": 40
+      }
+    ]
+  },
+  {
+    "name": "SW Frameworks",
+    "skills": [
+      {
+        "title": "Vue",
+        "level": 70
+      },
+      {
+        "title": "VueX",
+        "level": 40
+      },
+      {
+        "title": "React",
+        "level": 60
+      },
+      {
+        "title": "Redux",
+        "level": 30
+      },
+      {
+        "title": "Express",
+        "level": 60
+      },
+      {
+        "title": "Flutter",
+        "level": 30
+      },
+      {
+        "title": "React Native",
+        "level": 50
+      },
+      {
+        "title": "Spring Boot",
+        "level": 40
+      }
+    ]
+  },
+  {
+    "name": "Infrastructure",
+    "skills": [
+      {
+        "title": "Docker",
+        "level": 60
+      },
+      {
+        "title": "AWS",
+        "level": 70
+      },
+      {
+        "title": "Windows 10",
+        "level": 70
+      },
+      {
+        "title": "Linux",
+        "level": 70
+      },
+      {
+        "title": "Mac OS",
+        "level": 30
+      },
+      {
+        "title": "Terraform",
+        "level": 20
+      },
+      {
+        "title": "Vagrant",
+        "level": 10
+      },
+      {
+        "title": "Virtual Box",
+        "level": 60
+      }
+    ]
+  },
+  {
+    "name": "Databases",
+    "skills": [
+      {
+        "title": "MySQL",
+        "level": 50
+      },
+      {
+        "title": "SQL Server",
+        "level": 20
+      },
+      {
+        "title": "MongoDB",
+        "level": 80
+      },
+      {
+        "title": "Firebase Cloud Firestore",
+        "level": 80
+      },
+      {
+        "title": "DynamoDB",
+        "level": 60
+      },
+      {
+        "title": "Redis",
+        "level": 80
+      }
+    ]
+  },
+  {
+    "name": "Cloud Storage",
+    "skills": [
+      {
+        "title": "Amazon S3",
+        "level": 80
+      },
+      {
+        "title": "Firebase Storage",
+        "level": 40
+      }
+    ]
+  },
+  {
+    "name": "Message Queues",
+    "skills": [
+      {
+        "title": "Rabbit MQ",
+        "level": 40
+      },
+      {
+        "title": "Mosquitto MQTT",
+        "level": 60
+      },
+      {
+        "title": "Amazon SQS",
+        "level": 80
+      },
+      {
+        "title": "Amazon SNS",
+        "level": 80
+      }
+    ]
+  },
+  {
+    "name": "Cloud Functions",
+    "skills": [
+      {
+        "title": "Amazon lambda",
+        "level": 80
+      },
+      {
+        "title": "Firebase Functions",
+        "level": 50
+      }
+    ]
+  },
+  {
+    "name": "IDEs",
+    "skills": [
+      {
+        "title": "Android Studio",
+        "level": 80
+      },
+      {
+        "title": "Unity",
+        "level": 40
+      },
+      {
+        "title": "VS Code",
+        "level": 80
+      },
+      {
+        "title": "IntelliJ IDEA",
+        "level": 30
+      }
+    ]
+  }
+]

@@ -34,7 +34,7 @@ export default {
 
     const { useState, useActions } = createNamespacedHelpers(
       root.$store,
-      'moods'
+      'moods',
     );
     const { currentMood } = useState(['currentMood']);
 
@@ -67,18 +67,6 @@ body {
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   padding: 20px;
-}
-
-#app a {
-  color: var(--highlight-color);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#app a:hover,
-a:visited {
-  color: var(--highlight-color-2);
-  text-decoration: none;
 }
 
 #router-view {
