@@ -1,12 +1,12 @@
 [
   {
     "title": "Casual",
-    "faIcon": "user-secret",
+    "faIcon": "fas fa-user",
     "textColor": "#e7ecef",
     "backgroundColor": "#272932",
     "highlightColor1": "#5bc0eb",
     "highlightColor2": "#f4d35e",
-    "profilePic": "profile-pic.jpg",
+    "profilePic": "profile-pic.png",
     "startTime": "18:00",
     "endTime": "24:00",
     "startDate": "02/04/2020",
