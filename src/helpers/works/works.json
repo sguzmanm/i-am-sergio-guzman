@@ -75,9 +75,9 @@
     "title": "Research assistance on UnaCloud",
     "startDate": "01/01/2018",
     "endDate": "12/01/2018",
-    "status": "work",
+    "status": "work open source",
     "media": "unacloud.png",
-    "description": "I worked on UnaCloud, a project to use Virtual Machines on unused college equipment (computer labs, for example). I mostly worked on craiting a REST API (GRails) with a library to connect to it (Java), and solve concurrency issues using VBox Manager CLI",
+    "description": "I worked on UnaCloud, a project to use Virtual Machines on unused college equipment (computer labs, for example). I mostly worked on creating a REST API (Grails) with a library to connect to it (Java), and solve concurrency issues using VBox Manager CLI. I also maintained their architecture (Messaging through Rabbit MQ and TCP sockets)",
     "organizations": [
       {
         "name": "Universidad de Los Andes",
@@ -87,13 +87,20 @@
     "links": {
       "code": "https://github.com/UnaCloud/UnaCloud2/tree/sergiodev"
     },
-    "tags": ["Java", "Virtual Box", "Shell", "IntelliJ IDEA"]
+    "tags": [
+      "Java",
+      "Virtual Box",
+      "Shell",
+      "IntelliJ IDEA",
+      "VS Code",
+      "Rabbit MQ"
+    ]
   },
   {
-    "title": "Finalist on Act In Space Hackathon Colombia",
+    "title": "Pecheo: Finalist on Act In Space Hackathon Colombia",
     "startDate": "05/01/2018",
     "endDate": "05/20/2018",
-    "status": "college",
+    "status": "personal",
     "media": "actinspace.jpg",
     "description": "With my group we ideated a fuel optimization system using ESA technology from space stations. We were among the top 6 ideas.",
     "organizations": [
@@ -105,10 +112,10 @@
     "links": {
       "demo": "https://www.facebook.com/IngElectricayElectronicaUniandes/videos/1959330727435255/?t=1858"
     },
-    "tags": ["Python", "React Native"]
+    "tags": ["Python", "React Native", "VS Code"]
   },
   {
-    "title": "Datos Abiertos DC Hackathon Colombia",
+    "title": "3R: Datos Abiertos DC Hackathon Colombia",
     "startDate": "06/20/2018",
     "endDate": "06/20/2018",
     "status": "personal",
@@ -123,6 +130,292 @@
     "links": {
       "demo": "https://www.facebook.com/IngElectricayElectronicaUniandes/videos/1959330727435255/?t=1858"
     },
-    "tags": ["Python", "Firebase Cloud Firestore"]
+    "tags": ["Python", "Firebase Cloud Firestore", "VS Code"]
+  },
+  {
+    "title": "Senehack: Y4PT Transport Hackathon",
+    "startDate": "10/30/2018",
+    "endDate": "10/30/2018",
+    "status": "personal",
+    "media": "y4pt.png",
+    "description": "With my team, we developed an app for matching cyclists and walkers to go together to different locations in Bogotá, Colombia.",
+    "organizations": [
+      {
+        "name": "Universidad de Los Andes",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/University_of_Los_Andes_logo.svg/243px-University_of_Los_Andes_logo.svg.png"
+      }
+    ],
+    "links": {
+      "code": "https://github.com/Jularenas/SeneHack"
+    },
+    "tags": ["Python", "Firebase Cloud Firestore", "Vue", "VS Code"]
+  },
+  {
+    "title": "Indoor Location inside Universidad De Los Andes",
+    "startDate": "06/01/2018",
+    "endDate": "12/01/2018",
+    "status": "stopped",
+    "media": "andes.png",
+    "description": "Andes' goal was to make a cheap indoor location Android application that would only use the WiFi RFID signals. our pilot started at Universidad de Los Andes with a KNN Algorithm that achieved a typical error of 2 meters. However, since it was too hard to train the algorithm it was stopped.",
+    "organizations": [
+      {
+        "name": "Universidad de Los Andes",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/University_of_Los_Andes_logo.svg/243px-University_of_Los_Andes_logo.svg.png"
+      }
+    ],
+    "links": {
+      "code": "https://github.com/sguzmanm/Andes"
+    },
+    "tags": ["Android Studio", "Java", "Firebase Cloud Firestore"]
+  },
+  {
+    "title": "Gaucher Awareness website Colombia",
+    "startDate": "02/01/2019",
+    "endDate": "04/01/2019",
+    "status": "work",
+    "media": "gaucher.mp4",
+    "description": "I developed a webpage to show the information of Gaucher Disease from what we had on Takeda. This was based on an international website and I adapted it all using React",
+    "organizations": [
+      {
+        "name": "Baxalta Colombia S.A.S. (Takeda)",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Logo_Takeda.svg/1920px-Logo_Takeda.svg.png"
+      }
+    ],
+    "links": {
+      "demo": "https://www.enfermedaddegaucher.com.co/"
+    },
+    "tags": ["React", "JS", "CSS", "HTML", "VS Code"]
+  },
+  {
+    "title": "Know HAE website Colombia",
+    "startDate": "01/01/2019",
+    "endDate": "04/01/2019",
+    "status": "work",
+    "media": "hae.mp4",
+    "description": "I developed a webpage to show the information of Hereditary Angioedema (HAE) Disease from what we had on Takeda. I modified the international website to suit Colombia´s market needs",
+    "organizations": [
+      {
+        "name": "Baxalta Colombia S.A.S. (Takeda)",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Logo_Takeda.svg/1920px-Logo_Takeda.svg.png"
+      }
+    ],
+    "links": {
+      "demo": "http://www.pienseaeh.com/index.html"
+    },
+    "tags": ["JS", "CSS", "HTML", "VS Code"]
+  },
+  {
+    "title": "Fabry website Colombia, Perú and Ecuador",
+    "startDate": "04/01/2019",
+    "endDate": "06/01/2019",
+    "status": "incomplete",
+    "media": "fabry.png",
+    "description": "I developed a webpage to show the information of Fabry Disease from what we had on Takeda. I modified the international website to suit Colombia´s market needs buuut I never got to see my work live before leaving the company",
+    "organizations": [
+      {
+        "name": "Baxalta Colombia S.A.S. (Takeda)",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Logo_Takeda.svg/1920px-Logo_Takeda.svg.png"
+      }
+    ],
+    "links": {
+      "demo": "https://www.enfermedaddefabry.com.co/"
+    },
+    "tags": ["JS", "CSS", "HTML", "Vue", "VS Code"]
+  },
+  {
+    "title": "Bogotá Botanical Garden Android app",
+    "startDate": "09/01/2019",
+    "endDate": "12/16/2019",
+    "status": "college",
+    "media": "botgarden-kotlin.mp4",
+    "description": "After making a context analysis for the Mobile Development course of Universidad de Los Andes, I developed with a partner a mobile app using Kotlin and Android Jetpack for AndroidX devices to get realtime location inside a map with the different activities and plants you could locate inside the Bogotá Botanical Garden",
+    "organizations": [
+      {
+        "name": "Universidad de Los Andes",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/University_of_Los_Andes_logo.svg/243px-University_of_Los_Andes_logo.svg.png"
+      }
+    ],
+    "links": {
+      "code": "https://gitlab.com/isis3510_201920_team10/kotlin"
+    },
+    "tags": [
+      "Android Studio",
+      "Firebase Functions",
+      "Android Studio",
+      "VS Code",
+      "Kotlin",
+      "JS"
+    ]
+  },
+  {
+    "title": "Top Image",
+    "startDate": "10/01/2019",
+    "endDate": "12/01/2019",
+    "status": "college",
+    "media": "top-image.mp4",
+    "description": "PWA to post your own images and make contests with other. There is the option to use private rooms to invite anyone you like and start working. Voting is completely reactive (Mongo streams and socket io) as well as the ranking of the images",
+    "organizations": [
+      {
+        "name": "Universidad de Los Andes",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/University_of_Los_Andes_logo.svg/243px-University_of_Los_Andes_logo.svg.png"
+      }
+    ],
+    "links": {
+      "demo": "https://picross-vs.herokuapp.com/",
+      "code": "https://github.com/sguzmanm/PicrossVS"
+    },
+    "tags": [
+      "MongoDB",
+      "Express",
+      "React",
+      "Redux",
+      "JS",
+      "HTML",
+      "CSS",
+      "VS Code"
+    ]
+  },
+  {
+    "title": "Picross VS",
+    "startDate": "09/01/2019",
+    "endDate": "09/01/2019",
+    "status": "college",
+    "media": "picrossvs.mp4",
+    "description": "Reactive web app to play picross with your friends on real time. Achieved using Meteor and the MERN stack",
+    "organizations": [
+      {
+        "name": "Universidad de Los Andes",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/University_of_Los_Andes_logo.svg/243px-University_of_Los_Andes_logo.svg.png"
+      }
+    ],
+    "links": {
+      "demo": "https://top-image.herokuapp.com/login",
+      "code": "https://github.com/korkies22/TopImage"
+    },
+    "tags": [
+      "MongoDB",
+      "Express",
+      "React",
+      "Redux",
+      "JS",
+      "HTML",
+      "CSS",
+      "VS Code"
+    ]
+  },
+  {
+    "title": "Academical Reborn",
+    "startDate": "08/01/2019",
+    "endDate": "01/01/2020",
+    "status": "personal",
+    "media": "academical-reborn.mp4",
+    "description": "Web app to help students plan their schedule with different subject from Unviersidad de Los Andes. It started as an event planner and then was modified for doing the above purpose. Sadly it wasn´t used as expected and it was decided to leave it like this",
+    "organizations": [
+      {
+        "name": "Universidad de Los Andes",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/University_of_Los_Andes_logo.svg/243px-University_of_Los_Andes_logo.svg.png"
+      }
+    ],
+    "links": {
+      "demo": "https://protected-inlet-87189.herokuapp.com/",
+      "code": "https://github.com/sguzmanm/academical-reborn"
+    },
+    "tags": [
+      "MongoDB",
+      "Express",
+      "React",
+      "Redux",
+      "JS",
+      "HTML",
+      "CSS",
+      "VS Code"
+    ]
+  },
+  {
+    "title": "Open API Automated SDK generation with Docker container Amazon ECS",
+    "startDate": "02/01/2020",
+    "endDate": "02/01/2020",
+    "status": "private work",
+    "media": "docker-on-aws.png",
+    "description": "I helped in the implementation of a Docker container that generates automated SDKs of our API using OpenAPI, to ease client integration. This code is not public, hence I can only tell you about the experience",
+    "organizations": [
+      {
+        "name": "Truora Inc",
+        "logo": "https://media-exp1.licdn.com/dms/image/C4E0BAQG7zI4oZYSBNw/company-logo_200_200/0?e=1594857600&v=beta&t=35jugu3Y2wovyp3E34Q4i0AyduvdF3BFQV68HqgS87s"
+      }
+    ],
+    "links": {
+      "company": "https://www.truora.com/"
+    },
+    "tags": [
+      "Amazon Lambda",
+      "Amazon S3",
+      "AWS",
+      "Docker",
+      "Golang",
+      "Amazon SQS",
+      "VS Code"
+    ]
+  },
+  {
+    "title": "Automated information retrieval from web pages",
+    "startDate": "07/01/2019",
+    "status": "private work",
+    "media": "golang-http.png",
+    "description": "The title says it all. I helped with the code generation for retrieving information from public websites automatically with scheduling provided by AWS Lambdas. I can´t post any code or sources since this is private",
+    "organizations": [
+      {
+        "name": "Truora Inc",
+        "logo": "https://media-exp1.licdn.com/dms/image/C4E0BAQG7zI4oZYSBNw/company-logo_200_200/0?e=1594857600&v=beta&t=35jugu3Y2wovyp3E34Q4i0AyduvdF3BFQV68HqgS87s"
+      }
+    ],
+    "links": {
+      "company": "https://www.truora.com/"
+    },
+    "tags": [
+      "Amazon Lambda",
+      "AWS",
+      "Golang",
+      "DynamoDB",
+      "Amazon SNS",
+      "Amazon SQS",
+      "VS Code"
+    ]
+  },
+  {
+    "title": "Frontend and backend language translation",
+    "startDate": "09/01/2019",
+    "endDate": "09/01/2019",
+    "status": "private work",
+    "media": "golang-http.png",
+    "description": "I helped my team to translate the backend and frontend labels of our system. In the frontend VueX and i18n were used",
+    "organizations": [
+      {
+        "name": "Truora Inc",
+        "logo": "https://media-exp1.licdn.com/dms/image/C4E0BAQG7zI4oZYSBNw/company-logo_200_200/0?e=1594857600&v=beta&t=35jugu3Y2wovyp3E34Q4i0AyduvdF3BFQV68HqgS87s"
+      }
+    ],
+    "links": {
+      "company": "https://www.truora.com/"
+    },
+    "tags": ["Amazon Lambda", "AWS", "Golang", "Vue", "VueX", "VS Code"]
+  },
+  {
+    "title": "Inception... I am Sergio Guzmán",
+    "startDate": "08/01/2019",
+    "status": "in progress",
+    "media": "i-am-sergio-guzman.png",
+    "description": "This is my personal webpage to show who I am to the world. I used Vue with Vue X and Vue Composition API just for testing",
+    "organizations": [
+      {
+        "name": "Me",
+        "logo": "https://raw.githubusercontent.com/sguzmanm/i-am-sergio-guzman/master/favicon.ico"
+      }
+    ],
+    "links": {
+      "code": "https://github.com/sguzmanm/i-am-sergio-guzman",
+      "demo": "https://sguzmanm.github.io/i-am-sergio-guzman/"
+    },
+    "tags": ["Vue", "VueX", "HTML", "CSS", "JS", "VS Code"]
   }
 ]

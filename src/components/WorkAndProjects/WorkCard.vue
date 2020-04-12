@@ -13,17 +13,18 @@
           </div>
           <p>{{organization.name}}</p>
       </div>
+      <media-preview :media="`work-and-projects/${work.media?work.media:placeholder}`"
+        :alt="work.title"/>
       <div class="card__content">
-          <media-preview style="flex:1" :media="`work-and-projects/${work.media?work.media:placeholder}`"
-            :alt="work.title"/>
-          <div style="flex:1">
-            <p>{{work.description}} </p>
-            <p v-if="!work.links">I don´t have a demo to show you here :/</p>
-            <a v-if="work.links && work.links.demo"
-                :href="work.links.demo" target="_blank">Check it out here</a><br>
-            <a v-if="work.links && work.links.code"
-                :href="work.links.code" target="_blank">This is the code</a>
-          </div>
+        <p>{{work.description}} </p>
+        <p v-if="!work.links">I don´t have a link to show you here :/</p>
+        <a v-if="work.links && work.links.demo"
+            :href="work.links.demo" target="_blank">Check it out here</a><br>
+        <a v-if="work.links && work.links.code"
+            :href="work.links.code" target="_blank">This is the code</a>
+        <a v-if="work.links && work.links.company"
+            :href="work.links.company" target="_blank">In any case this is the company link</a><br>
+
       </div>
 
   </div>
@@ -33,7 +34,7 @@
 import MediaPreview from '@/components/WorkAndProjects/MediaPreview.vue';
 import { ref, computed } from '@vue/composition-api';
 
-const finalStates = ['college', 'work', 'personal'];
+const finalStates = ['college', 'work', 'work open source', 'personal'];
 const [successStyleVariable, failedStyleVariable] = ['--highlight-color-2', '--highlight-color'];
 
 const areDatesEqual = (firstDate, secondDate) => firstDate.getMonth() === secondDate.getMonth();
@@ -50,9 +51,9 @@ export default {
     const workDate = computed(() => {
       const options = { year: 'numeric', month: 'long' };
       const startDate = new Date(work.startDate);
-      const endDate = new Date(work.endDate);
+      const endDate = work.endDate ? new Date(work.endDate) : new Date();
 
-      if (areDatesEqual(startDate, endDate)) {
+      if (endDate !== null && areDatesEqual(startDate, endDate)) {
         return startDate.toLocaleDateString('en-US', options);
       }
 
@@ -79,16 +80,16 @@ export default {
         display:flex;
         flex-direction: column;
         text-align: justify;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
 
-        flex:1 0 30%;
+        flex: 1 0 calc(25% - 10px);
         background-color: var(--background-color);
         border: 2px solid var(--text-color);
         color: var(--text-color);
 
         margin: 20px;
-        padding:10px;
+        padding:20px;
         max-width: 50%;
     }
 
@@ -153,17 +154,6 @@ export default {
 
     .card__content{
         font-size: 20px;
-        display:flex;
-        flex-direction: row;
-        flex-wrap:wrap;
-    }
-
-    .card__content div.media{
-        flex:2 0 50%;
-    }
-
-    .card__content div{
-        flex:1 0 50%;
     }
 
     .card__content a,a:visited{

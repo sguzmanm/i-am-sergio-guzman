@@ -28,6 +28,6 @@ export default {
     }
 
     .media,video,img{
-        width:100%;
+        max-height:25vh;
     }
 </style>

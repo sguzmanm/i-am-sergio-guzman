@@ -22,7 +22,11 @@ export default {
     WorkCard,
   },
   setup() {
-    const currentWorks = ref(works);
+    const currentWorks = ref(works.sort((a, b) => {
+      const dateA = a.endDate ? new Date(a.endDate) : new Date();
+      const dateB = b.endDate ? new Date(b.startDate) : new Date();
+      return dateB - dateA;
+    }));
     return { currentWorks };
   },
 };
