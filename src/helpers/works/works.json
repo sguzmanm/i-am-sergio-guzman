@@ -1,0 +1,128 @@
+[
+  {
+    "title": "Box Shooter",
+    "startDate": "05/05/2017",
+    "endDate": "06/06/2017",
+    "status": "college",
+    "media": "boxshooter.mp4",
+    "description": "First person shooter demo for course of Introduction to Game Development of Michigan State University (It can take up to 10 min to fully load hehe)",
+    "organizations": [
+      {
+        "name": "Michigan State University",
+        "logo": "https://cdn.freebiesupply.com/logos/large/2x/michigan-state-university-logo-png-transparent.png"
+      }
+    ],
+    "links": {
+      "demo": "https://www.kongregate.com/games/SergioG482/box-shooter-student-development"
+    },
+    "tags": ["C#", "Unity"]
+  },
+  {
+    "title": "Roller Madness",
+    "startDate": "05/05/2017",
+    "endDate": "06/06/2017",
+    "status": "college",
+    "media": "rollermadness.mp4",
+    "description": "3D platformer demo for course of Introduction to Game Development of Michigan State University (It can take up to 10 min to fully load hehe)",
+    "organizations": [
+      {
+        "name": "Michigan State University",
+        "logo": "https://cdn.freebiesupply.com/logos/large/2x/michigan-state-university-logo-png-transparent.png"
+      }
+    ],
+    "links": {
+      "demo": "https://www.kongregate.com/games/SergioG482/roller-madness-student-project"
+    },
+    "tags": ["C#", "Unity"]
+  },
+  {
+    "title": "Interest groups",
+    "startDate": "03/01/2017",
+    "endDate": "05/23/2017",
+    "status": "college",
+    "description": "Java REST API and Front in Angular for connecting groups of persons",
+    "organizations": [
+      {
+        "name": "Universidad de Los Andes",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/University_of_Los_Andes_logo.svg/243px-University_of_Los_Andes_logo.svg.png"
+      }
+    ],
+    "tags": ["Java", "JS", "MySQL"]
+  },
+  {
+    "title": "IoT lock architecture contest Yale",
+    "startDate": "02/23/2018",
+    "endDate": "05/23/2018",
+    "status": "college",
+    "media": "yale2018.png",
+    "description": "With my team from the course Software Architecture by teams, we won the contest for designing an architecture for Yale smart lock alarams using IoT",
+    "organizations": [
+      {
+        "name": "Universidad de Los Andes",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/University_of_Los_Andes_logo.svg/243px-University_of_Los_Andes_logo.svg.png"
+      },
+      {
+        "name": "Yale",
+        "logo": "https://logodownload.org/wp-content/uploads/2020/02/yale-logo-0.png"
+      }
+    ],
+    "links": {
+      "code": "https://github.com/sguzmanm/201810_02_pipo"
+    },
+    "tags": ["Python", "Java", "Mosquitto MQTT", "Redis", "MongoDB"]
+  },
+  {
+    "title": "Research assistance on UnaCloud",
+    "startDate": "01/01/2018",
+    "endDate": "12/01/2018",
+    "status": "work",
+    "media": "unacloud.png",
+    "description": "I worked on UnaCloud, a project to use Virtual Machines on unused college equipment (computer labs, for example). I mostly worked on craiting a REST API (GRails) with a library to connect to it (Java), and solve concurrency issues using VBox Manager CLI",
+    "organizations": [
+      {
+        "name": "Universidad de Los Andes",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/University_of_Los_Andes_logo.svg/243px-University_of_Los_Andes_logo.svg.png"
+      }
+    ],
+    "links": {
+      "code": "https://github.com/UnaCloud/UnaCloud2/tree/sergiodev"
+    },
+    "tags": ["Java", "Virtual Box", "Shell", "IntelliJ IDEA"]
+  },
+  {
+    "title": "Finalist on Act In Space Hackathon Colombia",
+    "startDate": "05/01/2018",
+    "endDate": "05/20/2018",
+    "status": "college",
+    "media": "actinspace.jpg",
+    "description": "With my group we ideated a fuel optimization system using ESA technology from space stations. We were among the top 6 ideas.",
+    "organizations": [
+      {
+        "name": "Universidad de Los Andes",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/University_of_Los_Andes_logo.svg/243px-University_of_Los_Andes_logo.svg.png"
+      }
+    ],
+    "links": {
+      "demo": "https://www.facebook.com/IngElectricayElectronicaUniandes/videos/1959330727435255/?t=1858"
+    },
+    "tags": ["Python", "React Native"]
+  },
+  {
+    "title": "Datos Abiertos DC Hackathon Colombia",
+    "startDate": "06/20/2018",
+    "endDate": "06/20/2018",
+    "status": "personal",
+    "media": "datosdc.png",
+    "description": "With my team, we developed a map for recyclers in Bogotá, Colombia to optimize their routes and track their movements.",
+    "organizations": [
+      {
+        "name": "Vivelab Bogotá",
+        "logo": "https://media-exp1.licdn.com/dms/image/C510BAQHC9L5PVJlItg/company-logo_200_200/0?e=2159024400&v=beta&t=PIIFgNsemq1iNIyxWLnpc70zpo2Z1EuzNBI_WIC_O-g"
+      }
+    ],
+    "links": {
+      "demo": "https://www.facebook.com/IngElectricayElectronicaUniandes/videos/1959330727435255/?t=1858"
+    },
+    "tags": ["Python", "Firebase Cloud Firestore"]
+  }
+]

@@ -56,14 +56,14 @@ export default {
         .hierarchy(packableTweets, (d) => d.values)
         .sum((d) => (d.level ? d.level : 1));
     },
-    calculateGraph(name, skills) {
+    calculateGraph(name, skills) { // Create data for d3 graph
       const packData = this.packData(name, skills);
       const packChart = d3.pack();
       packChart.size([this.width, this.height]);
       packChart.padding(10);
+
       const output = packChart(packData).descendants();
       return output.map((d, i) => {
-        console.log('ITEM', d);
         const fill = this.colourScale(d.data.level);
         let response = { id: i + 1 };
         if (i !== 0) {
