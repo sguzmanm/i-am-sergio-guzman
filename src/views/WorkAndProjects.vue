@@ -1,10 +1,21 @@
 <template>
   <div class="work">
     <div class="skills">
-      <chart/>
+      <chart :addTag="addTag" />
     </div>
+
+    <div class="tags">
+      <div v-for="(tag,index) in state.currentTags" :key="index" class="tag">
+        <p>{{tag}}</p>
+        <button @click="removeTag(tag)">&times;</button>
+      </div>
+    </div>
+
     <div class="cards">
-        <work-card v-for="(work,index) in currentWorks" :key="index" :work="work"/>
+        <div v-if="!state.currentWorks || state.currentWorks.length===0" class="cards__empty">
+          Remember I love learning new skills, it doesn´t mean that I always have works to show.
+        </div>
+        <work-card v-for="(work,index) in state.currentWorks" :key="index" :work="work"/>
     </div>
   </div>
 </template>
@@ -12,9 +23,16 @@
 <script>
 import Chart from '@/components/WorkAndProjects/Chart.vue';
 import WorkCard from '@/components/WorkAndProjects/WorkCard.vue';
-import { ref } from '@vue/composition-api';
+import { reactive, computed } from '@vue/composition-api';
 
 const works = require('@/helpers/works/works.json');
+
+const compareWorks = (a, b) => {
+  const dateA = a.endDate ? new Date(a.endDate) : new Date();
+  const dateB = b.endDate ? new Date(b.startDate) : new Date();
+  return dateB - dateA;
+};
+
 
 export default {
   components: {
@@ -22,12 +40,36 @@ export default {
     WorkCard,
   },
   setup() {
-    const currentWorks = ref(works.sort((a, b) => {
-      const dateA = a.endDate ? new Date(a.endDate) : new Date();
-      const dateB = b.endDate ? new Date(b.startDate) : new Date();
-      return dateB - dateA;
-    }));
-    return { currentWorks };
+    const state = reactive({
+      currentTags: [],
+      currentWorks: computed(() => {
+        const sortedWorks = works.sort(compareWorks);
+        if (state.currentTags.length === 0) {
+          return sortedWorks;
+        }
+
+        return sortedWorks.filter((e) => {
+          for (let i = 0; i < state.currentTags.length; i += 1) {
+            const currentTag = state.currentTags[i];
+            if (!e.tags.find((element) => element === currentTag)) { return false; }
+          }
+          return true;
+        });
+      }),
+    });
+
+    const addTag = (tag) => {
+      state.currentTags.push(tag);
+    };
+
+    const removeTag = (tag) => {
+      const index = state.currentTags.indexOf(tag);
+      state.currentTags.splice(index, 1);
+    };
+
+    return {
+      state, addTag, removeTag,
+    };
   },
 };
 </script>
@@ -40,4 +82,47 @@ export default {
 
     overflow: hidden;
   }
+
+  .cards__empty{
+    font-size:30px;
+    color:var(--text-color);
+  }
+
+  .tags{
+    display:flex;
+    flex-wrap:wrap;
+  }
+
+  .tag{
+    background-color:var(--highlight-color);
+    color:var(--text-color);
+    padding:5px;
+
+    flex:1;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    min-width:50px;
+    max-width:70px;
+
+    margin:0 10px;
+  }
+
+  .tag:hover{
+    background-color:var(--highlight-color-2);
+  }
+
+  .tag button{
+    background: none;
+    border:none;
+
+    color:var(--text-color);
+    cursor:pointer;
+
+    font-size:20px;
+    font-weight:bold;
+  }
+
 </style>

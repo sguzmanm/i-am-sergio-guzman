@@ -133,16 +133,8 @@ export default {
         text-align: center;
         text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
 
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-
         position: relative;
         padding: 7px 35px;
-        left: 40px;
-        top: -10px;
 
         -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
         -moz-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);

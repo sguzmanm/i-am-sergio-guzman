@@ -27,12 +27,18 @@ export default {
 .social {
   margin: 20px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  position:fixed;
+  left:0px;
+  top:calc(50vh - 100px);
+  margin:auto;
 }
 
 button.social__icon {
+  width:50px;
   padding: 20px 10px;
   margin: 0px 1px;
   font-size: 30px;

@@ -17,6 +17,7 @@
                 :cy="c.y"
                 :fill="c.fill"
                 :stroke="c.stroke"
+                @click="selectTag(c.title)"
             />
             <text
                 :dx="c.x-c.r/2"
@@ -36,6 +37,9 @@ const skillGroups = require('@/helpers/layout/skills.json');
 
 export default {
   name: 'PackChart',
+  props: {
+    addTag: Function,
+  },
   data() {
     return {
       msg: '👋 from the Chart Component',
@@ -50,6 +54,9 @@ export default {
       .range(['#5EAFC6', '#FE9922', '#93c464', '#75739F']);
   },
   methods: {
+    selectTag(tag) {
+      this.addTag(tag);
+    },
     packData(name, skills) {
       const packableTweets = { id: name, values: skills };
       return d3
@@ -90,6 +97,8 @@ export default {
     flex-direction:row;
 
     overflow-x: scroll;
+
+    scrollbar-color: var(--text-color) var(--highlight-color-2);
 }
 
 /* width */
@@ -106,12 +115,6 @@ export default {
 .chart::-webkit-scrollbar-thumb {
   background: var(--text-color);
 }
-
-/* Handle on hover */
-.chart::-webkit-scrollbar-thumb:hover {
-  background: var(--highlight-color);
-}
-
 
 .chart__item{
     flex:1;
