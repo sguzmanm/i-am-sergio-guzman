@@ -5,7 +5,7 @@
     </div>
 
     <div class="tags">
-      <div v-for="(tag,index) in state.currentTags" :key="index" class="tag">
+      <div v-for="(tag,index) in state.currentTags" :key="`${tag}_${index}`" class="tag">
         <p>{{tag}}</p>
         <button @click="removeTag(tag)">&times;</button>
       </div>
@@ -13,9 +13,9 @@
 
     <div class="cards">
         <div v-if="!state.currentWorks || state.currentWorks.length===0" class="cards__empty">
-          Remember I love learning new skills, it doesn´t mean that I always have works to show.
+          Remember I love learning new skills; it doesn´t mean that I always have works to show.
         </div>
-        <work-card v-for="(work,index) in state.currentWorks" :key="index" :work="work"/>
+        <work-card v-for="(work,index) in state.currentWorks" :key="`${work.title}_${index}`" :work="work"/>
     </div>
   </div>
 </template>
@@ -48,17 +48,23 @@ export default {
           return sortedWorks;
         }
 
-        return sortedWorks.filter((e) => {
+        const filteredWorks = sortedWorks.filter((e) => {
           for (let i = 0; i < state.currentTags.length; i += 1) {
             const currentTag = state.currentTags[i];
             if (!e.tags.find((element) => element === currentTag)) { return false; }
           }
           return true;
         });
+
+        console.log(filteredWorks);
+        return filteredWorks;
       }),
     });
 
     const addTag = (tag) => {
+      const index = state.currentTags.indexOf(tag);
+      if (index !== -1) { return; }
+
       state.currentTags.push(tag);
     };
 
@@ -86,11 +92,13 @@ export default {
   .cards__empty{
     font-size:30px;
     color:var(--text-color);
+    margin:30px;
   }
 
   .tags{
     display:flex;
     flex-wrap:wrap;
+    margin-top:15px;
   }
 
   .tag{
