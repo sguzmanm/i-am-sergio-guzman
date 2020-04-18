@@ -15,7 +15,8 @@
         <div v-if="!state.currentWorks || state.currentWorks.length===0" class="cards__empty">
           Remember I love learning new skills; it doesn´t mean that I always have works to show.
         </div>
-        <work-card v-for="(work,index) in state.currentWorks" :key="`${work.title}_${index}`" :work="work"/>
+        <work-card v-for="(work,index) in state.currentWorks" :key="`${work.title}_${index}`"
+          :work="work"/>
     </div>
   </div>
 </template>
