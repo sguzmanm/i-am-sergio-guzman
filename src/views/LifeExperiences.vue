@@ -1,6 +1,5 @@
 <template>
  <div class="life-experiences">
-   {{reactiveQuotes["Video Games"]}}
   <life-quote v-for="(quoteGroup,index) in Object.keys(reactiveQuotes)"
     :key="`${quoteGroup}_${index}`" :quote="reactiveQuotes[quoteGroup].content"
     :style="{flexDirection:index%2===0?'row':'row-reverse'}"
@@ -11,9 +10,9 @@
 
 <script>
 import { createNamespacedHelpers } from 'vuex-composition-helpers/dist';
+import { reactive } from '@vue/composition-api';
 
 import LifeQuote from '@/components/LifeExperiences/LifeQuote.vue';
-import { reactive } from '@vue/composition-api';
 
 export default {
   name: 'LifeExperiences',

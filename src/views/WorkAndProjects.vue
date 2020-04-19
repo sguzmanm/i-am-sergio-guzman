@@ -22,11 +22,11 @@
 </template>
 
 <script>
-import Chart from '@/components/WorkAndProjects/Chart.vue';
-import WorkCard from '@/components/WorkAndProjects/WorkCard.vue';
+import { createNamespacedHelpers } from 'vuex-composition-helpers/dist';
 import { reactive, computed } from '@vue/composition-api';
 
-const works = require('@/helpers/works/works.json');
+import Chart from '@/components/WorkAndProjects/Chart.vue';
+import WorkCard from '@/components/WorkAndProjects/WorkCard.vue';
 
 const compareWorks = (a, b) => {
   const dateA = a.endDate ? new Date(a.endDate) : new Date();
@@ -40,11 +40,21 @@ export default {
     Chart,
     WorkCard,
   },
-  setup() {
+  setup(props, { root }) {
+    const { useState, useActions } = createNamespacedHelpers(
+      root.$store,
+      'works',
+    );
+    const { works } = useState(['works']);
+
+    const { fetchWorks } = useActions(['fetchWorks']);
+    fetchWorks();
+
+
     const state = reactive({
       currentTags: [],
       currentWorks: computed(() => {
-        const sortedWorks = works.sort(compareWorks);
+        const sortedWorks = works.value.sort(compareWorks);
         if (state.currentTags.length === 0) {
           return sortedWorks;
         }
@@ -57,7 +67,6 @@ export default {
           return true;
         });
 
-        console.log(filteredWorks);
         return filteredWorks;
       }),
     });

@@ -5,7 +5,12 @@
         <p>{{quote.category}}</p>
       </div>
       <div class="life-quote__quote">
-          <p>{{quote.quote}}</p>
+          <p>
+            {{quote.quote}}
+            <a v-if="quote.link" :href="quote.link.url" target="__blank">
+              {{quote.link.name?quote.link.name:quote.link.url}}
+            </a>
+          </p>
           <div class="life-quote__arrows">
               <button @click="getPreviousQuote">&lt;</button>
               <button @click="getNextQuote">&gt;</button>
@@ -70,11 +75,20 @@ export default {
   font-size: 20px;
  }
 
+ .life-quote__quote a,.life-quote__quote a:visited {
+  color: var(--highlight-color);
+  font-weight: bold;
+ }
+
+ .life-quote__quote a:hover {
+  color: var(--highlight-color-2);
+ }
+
  .life-quote__arrows button{
   margin: 20px;
 
   color:var(--text-color);
-  font-size: 20px;
+  font-size: 40px;
   font-weight: bold;
 
   background: none;

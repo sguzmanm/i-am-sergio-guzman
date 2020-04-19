@@ -42,7 +42,7 @@ export default {
 }
 
 .panel a,
-a:visited {
+.panel a:visited {
   color: var(--highlight-color);
   font-weight: bold;
 }
