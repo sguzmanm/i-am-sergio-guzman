@@ -9,25 +9,23 @@ export const set = (state, lifeQuotes) => {
       content: quotes[index],
     };
   });
-
-  console.log('current state', state);
 };
 
 export const changeCurrent = (state, { category, isNext }) => {
   const currentData = state.currentQuotes[category];
-  console.log('Current data', currentData, category, state);
   if (!currentData) { return; }
 
   let index = isNext ? currentData.index + 1 : currentData.index - 1;
   const categorySize = state.quotes[category].length;
-  if (index < 0) { index = categorySize - 1; }
 
+  if (index < 0) { index = categorySize - 1; }
   if (index >= categorySize) { index = 0; }
 
-  state.currentQuotes[category] = {
+  const newQuotes = state.currentQuotes;
+  newQuotes[category] = {
     index,
     content: state.quotes[category][index],
   };
 
-  console.log('After change', state);
+  state.currentQuotes = { ...newQuotes };
 };
