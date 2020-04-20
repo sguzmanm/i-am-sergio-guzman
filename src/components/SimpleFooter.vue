@@ -26,7 +26,7 @@ const getFooterMessage = (currentRoute) => {
     case '/work-and-projects':
       return 'And these are my skills and projects, thank you for looking at them and if you have any doubt be sure to contact me.';
     case '/life-experiences':
-      return 'I chresih my life and all I´ve done more than anything.If you wanna talk about any of these things be sure to contact me.';
+      return 'I cherish my life and all I´ve done more than anything. If you wanna talk about any of these things be sure to contact me.';
     default:
       return defaultFooterMessage;
   }
@@ -50,7 +50,7 @@ export default {
 <style scoped>
 .footer{
   bottom:0;
-  width:100%;
+  width:90%;
 
   display:flex;
   justify-content: center;

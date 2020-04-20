@@ -79,8 +79,11 @@ export default {
  }
 
  .life-quote__image img,.life-quote__image p{
-  width:100%;
   margin:0;
+ }
+
+ .life-quote__image img{
+   max-height:200px;
  }
 
  .life-quote__image p{
@@ -88,6 +91,9 @@ export default {
     color:var(--text-color);
     padding:10px;
     font-weight:bold;
+    text-align:center;
+
+    width:100%;
  }
 
  .life-quote__quote{

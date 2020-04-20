@@ -13,7 +13,7 @@
       :faIcon="currentMood.faIcon"
     />
     <social-media />
-    <simple-footer/>
+    <simple-footer v-if="!isMainPage"/>
   </div>
 </template>
 
