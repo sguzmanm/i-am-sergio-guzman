@@ -13,6 +13,7 @@
       :faIcon="currentMood.faIcon"
     />
     <social-media />
+    <simple-footer/>
   </div>
 </template>
 
@@ -24,6 +25,7 @@ import { getCurrentMood } from '@/helpers/moods/moods';
 import NavBar from '@/components/NavBar.vue';
 import ProfilePicture from '@/components/ProfilePicture.vue';
 import SocialMedia from '@/components/SocialMedia.vue';
+import SimpleFooter from '@/components/SimpleFooter.vue';
 
 export default {
   setup(props, { root }) {
@@ -47,6 +49,7 @@ export default {
     NavBar,
     ProfilePicture,
     SocialMedia,
+    SimpleFooter,
   },
 };
 </script>

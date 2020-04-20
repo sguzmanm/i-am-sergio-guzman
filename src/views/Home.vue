@@ -2,8 +2,7 @@
   <div class="home">
     <div class="panel">
       <p>
-        Hello, I am
-        <a :href="`${publicPath}cv_latam.docx`">Sergio Guzmán Mayorga</a>,
+        Hello, I am Sergio Guzmán Mayorga,
         passionate SW Developer currently at {{ 'TRUORA INC' }}. You can find a
         lot of
         <router-link to="/work-and-projects">interesting projects</router-link>

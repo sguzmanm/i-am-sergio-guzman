@@ -1,13 +1,28 @@
 [
     {
-        "category": "Friends and Family",
+        "category": "Life lessons",
         "quote": "No matter how though you are, you always need someone to talk to",
         "image": "https://i.pinimg.com/originals/04/b1/32/04b132b363f7532a42ee479477d60133.jpg"
+    },
+    {
+        "category": "Life lessons",
+        "quote": "I´ll always help by friends, no matter if it means risking my life anyway",
+        "image": "https://www.kh13.com/uploads/monthly_2018_10/large.gallery_52074_2_190265.png.682498e83750e8a4b16d00e6db210803.png"
+    },
+    {
+        "category": "Life lessons",
+        "quote": "Talking about cold and chilling, I love Tibasosa, a small town in Boyacá, Colombia. The only place on erth where just being there renders my mind blank",
+        "image": "https://lh3.googleusercontent.com/fcksUQdA7NHOspKdjig3Tedh9-Jd5Mkf8EJbLG3E95ctK7EPXHQ_8aPn3zTlK04ZOSnk3g845So6TIkCav2J_1CXkE5QYHr9I8NwiAsMjbmdd-Bp4IZCppsD3n47-XS6qUJWQC7F8yHI6YWSuTrFbU8quIJBtx905d-AgyGgPUc1GysuoN_YQ2nFSd6sWzvGAQf_MkL1Hprt0bx9QYrjVhyHn0Y7ks_SO35VEpkzSB7k0zP6CdJv6r4IPR1oZs4Wuw_jGZwr36fXn0uGAulxzYRAYb_l1rOgRqjFOhxwBX_-CZfu7XaIPR3sxivGmmaumA04bOtzD6xYMiV3CjGzibEpc3q9NJdHp_8harkeOatHZ4FiXYaV8tVgMXdP6a2Pgr32DUKzHupOpsh0OpBtXz0Vw9Qzh6eBSYXg5k1UVlDgJneQ8nknwpgxF9Xxw63zVsxbjAx4P0WbHnEqaR9qGTwrhe9FfmCyJiJju5_ubWCtqjGV6oCkgSf_FaRcl0e6qrY1-5CdWyL8IAAUbDdqn9-dsl53KUcGFygFyZjQ0sS2O9bz9w3diAjeFMkLiJieXfekSrXSFgDrFMAJGQojpXy4S2gnMNOepsZbciC7MIreM6DTft9M58D_DswVZiPx24uLeZ8PV278E3Bk0_MD5LapR9HIQ3YIj6AY62LfVeesaTr1WROu2fNsy_N-5EX12IHwakEQjMdziurcnSPyGt7cDCeeAqRbOfmMmweuN3MxfP2Dq37jpf4=w1258-h943-no"
     },
     {
         "category": "Sports Life",
         "quote": "I wasn´t passionate for international soccer until the FIFA World Cup of 2014. Since then, favourite country Colombia (my land)",
         "image": "https://i.pinimg.com/originals/7c/bb/94/7cbb94734ed9a446a96b100994a28d05.jpg"
+    },
+    {
+        "category": "Sports Life",
+        "quote": "Favourite sport: basketball. Favourite player: Lebron James. Favourite number: 44 (My number in the Bogotá Basketball League School)",
+        "image": "data:image/png;base64,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"
     },
     {
         "category": "Music",
@@ -18,14 +33,36 @@
         }
     },
     {
+        "category": "Music",
+        "quote": "Metallica arrived on Bogota on November of 2016 and I was there to live it. First time they sang Atlas Rise live. Toooooop!",
+        "image": "https://static.wixstatic.com/media/150c1a_b627d06a7d914b8ea35d71cea22bed82~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+        "link": {
+            "url": "https://www.youtube.com/watch?v=kHOrR2XvEcU"
+        }
+    },
+    {
         "category": "Books",
-        "quote": "Best book from TLOTR, the Two Towers. The way tolkien depicted each story is magnificent :)",
+        "quote": "Best book from TLOTR, the Two Towers. The way Tolkien depicted each story is magnificent :)",
         "image": "https://pictures.abebooks.com/PICKABOOK/22596508016.jpg"
+    },
+    {
+        "category": "Books",
+        "quote": "I love detective stories; mostly Sherlock Holmes. The character and the way he solves mysteries with not only clues, but instinct and actions is phenomenal",
+        "image": "https://i.pinimg.com/originals/e7/b8/df/e7b8dfcca0a5383d99142f28b3a6f51d.jpg"
     },
     {
         "category": "Old School Games",
         "quote": "I used to reset my Crash Bandicoot game on PS1 to play with my cousins. Every death or completed level was a new turn. We could spend days doing that shit, even better when we didn´t have memory cards.",
         "image": "https://2.bp.blogspot.com/-vFzU506wbTg/V3hQwRMngYI/AAAAAAAAAGI/kIevFhKHfsQuUlaDt_IdZXwNr1y3mLLgACLcB/s1600/crash-bandicoot-coleccion.jpg"
+    },
+    {
+        "category": "Old School Games",
+        "quote": "I always tried to play YuGiOh! the Forbidden Memories and lost since I didn´t have a memory card nor cheat codes to play. It´s too complicated to learn fusions :/",
+        "image": "https://vignette.wikia.nocookie.net/yugiohenespanol/images/f/f6/Cover_forbidden_memories_%28ps%29.jpg/revision/latest/top-crop/width/360/height/450?cb=20111219224442&path-prefix=es",
+        "link": {
+            "url": "https://www.youtube.com/watch?v=FLCqm8z0EFY",
+            "name": "The music was on fire though"
+        }
     },
     {
         "category": "Video Games",
@@ -42,12 +79,26 @@
         "image": "https://assets.vg247.com/current//2010/08/fifa11_keyart_uk-492x600.jpg"
     },
     {
+        "category": "Video Games",
+        "quote": "I am only good on Mario Kart with one character... that´s right, Baby Mario :c",
+        "image": "https://lh3.googleusercontent.com/xtz2l14PiJV0BmLo66zl7UXlOJ7cjAS8PB8Y06-NtUVjI-pogstpXz7c48LJ7x5FX3P_kDaEOWPowhbf9HXlkdJHdTmGH2tjin1JfB8G9RQuLy_21Kp9LrgBzydHH0QMEkRFS6Id2pWVA3anOKZjWocX_GcUQhtkVp_-AD3ay3XDo-1aWCYL8jmkS32WoqSxFrBpMZOcZIHTEc-noiY5C3kYSr2b3h8ELNNlFyaHl-O3SU0uwhkLtTmHawVQ_FNgKP2qkF233IUIocvGAemeR96B9KAIQsuazBiRL8d1texs1y3-9zOrKN3wNDswkv7H9hPY2VFrQKTKP8VE5IeQyikSv4YemF-h16vdr1JhtHXaHieoEYwRBme-0wXk9pbbk3B1lEqH6yoBF2NxHrYL7lQitAox9Up6FkRRSvQQEPMulDwrRSgoMBj3nebA3M5whPcL6F6Wnvs3DBA93r4dKooffp_YAZImvYHRkNUV08jQ9AUn0g2Hw5Lc1WiZyCimPH7iHpSVnWu7BoPeoD6dVJGEe6TEKMSEsc17KWj5g2cKdBKimGXSrJW9LPGl9w-9PGvyCLNWUonILs78hlA1PZ8MsEC8aO0_2exTZQ4PwcTp9GeCwqvOgnxYEHvuniygXveEa1frOqDDgxaDjJBeueIf0Y-I72SC-LC2dlFB5OCfnkQKuVkgxAARF4GkIw=w1258-h943-no"
+    },
+    {
         "category": "Real-Life Series",
         "quote": "I don´t care what anybody says. Daredevil is the best series in Netflix.",
         "image": "https://www.elcinedeloqueyotediga.net/wp-content/uploads/2015/04/daredevil1.png",
         "link": {
             "name": "The hallway scene from season 1 sold me the whole series",
             "url": "https://www.youtube.com/watch?v=vV1Vzn6xwqQ"
+        }
+    },
+    {
+        "category": "Real-Life Series",
+        "quote": "Arya is the greatest character in Game Of Thrones. She deserved to kill the night king, you can´t change my mind",
+        "image": "https://vignette.wikia.nocookie.net/gameofthrones/images/0/08/House_Stark_banner.jpg/revision/latest/scale-to-width-down/340?cb=20110408162221",
+        "link": {
+            "name": "The pursuit made me an Arya believer...",
+            "url": "https://www.youtube.com/watch?v=-Y6dxUrVFhs"
         }
     },
     {
@@ -59,9 +110,12 @@
         }
     },
     {
-        "category": "Travel",
-        "quote": "Talking about cold and chilling, I love Tibasosa, a small town in Boyacá, Colombia. The only place on erth where just being there renders my mind blank",
-        "image": "https://lh3.googleusercontent.com/fcksUQdA7NHOspKdjig3Tedh9-Jd5Mkf8EJbLG3E95ctK7EPXHQ_8aPn3zTlK04ZOSnk3g845So6TIkCav2J_1CXkE5QYHr9I8NwiAsMjbmdd-Bp4IZCppsD3n47-XS6qUJWQC7F8yHI6YWSuTrFbU8quIJBtx905d-AgyGgPUc1GysuoN_YQ2nFSd6sWzvGAQf_MkL1Hprt0bx9QYrjVhyHn0Y7ks_SO35VEpkzSB7k0zP6CdJv6r4IPR1oZs4Wuw_jGZwr36fXn0uGAulxzYRAYb_l1rOgRqjFOhxwBX_-CZfu7XaIPR3sxivGmmaumA04bOtzD6xYMiV3CjGzibEpc3q9NJdHp_8harkeOatHZ4FiXYaV8tVgMXdP6a2Pgr32DUKzHupOpsh0OpBtXz0Vw9Qzh6eBSYXg5k1UVlDgJneQ8nknwpgxF9Xxw63zVsxbjAx4P0WbHnEqaR9qGTwrhe9FfmCyJiJju5_ubWCtqjGV6oCkgSf_FaRcl0e6qrY1-5CdWyL8IAAUbDdqn9-dsl53KUcGFygFyZjQ0sS2O9bz9w3diAjeFMkLiJieXfekSrXSFgDrFMAJGQojpXy4S2gnMNOepsZbciC7MIreM6DTft9M58D_DswVZiPx24uLeZ8PV278E3Bk0_MD5LapR9HIQ3YIj6AY62LfVeesaTr1WROu2fNsy_N-5EX12IHwakEQjMdziurcnSPyGt7cDCeeAqRbOfmMmweuN3MxfP2Dq37jpf4=w1258-h943-no"
+        "category": "Movies",
+        "quote": "Batman: The Dark Knight. Timeless classic. Cleanest performance. Best plot writing and villain. Best showcasing of batman on a live film to date... And Hans Zimmer as the main composer",
+        "image": "https://pics.filmaffinity.com/El_caballero_oscuro-102763119-large.jpg",
+        "link": {
+            "url": "https://www.youtube.com/watch?v=w1B3Mgklfd0"
+        }
     },
     {
         "category": "Comics",
@@ -73,11 +127,29 @@
         }
     },
     {
+        "category": "Comics",
+        "quote": "Favourite hero: Spiderman. It´s not his strength or powers, it´s his heart and will to protect everything that matters to him. Also his games, movies and series are over the top, ",
+        "image": "https://lh3.googleusercontent.com/qtQ-d9FdVY4vc69pmqYIrd2rQL7Moydix1wIweDP_45sOqbdXaQr8mdGmU50N6c85yZE1z0P4BBDRErtAako3_aJ-YHmNCYtROoYwRlnsHcVarL5DKEUJ7Mdj9GC5gXEU4lVu_ZaerPn6lXRREbtgUqD-_LDJ9950G3QE4rEn0W3cr8k6rW8moQfdKK_vywcj_ELrK6amSHpoxGuo6lSHy6776BPs3xKupj7WDXyIS6eBmgKUEE2JRbLLsLSOIH8nj5BiSS9ZFzq3Tn6LIps3X5fHbE6GYsCB6Y8luSYeITZfxTMnh5vdJqvEokItedQCnLkPoBf9d6V568UZHBFG71SzuYvavdnH1PmiX7wxj6PXNcaPIOjno_RhRXSg0wwn-opBse6sjjs9NJErZf4BlZUD5qdCo6wbUMwIcovqWx9EK1r8wghMCcwS0qde_X_QSn7bYFpaOwQLvwhKf4BLgXLLrUYUtGizevczqBoz1bhFA5VfGkF8rTaBnjaZXo6K50GFePZHN5QPyailf5M2eZn8RNmd8yHWqdM-9bCly931fj0MvvLOsS4pdnUm6f95P-JCddAuet3AHaQSyTZ-KEvC5uohrsG_Q2Ehcs_xk8VO6t_Y_C11egGMF4WCAMnb5YH17FqFPKtKj24hlAVUvYM_EbvCywJ3bY1c_hShu3lRw2hphWvlJnzWl85eg=w708-h943-no",
+        "link": {
+            "name": "mostly his themes",
+            "url": "https://www.youtube.com/watch?v=TxtvogVepSg"
+        }
+    },
+    {
         "category": "Anime",
         "quote": "Goku is the hero that got me into anime. The fighting, animation, comedy, world stakes and transformations made me keep going through every series, every single one of them. And mostly the super saiyan 1 will always have a special place on my heart",
-        "image": "PONER IMG DE TODAS LAS TRANF DE GOKU",
+        "image": "https://lh3.googleusercontent.com/24fElL5G83hZLDqNrwymsE1m_hE8vc3sqWS58JhDo4kT1FCnzZ-Hmb62cZGuCWxZ3KAPqh8HX8Kx2fnd4yj01H_ntJDrmDm9kexbDYIvDhyTjIYF8BKD5d8AvSgcyC02RUxmQcSpF0i4b_Sr0fOKpiH07koXgE2dozp3R8peuSN_o1P9kF_6Y9eVRs2lP25QykztA0QN7G8BGa_mKhxExdKQdOsKECsbED58gPwmHaQqaOEEGs9SgtldXMNRm4yzFTI9FusbvZrDaFdAiz5I5IMLeEh4HKVU_cWw2F8B0Dgz6IJkxUYvqgURlWqS7IMY0w6ZcIY-VbSW5JWExZp2umSl7SmIwo8ejrDXoyTf-rp5a1YeFCq9ckRwWbU_wX_WZs65gElrsyw8bd494y9o-tGIXPz2xT_fEe3lk1gThdFFWzAiRl9mAcTFcj4oCvC6Vq6lJGIiNIAoZYbfOIMLvM_wDssUK6Q_Cm6nU0nLGcDuNiWy7ooWEYFQHxi6aqr2IPOwda2TY-HnUd_Pq-xSxfDBYIEDrliGFgn1GcpO3B20Ko12bKHE9nsE3V0cuqMIsMIcLExrr7C-59j_zIInATzU_jRnXimzfRcVAunk-MXGREcZGR5jKrbhDGeZiEFBDkxnM8SepSdXOC2eGOOz1NFlqrWEbpQRv_auByUYy29QC19USSdDNhhDEqIN4w=w1258-h943-no",
         "link": {
             "url": "https://www.youtube.com/watch?v=4st_ygFPxWM"
+        }
+    },
+    {
+        "category": "Anime",
+        "quote": "I didn´t watch Bleach till I was 18 years old. I was so naive to all I was missing :/. Just amazing story. And Aizen as a villain is too much. The best planner, strongest and ... just",
+        "image": "https://quotetheanime.com/wp-content/uploads/2019/11/Bleach-Quotes.-Aizen-Sosuke-Quote.-no-one-has-ever-stood-in-the-heavens.-Quote-The-Anime.-768x768.jpg",
+        "link": {
+            "url": "https://www.youtube.com/watch?v=5tP8_onP0Js&t=6s",
+            "name": "look at him slaying every hero at the same time"
         }
     }
 ]

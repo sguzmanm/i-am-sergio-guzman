@@ -1,5 +1,7 @@
 <template>
-  <div class="life-quote">
+  <div class="life-quote"
+    :style="{flexDirection:isRight?'row':'row-reverse'}"
+    v-animate.repeat.fade="isRight?'slide-from-left':'slide-from-right'">
       <div class="life-quote__image">
         <img :src="quote.image" :alt="`Image for ${quote.category} experience`"/>
         <p>{{quote.category}}</p>
@@ -26,11 +28,34 @@ export default {
     quote: Object,
     getPreviousQuote: Function,
     getNextQuote: Function,
+    isRight: Boolean,
   },
 };
 </script>
 
-<style>
+<style scoped>
+
+.animate {
+  transition-delay: .1s;
+  transition-duration: .25s;
+  transition-timing-function: ease-in;
+}
+
+.slide-from-left {
+  transform: translateX(-100px);
+  opacity:0;
+}
+
+.slide-from-right {
+  transform: translateX(100px);
+  opacity:0;
+}
+
+.slide-from-left.animate-active,.slide-from-right.animate-active {
+  transform: translateX(0px);
+  opacity:1;
+}
+
 
  .life-quote{
      background-color: var(--background-color);

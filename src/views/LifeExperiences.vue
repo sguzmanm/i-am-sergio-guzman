@@ -2,7 +2,7 @@
  <div class="life-experiences">
   <life-quote v-for="(quoteGroup,index) in Object.keys(reactiveQuotes)"
     :key="`${quoteGroup}_${index}`" :quote="reactiveQuotes[quoteGroup].content"
-    :style="{flexDirection:index%2===0?'row':'row-reverse'}"
+    :isRight="index%2===0"
     :getPreviousQuote="()=>previousQuote(quoteGroup)"
     :getNextQuote="()=>nextQuote(quoteGroup)"/>
  </div>
@@ -48,5 +48,6 @@ export default {
 <style scoped>
 .life-experiences{
   padding:30px;
+  overflow-x:hidden;
 }
 </style>
