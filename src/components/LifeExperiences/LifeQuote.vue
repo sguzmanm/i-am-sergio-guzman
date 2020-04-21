@@ -37,7 +37,6 @@ export default {
     const currentWidth = ref(window.innerWidth);
     window.addEventListener('resize', () => {
       // check width
-      console.log('WIDTH', window.innerWidth);
       currentWidth.value = window.innerWidth;
     });
 
@@ -82,17 +81,17 @@ export default {
 }
 
 
- .life-quote{
-    background-color: var(--background-color);
-    border: solid 1px var(--text-color);
-    border-radius:5px;
+.life-quote{
+  background-color: var(--background-color);
+  border: solid 1px var(--text-color);
+  border-radius:5px;
 
-    padding: 10px;
-    margin: 15px 0;
-    display:flex;
- }
+  padding: 10px;
+  margin: 15px 0;
+  display:flex;
+}
 
- .life-quote__image{
+.life-quote__image{
   flex:1;
   border-radius: 50%;
   border-collapse: separate;
@@ -101,27 +100,27 @@ export default {
   display:flex;
   flex-direction: column;
   align-items: center;
- }
+}
 
- .life-quote__image img,.life-quote__image p{
+.life-quote__image img,.life-quote__image p{
   margin:0;
- }
+}
 
- .life-quote__image img{
-   max-height:200px;
- }
+.life-quote__image img{
+  max-height:200px;
+}
 
- .life-quote__image p{
-    background-color: var(--highlight-color);
-    color:var(--text-color);
-    padding:10px;
-    font-weight:bold;
-    text-align:center;
+.life-quote__image p{
+  background-color: var(--highlight-color);
+  color:var(--text-color);
+  padding:10px;
+  font-weight:bold;
+  text-align:center;
 
-    width:100%;
- }
+  width:100%;
+}
 
- .life-quote__quote{
+.life-quote__quote{
   flex:4;
   display:flex;
   justify-content: center;
@@ -129,22 +128,22 @@ export default {
   flex-direction: column;
 
   font-size: 20px;
- }
+}
 
- .life-quote__quote p{
+.life-quote__quote p{
   width:100%;
- }
+}
 
- .life-quote__quote a,.life-quote__quote a:visited {
+.life-quote__quote a,.life-quote__quote a:visited {
   color: var(--highlight-color);
   font-weight: bold;
- }
+}
 
- .life-quote__quote a:hover {
+.life-quote__quote a:hover {
   color: var(--highlight-color-2);
- }
+}
 
- .life-quote__arrows button{
+.life-quote__arrows button{
   margin: 20px;
 
   color:var(--text-color);
@@ -154,33 +153,33 @@ export default {
   background: none;
   border:none;
   cursor:pointer;
- }
+}
 
-  @media (max-width: 700px) {
-     .life-quote__image{
-      border-radius: 50%;
-      border-collapse: separate;
-      margin:5px 20px;
+@media (max-width: 700px) {
+  .life-quote__image{
+    border-radius: 50%;
+    border-collapse: separate;
+    margin:5px 20px;
 
-      flex:1;
-    }
-
-     .life-quote__image img{
-        max-width:300px;
-        max-height: none;
-      }
-
-    .life-quote__quote{
-      flex:1;
-    }
-
+    flex:1;
   }
 
-   @media (max-width: 380px) {
-     .life-quote__image img{
-        max-width:150px;
-        max-height: none;
-      }
-
+  .life-quote__image img{
+    max-height: 300px;
+    max-width: 100%;
   }
+
+  .life-quote__quote{
+    flex:1;
+  }
+
+}
+
+  @media (max-width: 380px) {
+    .life-quote__image img{
+      max-height:200px;
+      max-width:100%;
+    }
+
+}
 </style>
