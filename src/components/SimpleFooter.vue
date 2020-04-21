@@ -56,6 +56,7 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 
   margin-top: 15px;
   padding: 5px 30px;

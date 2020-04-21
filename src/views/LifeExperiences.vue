@@ -50,4 +50,10 @@ export default {
   padding:30px;
   overflow-x:hidden;
 }
+
+@media (max-width: 700px) {
+  .life-experiences{
+      padding:0px;
+  }
+}
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="life-quote"
-    :style="{flexDirection:isRight?'row':'row-reverse'}"
+    :style="{flexDirection:currentDirection}"
     v-animate.repeat.fade="isRight?'slide-from-left':'slide-from-right'">
       <div class="life-quote__image">
         <img :src="quote.image" :alt="`Image for ${quote.category} experience`"/>
@@ -22,6 +22,9 @@
 </template>
 
 <script>
+import { ref, computed } from '@vue/composition-api';
+
+const cardMobileWidth = 700;
 export default {
   name: 'LifeQuote',
   props: {
@@ -30,11 +33,33 @@ export default {
     getNextQuote: Function,
     isRight: Boolean,
   },
+  setup(context, props) {
+    const currentWidth = ref(window.innerWidth);
+    window.addEventListener('resize', () => {
+      // check width
+      console.log('WIDTH', window.innerWidth);
+      currentWidth.value = window.innerWidth;
+    });
+
+
+    const currentDirection = computed(() => {
+      console.log('Current width', currentWidth.value);
+      if (currentWidth.value <= cardMobileWidth) {
+        return 'column';
+      }
+
+      if (props.isRight) {
+        return 'row';
+      }
+
+      return 'row-reverse';
+    });
+    return { currentWidth, currentDirection };
+  },
 };
 </script>
 
 <style scoped>
-
 .animate {
   transition-delay: .1s;
   transition-duration: .25s;
@@ -58,13 +83,13 @@ export default {
 
 
  .life-quote{
-     background-color: var(--background-color);
-     border: solid 1px var(--text-color);
-     border-radius:5px;
+    background-color: var(--background-color);
+    border: solid 1px var(--text-color);
+    border-radius:5px;
 
-     padding: 10px;
-     margin: 15px 0;
-     display:flex;
+    padding: 10px;
+    margin: 15px 0;
+    display:flex;
  }
 
  .life-quote__image{
@@ -106,6 +131,10 @@ export default {
   font-size: 20px;
  }
 
+ .life-quote__quote p{
+  width:100%;
+ }
+
  .life-quote__quote a,.life-quote__quote a:visited {
   color: var(--highlight-color);
   font-weight: bold;
@@ -127,4 +156,31 @@ export default {
   cursor:pointer;
  }
 
+  @media (max-width: 700px) {
+     .life-quote__image{
+      border-radius: 50%;
+      border-collapse: separate;
+      margin:5px 20px;
+
+      flex:1;
+    }
+
+     .life-quote__image img{
+        max-width:300px;
+        max-height: none;
+      }
+
+    .life-quote__quote{
+      flex:1;
+    }
+
+  }
+
+   @media (max-width: 380px) {
+     .life-quote__image img{
+        max-width:150px;
+        max-height: none;
+      }
+
+  }
 </style>
