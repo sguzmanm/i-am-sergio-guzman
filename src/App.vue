@@ -78,4 +78,16 @@ body {
   height: 100%;
   overflow-y: auto;
 }
+
+@media (max-width: 700px) {
+  #app{
+    padding-right:0px;
+  }
+}
+
+@media (max-width: 500px) {
+  #app {
+    padding-bottom:130px;
+  }
+}
 </style>

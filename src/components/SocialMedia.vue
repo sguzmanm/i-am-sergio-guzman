@@ -53,4 +53,10 @@ button.social__icon:hover {
   color: var(--text-color);
   background-color: var(--highlight-color);
 }
+
+@media (max-width: 500px) {
+  .social {
+    top:calc(33vh - 100px);
+  }
+}
 </style>

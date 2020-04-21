@@ -1,5 +1,5 @@
 <template>
-    <div class="nav" v-if="!isMainPage">
+    <div class="nav">
       <div class="nav__container right">
         <router-link class="nav__regular" to="/work-and-projects" exact>Work and projects</router-link>
       </div>
@@ -36,6 +36,8 @@ export default {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+
+  width:100%;
 }
 
 .nav__container{
@@ -43,8 +45,7 @@ export default {
 }
 
 .nav__regular {
-  font-weight: bold;
-  padding: 20px;
+  padding:20px;
   border-radius:10%;
 
   color: var(--highlight-color);
@@ -70,6 +71,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width:100%;
 }
 
 .nav__profile img {
@@ -103,6 +105,44 @@ export default {
 
 .left{
     text-align: left;
+}
+
+@media (max-width: 700px) {
+  .nav__container{
+    flex:1;
+    font-size: 15px;
+  }
+
+  .nav__profile{
+    flex:1;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav{
+    position:fixed;
+    bottom:0;
+    left:0;
+    margin:auto;
+    text-align:center;
+
+    z-index:1;
+    background-color:var(--background-color);
+  }
+
+  .nav__container{
+    flex:1;
+    font-size: 15px;
+  }
+
+  .nav__profile{
+    flex:1;
+  }
+
+  .nav__regular{
+    display:block;
+    padding: 5px;
+  }
 }
 
 </style>

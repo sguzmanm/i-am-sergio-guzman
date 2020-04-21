@@ -29,5 +29,6 @@ export default {
 
     .media,video,img{
         max-height:25vh;
+        width:100%;
     }
 </style>

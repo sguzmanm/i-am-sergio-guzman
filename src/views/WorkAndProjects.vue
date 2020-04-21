@@ -123,9 +123,9 @@ export default {
     align-items: flex-start;
 
     min-width:50px;
-    max-width:70px;
+    max-width:100px;
 
-    margin:0 10px;
+    margin:10px;
   }
 
   .tag:hover{
@@ -141,6 +141,22 @@ export default {
 
     font-size:20px;
     font-weight:bold;
+  }
+
+  @media (max-width: 700px) {
+    .cards{
+      flex-wrap: nowrap;
+      flex-direction: column;
+
+      width: 100%;
+    }
+
+    .tag{
+      min-width:none;
+      max-width:none;
+          flex: 1 0 calc(40% - 10px);
+
+    }
   }
 
 </style>

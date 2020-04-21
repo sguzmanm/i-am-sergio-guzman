@@ -83,4 +83,10 @@ export default {
 .footer a:hover {
   color: var(--highlight-color-2);
 }
+
+@media (max-width: 500px) {
+  .footer {
+    width:none;
+  }
+}
 </style>
