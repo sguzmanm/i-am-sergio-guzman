@@ -49,4 +49,24 @@ export default {
 .panel a:hover {
   color: var(--highlight-color-2);
 }
+
+@media (max-width: 700px) {
+  .panel{
+    padding:0;
+  }
+
+  .panel p{
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 380px) {
+  .panel{
+    padding:0;
+  }
+
+  .panel p{
+    font-size: 25px;
+  }
+}
 </style>
