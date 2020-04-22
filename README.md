@@ -63,3 +63,7 @@ And later
 ## MIT License
 
 This project is public with the "MIT License", which you can find here: https://github.com/sguzmanm/i-am-sergio-guzman/blob/master/LICENSE
+
+
+## Coolest logo ever
+https://www.linkedin.com/in/lina-marcela-ruiz-mayorga-5b4827192

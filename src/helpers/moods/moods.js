@@ -1,12 +1,8 @@
-const moods = require('./moods.json');
-
 const { MOODS_KEY, getItem, setItem } = require('../localStorage');
 
 const HOUR_SPLIT = ':';
 
-const getMinutes = (timeString) =>
-  parseInt(timeString[0], 10) * 60 + parseInt(timeString[1], 10);
-const defaultMood = moods[0];
+const getMinutes = (timeString) => parseInt(timeString[0], 10) * 60 + parseInt(timeString[1], 10);
 
 const dateIsInCurrentMood = (mood, currentDate) => {
   console.log(mood);
@@ -24,8 +20,8 @@ const dateIsInCurrentMood = (mood, currentDate) => {
 
   console.log(startTime, currentTime, endTime);
   if (
-    getMinutes(startTime) > currentTime ||
-    getMinutes(endTime) < currentTime
+    getMinutes(startTime) > currentTime
+    || getMinutes(endTime) < currentTime
   ) {
     return false;
   }
@@ -33,7 +29,8 @@ const dateIsInCurrentMood = (mood, currentDate) => {
   return true;
 };
 
-module.exports.getCurrentMood = () => {
+module.exports.getCurrentMood = (moods) => {
+  console.log('MOODS', moods);
   // Check local storage
   let currentMood = getItem(MOODS_KEY);
   if (currentMood) {
@@ -42,8 +39,7 @@ module.exports.getCurrentMood = () => {
 
   // Look in file
   const currentDate = new Date();
-  currentMood =
-    moods.find((el) => dateIsInCurrentMood(el, currentDate)) || defaultMood;
+  currentMood = moods.find((el) => dateIsInCurrentMood(el, currentDate)) || moods[0];
   setItem(MOODS_KEY, currentMood);
 
   console.log('STORE', currentMood);

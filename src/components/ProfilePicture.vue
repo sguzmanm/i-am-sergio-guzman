@@ -1,8 +1,7 @@
 <template>
   <div class="profile">
-    <button>
+    <button @click="showMoods">
       <i :class="faIcon"></i>
-      <!-- uses solid style -->
     </button>
     <img :src="`${require('@/assets/' + profilePic)}`" />
   </div>
@@ -12,6 +11,7 @@
 export default {
   name: 'ProfilePicture',
   props: {
+    showMoods: Function,
     profilePic: String,
     faIcon: String,
   },

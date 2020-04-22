@@ -4,7 +4,7 @@
         <router-link class="nav__regular" to="/work-and-projects" exact>Work and projects</router-link>
       </div>
       <div class="nav__profile">
-          <button>
+          <button @click="showMoods">
             <i :class="faIcon"></i>
           </button>
           <router-link to="/">
@@ -21,6 +21,7 @@
 export default {
   name: 'NavBar',
   props: {
+    showMoods: Function,
     profilePic: String,
     faIcon: String,
   },
