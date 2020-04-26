@@ -9,7 +9,7 @@
       <div class="card__item card__org"
         v-for="organization in work.organizations" :key="`${work.title}_${organization.name}`">
           <div class="card__img">
-            <img :src="organization.logo" :alt="`Company logo for ${organization.name}`"/>
+            <img :src="organization.logo" loading="lazy" :alt="`Company logo for ${organization.name}`"/>
           </div>
           <p>{{organization.name}}</p>
       </div>

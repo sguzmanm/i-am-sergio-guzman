@@ -1,7 +1,7 @@
 <template>
   <div class="profile">
     <button @click="showMoods">
-      <i :class="faIcon"></i>
+      <i :class="faIcon"></i> Change
     </button>
     <img :src="`${require('@/assets/profile-pics/' + profilePic)}`" />
   </div>
@@ -39,10 +39,16 @@ export default {
   padding: 5px 20px;
   font-size: 30px;
 
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+
   background-color: var(--highlight-color-2);
   color: var(--background-color);
   border: none;
-  border-radius: 50% 50% 0 0;
+  border-radius: 15px;
   cursor: pointer;
 }
 
@@ -53,5 +59,9 @@ export default {
 
   color: var(--text-color);
   background-color: var(--highlight-color);
+}
+
+.profile i{
+  margin:0 5px;
 }
 </style>

@@ -30,7 +30,6 @@ export default {
     fetchQuotes();
 
     const nextQuote = (category) => {
-      console.log('NRxt');
       changeCurrentQuote({ category, isNext: true });
     };
     const previousQuote = (category) => {

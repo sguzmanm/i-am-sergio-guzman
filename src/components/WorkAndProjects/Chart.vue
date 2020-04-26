@@ -1,16 +1,18 @@
 <template>
-  <div class="chart">
-    <div class="chart__item" v-for="(skillGroup,index) in skillGroups" :key="index">
-        <h2>
-            {{skillGroup.name}}
-        </h2>
-        <svg
-            :height='height'
-            :width='width'
-        >
+  <div class="chart" ref="chartContainer">
+    <div class="chart__item"
+      v-for="(skillGroup,index) in skillGroups" :key="index">
+      <h2>
+          {{skillGroup.name}}
+      </h2>
+      <svg
+          :height='height'
+          :width='width'
+      >
         <g v-for="c in calculateGraph(skillGroup.name, skillGroup.skills)"
-            class="skill"
-            :key="c.id">
+          ref="skillChart"
+          class="skill"
+          :key="c.id">
             <circle
                 :r="c.r"
                 :cx="c.x"
@@ -19,13 +21,13 @@
                 :stroke="c.stroke"
                 @click="selectTag(c.title)"
             />
-            <text
+            <text v-if="c.r"
                 :dx="c.x-c.r/2"
                 :dy="c.y">
                 {{c.title}}
             </text>
         </g>
-        </svg>
+      </svg>
     </div>
   </div>
 </template>
@@ -43,8 +45,8 @@ export default {
   data() {
     return {
       msg: '👋 from the Chart Component',
-      height: 400,
-      width: 450,
+      height: 300,
+      width: 350,
       skillGroups,
     };
   },
@@ -52,15 +54,39 @@ export default {
     this.colourScale = d3
       .scaleOrdinal()
       .range(['#5EAFC6', '#FE9922', '#93c464', '#75739F']);
+
+    window.onresize = () => {
+      if (!this.$refs.chartContainer || !this.$refs.chartContainer.clientWidth) {
+        return;
+      }
+
+      const targetWidth = this.$refs.chartContainer.clientWidth;
+      const chartsPerScreen = this.calculateCharts(targetWidth);
+      const aspect = this.width / this.height;
+
+      this.width = targetWidth / chartsPerScreen;
+      this.height = Math.round(targetWidth / (aspect * chartsPerScreen));
+    };
   },
   methods: {
+    calculateCharts(width) {
+      if (width < 500) {
+        return 1;
+      }
+
+      if (width < 700) {
+        return 2;
+      }
+
+      return 3;
+    },
     selectTag(tag) {
       this.addTag(tag);
     },
     packData(name, skills) {
-      const packableTweets = { id: name, values: skills };
+      const packableSkills = { id: name, values: skills };
       return d3
-        .hierarchy(packableTweets, (d) => d.values)
+        .hierarchy(packableSkills, (d) => d.values)
         .sum((d) => (d.level ? d.level : 1));
     },
     calculateGraph(name, skills) { // Create data for d3 graph
@@ -101,20 +127,6 @@ export default {
     scrollbar-color: var(--text-color) var(--highlight-color-2);
 }
 
-/* width */
-.chart::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-.chart::-webkit-scrollbar-track {
-  background: var(--highlight-color-2);
-}
-
-/* Handle */
-.chart::-webkit-scrollbar-thumb {
-  background: var(--text-color);
-}
 
 .chart__item{
     flex:1;

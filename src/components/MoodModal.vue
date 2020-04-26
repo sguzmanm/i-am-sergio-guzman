@@ -1,6 +1,7 @@
 <template>
     <div class="modal">
       <div class="modal__backdrop"/>
+      <div class="modal__wrapper">
         <div class="modal__content">
             <div class="modal__close">
                 <button @click="()=>hideModal()">&times;</button>
@@ -18,6 +19,7 @@
                 </div>
             </div>
         </div>
+      </div>
     </div>
 </template>
 
@@ -64,18 +66,23 @@ export default {
   justify-content: center;
 }
 
-.modal__content{
-  margin:auto;
+.modal__wrapper{
+  display:flex;
+  position:absolute;
+  top:0;
+  left:0;
   z-index:2;
 
-  width: auto;
-  position: fixed;
-  top: 35%;
-  left: 35%;
-  margin-top: -100px;
-  margin-left: -150px;
+  justify-content: center;
+  align-items: center;
+
+  width:100vw;
+  height: 100vh;
+}
+
+.modal__content{
   border-radius: 5px;
-  text-align: center;
+  max-width: 50%;
 
   background-color:var(--text-color);
 }
@@ -118,6 +125,7 @@ export default {
 
 .mood{
   display:flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 
@@ -150,6 +158,20 @@ export default {
 
 .mood > button:hover{
   background: var(--highlight-color-2);
+}
+
+@media (max-width: 700px) {
+  .modal__content{
+    max-width: 100%;
+  }
+
+  .mood{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding:15px 30px;
+  }
 }
 
 </style>

@@ -3,7 +3,7 @@
     :style="{flexDirection:currentDirection}"
     v-animate.repeat.fade="isRight?'slide-from-left':'slide-from-right'">
       <div class="life-quote__image">
-        <img :src="quote.image" :alt="`Image for ${quote.category} experience`"/>
+        <img loading="lazy" :src="quote.image" :alt="`Image for ${quote.category} experience`"/>
         <p>{{quote.category}}</p>
       </div>
       <div class="life-quote__quote">

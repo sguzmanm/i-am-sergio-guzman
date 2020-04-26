@@ -5,11 +5,9 @@ const HOUR_SPLIT = ':';
 const getMinutes = (timeString) => parseInt(timeString[0], 10) * 60 + parseInt(timeString[1], 10);
 
 const dateIsInCurrentMood = (mood, currentDate) => {
-  console.log(mood);
   const startDate = mood.startDate ? new Date(mood.startDate) : currentDate;
   const endDate = mood.endDate ? new Date(mood.endDate) : currentDate;
 
-  console.log(startDate, currentDate, endDate);
   if (startDate > currentDate || endDate < currentDate) {
     return false;
   }
@@ -18,7 +16,6 @@ const dateIsInCurrentMood = (mood, currentDate) => {
   const endTime = mood.endTime.split(HOUR_SPLIT);
   const currentTime = currentDate.getHours() * 60 + currentDate.getMinutes();
 
-  console.log(startTime, currentTime, endTime);
   if (
     getMinutes(startTime) > currentTime
     || getMinutes(endTime) < currentTime
@@ -30,7 +27,6 @@ const dateIsInCurrentMood = (mood, currentDate) => {
 };
 
 module.exports.getCurrentMood = (moods) => {
-  console.log('MOODS', moods);
   // Check local storage
   let currentMood = getItem(MOODS_KEY);
   if (currentMood) {
@@ -42,6 +38,5 @@ module.exports.getCurrentMood = (moods) => {
   currentMood = moods.find((el) => dateIsInCurrentMood(el, currentDate)) || moods[0];
   setItem(MOODS_KEY, currentMood);
 
-  console.log('STORE', currentMood);
   return currentMood;
 };
