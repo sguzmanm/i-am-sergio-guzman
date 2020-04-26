@@ -33,7 +33,7 @@ export default {
     getNextQuote: Function,
     isRight: Boolean,
   },
-  setup(context, props) {
+  setup(props) {
     const currentWidth = ref(window.innerWidth);
     window.addEventListener('resize', () => {
       // check width
@@ -42,7 +42,6 @@ export default {
 
 
     const currentDirection = computed(() => {
-      console.log('Current width', currentWidth.value);
       if (currentWidth.value <= cardMobileWidth) {
         return 'column';
       }

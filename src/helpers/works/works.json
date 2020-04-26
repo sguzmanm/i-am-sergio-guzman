@@ -15,7 +15,10 @@
     "links": {
       "demo": "https://www.kongregate.com/games/SergioG482/box-shooter-student-development"
     },
-    "tags": ["C#", "Unity"]
+    "tags": [
+      "C#",
+      "Unity"
+    ]
   },
   {
     "title": "Roller Madness",
@@ -33,7 +36,10 @@
     "links": {
       "demo": "https://www.kongregate.com/games/SergioG482/roller-madness-student-project"
     },
-    "tags": ["C#", "Unity"]
+    "tags": [
+      "C#",
+      "Unity"
+    ]
   },
   {
     "title": "Interest groups",
@@ -47,7 +53,11 @@
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/University_of_Los_Andes_logo.svg/243px-University_of_Los_Andes_logo.svg.png"
       }
     ],
-    "tags": ["Java", "JS", "MySQL"]
+    "tags": [
+      "Java",
+      "JS",
+      "MySQL"
+    ]
   },
   {
     "title": "IoT lock architecture contest Yale",
@@ -69,7 +79,13 @@
     "links": {
       "code": "https://github.com/sguzmanm/201810_02_pipo"
     },
-    "tags": ["Python", "Java", "Mosquitto MQTT", "Redis", "MongoDB"]
+    "tags": [
+      "Python",
+      "Java",
+      "Mosquitto MQTT",
+      "Redis",
+      "MongoDB"
+    ]
   },
   {
     "title": "Research assistance on UnaCloud",
@@ -112,7 +128,11 @@
     "links": {
       "demo": "https://www.facebook.com/IngElectricayElectronicaUniandes/videos/1959330727435255/?t=1858"
     },
-    "tags": ["Python", "React Native", "VS Code"]
+    "tags": [
+      "Python",
+      "React Native",
+      "VS Code"
+    ]
   },
   {
     "title": "3R: Datos Abiertos DC Hackathon Colombia",
@@ -130,7 +150,11 @@
     "links": {
       "demo": "https://www.facebook.com/IngElectricayElectronicaUniandes/videos/1959330727435255/?t=1858"
     },
-    "tags": ["Python", "Firebase Cloud Firestore", "VS Code"]
+    "tags": [
+      "Python",
+      "Firebase Cloud Firestore",
+      "VS Code"
+    ]
   },
   {
     "title": "Senehack: Y4PT Transport Hackathon",
@@ -148,7 +172,12 @@
     "links": {
       "code": "https://github.com/Jularenas/SeneHack"
     },
-    "tags": ["Python", "Firebase Cloud Firestore", "Vue", "VS Code"]
+    "tags": [
+      "Python",
+      "Firebase Cloud Firestore",
+      "Vue",
+      "VS Code"
+    ]
   },
   {
     "title": "Indoor Location inside Universidad De Los Andes",
@@ -166,7 +195,11 @@
     "links": {
       "code": "https://github.com/sguzmanm/Andes"
     },
-    "tags": ["Android Studio", "Java", "Firebase Cloud Firestore"]
+    "tags": [
+      "Android Studio",
+      "Java",
+      "Firebase Cloud Firestore"
+    ]
   },
   {
     "title": "Gaucher Awareness website Colombia",
@@ -184,7 +217,13 @@
     "links": {
       "demo": "https://www.enfermedaddegaucher.com.co/"
     },
-    "tags": ["React", "JS", "CSS", "HTML", "VS Code"]
+    "tags": [
+      "React",
+      "JS",
+      "CSS",
+      "HTML",
+      "VS Code"
+    ]
   },
   {
     "title": "Know HAE website Colombia",
@@ -202,7 +241,12 @@
     "links": {
       "demo": "http://www.pienseaeh.com/index.html"
     },
-    "tags": ["JS", "CSS", "HTML", "VS Code"]
+    "tags": [
+      "JS",
+      "CSS",
+      "HTML",
+      "VS Code"
+    ]
   },
   {
     "title": "Fabry website Colombia, Perú and Ecuador",
@@ -220,7 +264,13 @@
     "links": {
       "demo": "https://www.enfermedaddefabry.com.co/"
     },
-    "tags": ["JS", "CSS", "HTML", "Vue", "VS Code"]
+    "tags": [
+      "JS",
+      "CSS",
+      "HTML",
+      "Vue",
+      "VS Code"
+    ]
   },
   {
     "title": "Bogotá Botanical Garden Android app",
@@ -398,7 +448,14 @@
     "links": {
       "company": "https://www.truora.com/"
     },
-    "tags": ["Amazon Lambda", "AWS", "Golang", "Vue", "VueX", "VS Code"]
+    "tags": [
+      "Amazon Lambda",
+      "AWS",
+      "Golang",
+      "Vue",
+      "VueX",
+      "VS Code"
+    ]
   },
   {
     "title": "Inception... I am Sergio Guzmán",
@@ -416,6 +473,13 @@
       "code": "https://github.com/sguzmanm/i-am-sergio-guzman",
       "demo": "https://sguzmanm.github.io/i-am-sergio-guzman/"
     },
-    "tags": ["Vue", "VueX", "HTML", "CSS", "JS", "VS Code"]
+    "tags": [
+      "Vue",
+      "VueX",
+      "HTML",
+      "CSS",
+      "JS",
+      "VS Code"
+    ]
   }
 ]

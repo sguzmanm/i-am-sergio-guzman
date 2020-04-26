@@ -30,5 +30,6 @@ export default {
     .media,video,img{
         max-height:25vh;
         width:auto;
+        max-width: 100%;
     }
 </style>

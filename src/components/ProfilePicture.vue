@@ -3,7 +3,7 @@
     <button @click="showMoods">
       <i :class="faIcon"></i>
     </button>
-    <img :src="`${require('@/assets/' + profilePic)}`" />
+    <img :src="`${require('@/assets/profile-pics/' + profilePic)}`" />
   </div>
 </template>
 

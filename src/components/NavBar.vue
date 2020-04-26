@@ -8,7 +8,7 @@
             <i :class="faIcon"></i>
           </button>
           <router-link to="/">
-            <img :src="`${require('@/assets/' + profilePic)}`" />
+            <img :src="`${require('@/assets/profile-pics/' + profilePic)}`" />
           </router-link>
       </div>
       <div class="nav__container left">

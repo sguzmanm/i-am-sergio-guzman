@@ -117,7 +117,7 @@ export default {
 
 .card__img{
     border-radius: 50%;
-    background-color: var(--text-color);
+    background-color: white;
     width: 10%;
     padding:20px;
     margin:10px;
