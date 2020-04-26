@@ -26,8 +26,8 @@
     "faIcon": "fas fa-code",
     "textColor": "#242423",
     "backgroundColor": "#CFDBD5",
-    "highlightColor1": "#333533",
-    "highlightColor2": "#E8EDDF",
+    "highlightColor1": "#70587C",
+    "highlightColor2": "#502F4C",
     "profilePic": "profile-pic-work.jpg",
     "startTime": "10:00",
     "endTime": "18:00"
@@ -35,10 +35,10 @@
   {
     "title": "Nature lover",
     "faIcon": "fas fa-leaf",
-    "textColor": "#25A18E",
-    "backgroundColor": "#7AE582",
-    "highlightColor1": "#004E64",
-    "highlightColor2": "#00A5CF",
+    "textColor": "#345918",
+    "backgroundColor": "#C6CF7A",
+    "highlightColor1": "#7DA62E",
+    "highlightColor2": "#EFF0C1",
     "profilePic": "profile-pic-nature-lover.jpg",
     "startTime": "10:00",
     "endTime": "18:00"

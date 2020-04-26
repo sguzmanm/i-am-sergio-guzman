@@ -1,12 +1,12 @@
 <template>
   <div class="media">
       <video v-if="media.includes('.mp4')" muted loop autoplay>
-            <source :src="`${require('@/assets/' + media)}`"
+            <source loading="lazy" :src="`${require('@/assets/' + media)}`"
                     type="video/mp4">
 
             Sorry, your browser doesn't support embedded videos.
         </video>
-        <img v-else :src="`${require('@/assets/' + media)}`" :alt="'Demo image for '+alt"/>
+        <img v-else loading="lazy" :src="`${require('@/assets/' + media)}`" :alt="'Demo image for '+alt"/>
   </div>
 
 

@@ -5,7 +5,7 @@
       </div>
       <div class="nav__profile">
           <button @click="showMoods">
-            <i :class="faIcon"></i>
+            <i :class="faIcon"></i> Change
           </button>
           <router-link to="/">
             <img :src="`${require('@/assets/profile-pics/' + profilePic)}`" />
@@ -48,9 +48,9 @@ export default {
 .nav__regular {
   padding:20px;
   border-radius:10%;
+  border: 1px solid var(--highlight-color);
 
   color: var(--highlight-color);
-  text-decoration: none;
 }
 
 .nav__regular:hover {
@@ -88,16 +88,25 @@ export default {
   padding: 5px 20px;
   font-size: 20px;
 
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
   background-color: var(--highlight-color-2);
   color: var(--background-color);
   border: none;
-  border-radius: 50% 50% 0 0;
+  border-radius: 15px;
   cursor: pointer;
 }
 
 .nav__profile button:hover {
   color: var(--text-color);
   background-color: var(--highlight-color);
+}
+
+.nav__profile i{
+  margin:0 5px;
 }
 
 .right{
@@ -116,6 +125,12 @@ export default {
 
   .nav__profile{
     flex:1;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav__regular{
+    padding: 10px;
   }
 }
 
