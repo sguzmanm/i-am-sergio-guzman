@@ -1,50 +1,50 @@
 # Web page: I am Sergio Guzmán
 
-"I am Sergio Guzmán" is a webpage project for the Web Development class @ Uniandes (Fall 2019), to showcase my skills as a software developer to anyone that is interested. It has my work experience, hobbies, skills, contact information and previous projects.
+"I am Sergio Guzmán" is a webpage project to showcase my software development experience and what I love about life. It has my work experience, hobbies, skills, contact information and previous projects.
 
 ## Goal and technologies
 
-The aim for this project is to show employees and work partners (previous, current and/or future) what I have done and what are my skills in software development. In order to accomplish this, I created a static webpage using standard web technologies (HTML5,CSS3 and vanilla JS) and Bootstrap. Bootstrap helps with the responsiveness of the website with its 12 column grid and adaptable navigation bar.
+The aim for this project is to show employees and work partners (previous, current and/or future) what I have done and what are my skills in software development. For this, I create a web project with Vue JS as a framework, including VueX (State management), Vue Composition API (lifecycles) and Vue Router. 
 
-As a cool feature, depending on the current hour of your browser you will see a different design for the webpage. You can also change this with the @Change moods@ functionality close to the profile picture.
+As a cool feature, depending on the current hour of your browser you will see a different design for the webpage. You can also change this with the @Change moods@ functionality close to the profile picture (Handling of CSS vars). 
 
 ## How to run
 
-Since it is a static webpage you can either:
-
-- Open the index.html file on your browser of choice (Mozilla firefox for this particular project).
-- Run a local server (http-server,lite-server,reload,etc).
-- Deploy in a public/private server (Web Server for Chrome, Firebase, Github pages, etc).
-
-I personally tested this page using "reload". Make sure you have npm setup and type this on a terminal to install "reload":
-
-```
-npm install -g reload
-```
-
-When its finished, go to the project root and type:
-
-```
-reload
-```
-
-### Linting
-
-You can also check the linting of the project. By default I used eslint. To install it type at the root of the project:
-
+First of all install it
 ```
 npm install
 ```
 
-And later
+And then you are ready to go with a regular production serve: 
 
 ```
-./node_modules/.bin/eslint js/
+npm run serve
 ```
+
+Or with a hot reload on staging:
+```
+npm run serve:staging
+```
+
+Finally for building it to deploy on a static server use:
+```
+npm run build
+```
+
+This will generate a dist/ folder for you to upload to any static server. In here I used a CI with Heroku so that everytime there is a successful deploy on master the webpage is updated.
+
 
 ## Authors
 
 - Sergio Guzmán Mayorga: https://github.com/sguzmanm
+
+## Colaborators
+
+### Lina Ruiz: For the coolest logo ever
+- LinkedIn: https://www.linkedin.com/in/lina-marcela-ruiz-mayorga-5b4827192
+![WebPage logo dark](./preview/logo-dark.svg "WebPage logo dark")
+![WebPage logo white](./preview/logo-white.svg "WebPage logo white")
+
 
 ## Project
 
@@ -54,16 +54,11 @@ And later
 
 ### Home
 
-![Home page image](./preview/home.png "Home page")
+![Home page image](./preview/i-am-sergio-guzman.png "Home page")
 
-### Experience
-
-![Experience page image](./preview/experience.png "Experience page image")
 
 ## MIT License
 
 This project is public with the "MIT License", which you can find here: https://github.com/sguzmanm/i-am-sergio-guzman/blob/master/LICENSE
 
 
-## Coolest logo ever
-https://www.linkedin.com/in/lina-marcela-ruiz-mayorga-5b4827192

@@ -1,6 +1,6 @@
 <template>
     <div class="modal">
-      <div class="modal__backdrop"/>
+      <div class="modal__backdrop" @click="()=>hideModal()"/>
       <div class="modal__wrapper">
         <div class="modal__content">
             <div class="modal__close">
