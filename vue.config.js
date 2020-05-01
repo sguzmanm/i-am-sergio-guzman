@@ -1,7 +1,6 @@
 // vue.config.js
 module.exports = {
   lintOnSave: true,
-  publicPath: '/i-am-sergio-guzman/',
   devServer: {
     disableHostCheck: true,
   },
