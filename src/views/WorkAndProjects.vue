@@ -55,7 +55,7 @@ export default {
     const { fetchWorks } = useActions(['fetchWorks']);
     fetchWorks();
 
-    const maxWorks = 9;
+    const maxWorks = 6;
 
     const state = reactive({
       currentPage: 1,

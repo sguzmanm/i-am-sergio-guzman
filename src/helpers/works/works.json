@@ -77,6 +77,7 @@
       }
     ],
     "links": {
+      "demo": "https://sistemas.uniandes.edu.co/es/inicio/noticias/item/1047-estudiantes-del-disc-ganan-en-concurso-de-yale-assa-abloy-colombia",
       "code": "https://github.com/sguzmanm/201810_02_pipo"
     },
     "tags": [
@@ -322,7 +323,8 @@
       "JS",
       "HTML",
       "CSS",
-      "VS Code"
+      "VS Code",
+      "Heroku"
     ]
   },
   {
@@ -350,7 +352,8 @@
       "JS",
       "HTML",
       "CSS",
-      "VS Code"
+      "VS Code",
+      "Heroku"
     ]
   },
   {
@@ -378,7 +381,8 @@
       "JS",
       "HTML",
       "CSS",
-      "VS Code"
+      "VS Code",
+      "Heroku"
     ]
   },
   {
@@ -474,7 +478,7 @@
     ],
     "links": {
       "code": "https://github.com/sguzmanm/i-am-sergio-guzman",
-      "demo": "https://sguzmanm.github.io/i-am-sergio-guzman/"
+      "demo": "https://i-am-sergio-guzman.herokuapp.com/"
     },
     "tags": [
       "Vue",
@@ -482,7 +486,8 @@
       "HTML",
       "CSS",
       "JS",
-      "VS Code"
+      "VS Code",
+      "Heroku"
     ]
   }
 ]
