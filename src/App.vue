@@ -27,7 +27,7 @@ import { ref } from '@vue/composition-api';
 import { createNamespacedHelpers } from 'vuex-composition-helpers/dist';
 import { getCurrentMood } from '@/helpers/moods/moods';
 
-import NavBar from '@/components/NavBar.vue';
+import NavBar from '@/components/Navigation/NavBar.vue';
 import ProfilePicture from '@/components/ProfilePicture.vue';
 import SocialMedia from '@/components/SocialMedia.vue';
 import SimpleFooter from '@/components/SimpleFooter.vue';

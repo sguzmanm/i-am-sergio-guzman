@@ -12,12 +12,14 @@
     </div>
 
     <div class="cards">
-        <div v-if="!state.currentWorks || state.currentWorks.length===0" class="cards__empty">
+        <div v-if="!state.filteredWorks || state.filteredWorks.length===0" class="cards__empty">
           Remember I love learning new skills; it doesn´t mean that I always have works to show.
         </div>
-        <work-card v-for="(work,index) in state.currentWorks" :key="`${work.title}_${index}`"
+        <work-card v-for="(work,index) in state.filteredWorks" :key="`${work.title}_${index}`"
           :work="work"/>
     </div>
+    <pagination :backAction="getPrevPage" :nextAction="getNextPage" :goToAction="goToPage"
+      :currentPage="state.currentPage" :maxPages="5"/>
   </div>
 </template>
 
@@ -27,6 +29,7 @@ import { reactive, computed } from '@vue/composition-api';
 
 import Chart from '@/components/WorkAndProjects/Chart.vue';
 import WorkCard from '@/components/WorkAndProjects/WorkCard.vue';
+import Pagination from '@/components/Navigation/Pagination.vue';
 
 const compareWorks = (a, b) => {
   const dateA = a.endDate ? new Date(a.endDate) : new Date();
@@ -39,6 +42,7 @@ export default {
   components: {
     Chart,
     WorkCard,
+    Pagination,
   },
   setup(props, { root }) {
     const { useState, useActions } = createNamespacedHelpers(
@@ -50,8 +54,10 @@ export default {
     const { fetchWorks } = useActions(['fetchWorks']);
     fetchWorks();
 
+    const maxWorks = 2;
 
     const state = reactive({
+      currentPage: 1,
       currentTags: [],
       currentWorks: computed(() => {
         const sortedWorks = works.value.sort(compareWorks);
@@ -69,7 +75,21 @@ export default {
 
         return filteredWorks;
       }),
+      filteredWorks: computed(() => state.currentWorks.splice(maxWorks * (state.currentPage - 1), 2)),
+      maxPages: computed(() => state.currentWorks.length),
     });
+
+    const getPrevPage = () => {
+      state.currentPage -= 1;
+    };
+
+    const getNextPage = () => {
+      state.currentPage += 1;
+    };
+
+    const goToPage = (page) => {
+      state.currentPage = page;
+    };
 
     const addTag = (tag) => {
       const index = state.currentTags.indexOf(tag);
@@ -84,7 +104,7 @@ export default {
     };
 
     return {
-      state, addTag, removeTag,
+      state, addTag, removeTag, getPrevPage, getNextPage, goToPage,
     };
   },
 };
