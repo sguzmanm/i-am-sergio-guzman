@@ -64,4 +64,16 @@ export default {
 .profile i{
   margin:0 5px;
 }
+
+@media (max-width: 300px) {
+  .profile img{
+    width:100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .profile img{
+    width:60%;
+  }
+}
 </style>
