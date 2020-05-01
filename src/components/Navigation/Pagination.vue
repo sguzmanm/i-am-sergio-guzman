@@ -33,18 +33,14 @@ export default {
     const pages = computed(() => {
       const [currentPage, maxPages] = [props.currentPage, props.maxPages];
       const resultPages = [currentPage];
-      console.log(currentWidth.value > 500);
       const maxNavPages = currentWidth.value > 500 ? 5 : 1;
 
       let i = 1;
       let isAdded;
 
-      console.log('GET PAGES');
-
       while (resultPages.length < maxNavPages) {
         isAdded = false;
 
-        console.log(currentPage, i);
         if (currentPage - i > 0) {
           resultPages.unshift(currentPage - i);
           isAdded = true;

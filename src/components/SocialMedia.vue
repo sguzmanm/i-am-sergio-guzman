@@ -1,6 +1,7 @@
 <template>
   <div class="social">
-      <a :href="item.link" v-for="(item, index) in socialMedia" :key="index">
+      <a v-for="(item, index) in socialMedia" :key="index"
+        :href="item.link" target="__black">
         <button class="social__icon">
           <i :class="item.icon"></i>
         </button>

@@ -2,7 +2,7 @@
     <div class="footer">
       <p>{{message}} <a v-if="isProfessionalRoute"
         :href="`${publicPath}cv_latam.docx`">
-        This is is my CV if you need it
+        This is my CV if you need it
       </a></p>
       <!--Logo made by Lina Ruiz https://www.linkedin.com/in/lina-marcela-ruiz-mayorga-5b4827192 -->
       <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="101.785mm" height="97.1435mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"

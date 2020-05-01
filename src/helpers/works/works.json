@@ -5,7 +5,7 @@
     "endDate": "06/06/2017",
     "status": "college",
     "media": "boxshooter.mp4",
-    "description": "First person shooter demo for course of Introduction to Game Development of Michigan State University (It can take up to 10 min to fully load hehe)",
+    "description": "First person shooter demo for course of Introduction to Game Development of Michigan State University (It can take up to 10 min to fully load, hehe)",
     "organizations": [
       {
         "name": "Michigan State University",
@@ -26,7 +26,7 @@
     "endDate": "06/06/2017",
     "status": "college",
     "media": "rollermadness.mp4",
-    "description": "3D platformer demo for course of Introduction to Game Development of Michigan State University (It can take up to 10 min to fully load hehe)",
+    "description": "3D platformer demo for course of Introduction to Game Development of Michigan State University (It can take up to 10 min to fully load, hehe)",
     "organizations": [
       {
         "name": "Michigan State University",
@@ -359,7 +359,7 @@
     "endDate": "01/01/2020",
     "status": "personal",
     "media": "academical-reborn.mp4",
-    "description": "Web app to help students plan their schedule with different subject from Unviersidad de Los Andes. It started as an event planner and then was modified for doing the above purpose. Sadly it wasn´t used as expected and it was decided to leave it like this",
+    "description": "Web app to help students plan their schedule with different subjects from Unviersidad de Los Andes. It started as an event planner and then was modified for doing the above purpose. Sadly it wasn´t used as expected and it was decided to leave it like this",
     "organizations": [
       {
         "name": "Universidad de Los Andes",

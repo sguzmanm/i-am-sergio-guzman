@@ -11,7 +11,7 @@
       </div>
     </div>
 
-    <div class="cards">
+    <div class="cards" ref="cardsRef"  >
         <div v-if="!state.filteredWorks || state.filteredWorks.length===0" class="cards__empty">
           Remember I love learning new skills; it doesn´t mean that I always have works to show.
         </div>
@@ -19,13 +19,15 @@
           :work="work"/>
     </div>
     <pagination :backAction="getPrevPage" :nextAction="getNextPage" :goToAction="goToPage"
-      :currentPage="state.currentPage" :maxPages="5"/>
+      :currentPage="state.currentPage" :maxPages="state.currentWorks.length/maxWorks"/>
   </div>
 </template>
 
 <script>
 import { createNamespacedHelpers } from 'vuex-composition-helpers/dist';
-import { reactive, computed } from '@vue/composition-api';
+import {
+  reactive, computed, ref,
+} from '@vue/composition-api';
 
 import Chart from '@/components/WorkAndProjects/Chart.vue';
 import WorkCard from '@/components/WorkAndProjects/WorkCard.vue';
@@ -36,7 +38,6 @@ const compareWorks = (a, b) => {
   const dateB = b.endDate ? new Date(b.startDate) : new Date();
   return dateB - dateA;
 };
-
 
 export default {
   components: {
@@ -54,7 +55,7 @@ export default {
     const { fetchWorks } = useActions(['fetchWorks']);
     fetchWorks();
 
-    const maxWorks = 2;
+    const maxWorks = 9;
 
     const state = reactive({
       currentPage: 1,
@@ -75,19 +76,27 @@ export default {
 
         return filteredWorks;
       }),
-      filteredWorks: computed(() => state.currentWorks.splice(maxWorks * (state.currentPage - 1), 2)),
+      filteredWorks: computed(() => {
+        const startIndex = maxWorks * (state.currentPage - 1);
+        return state.currentWorks.slice(startIndex, startIndex + maxWorks);
+      }),
       maxPages: computed(() => state.currentWorks.length),
     });
 
+    const cardsRef = ref(null);
+
     const getPrevPage = () => {
+      window.scrollTo(cardsRef.value.offsetLeft, cardsRef.value.offsetTop);
       state.currentPage -= 1;
     };
 
     const getNextPage = () => {
+      window.scrollTo(cardsRef.value.offsetLeft, cardsRef.value.offsetTop);
       state.currentPage += 1;
     };
 
     const goToPage = (page) => {
+      window.scrollTo(cardsRef.value.offsetLeft, cardsRef.value.offsetTop);
       state.currentPage = page;
     };
 
@@ -104,7 +113,7 @@ export default {
     };
 
     return {
-      state, addTag, removeTag, getPrevPage, getNextPage, goToPage,
+      state, cardsRef, addTag, removeTag, getPrevPage, getNextPage, goToPage, maxWorks,
     };
   },
 };
