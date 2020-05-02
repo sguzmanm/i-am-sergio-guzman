@@ -126,7 +126,7 @@ export default {
 .mood{
   display:flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   padding:15px 30px;
@@ -135,7 +135,7 @@ export default {
 .mood > div{
   display:flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   font-size:30px;
