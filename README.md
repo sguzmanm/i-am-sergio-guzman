@@ -42,7 +42,6 @@ This will generate a dist/ folder for you to upload to any static server. In her
 
 ### Lina Ruiz: For the coolest logo ever
 - LinkedIn: https://www.linkedin.com/in/lina-marcela-ruiz-mayorga-5b4827192
-![WebPage logo dark](./preview/logo-dark.svg "WebPage logo dark")
 ![WebPage logo white](./preview/logo-white.svg "WebPage logo white")
 
 
