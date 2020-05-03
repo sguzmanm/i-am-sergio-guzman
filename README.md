@@ -6,7 +6,9 @@
 
 The aim for this project is to show employees and work partners (previous, current and/or future) what I have done and what are my skills in software development. For this, I create a web project with Vue JS as a framework, including VueX (State management), Vue Composition API (lifecycles) and Vue Router. 
 
-As a cool feature, depending on the current hour of your browser you will see a different design for the webpage. You can also change this with the @Change moods@ functionality close to the profile picture (Handling of CSS vars). 
+As a cool feature, depending on the current hour of your browser you will see a different design for the webpage. You can also change this with the "Change moods" functionality close to the profile picture (Handling of CSS vars). 
+
+Finally for animations I used vue-animate-scroll and CSS trnasitions.
 
 ## How to run
 
