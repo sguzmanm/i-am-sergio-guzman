@@ -95,6 +95,8 @@ body {
 @media (max-width: 500px) {
   #app {
     padding-bottom:150px;
+    padding-left:0;
+    padding-right:0;
   }
 }
 </style>

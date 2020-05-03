@@ -132,6 +132,7 @@
     "tags": [
       "Python",
       "React Native",
+      "Firebase Firestore",
       "VS Code"
     ]
   },
@@ -153,7 +154,7 @@
     },
     "tags": [
       "Python",
-      "Firebase Cloud Firestore",
+      "Firebase Firestore",
       "VS Code"
     ]
   },
@@ -362,7 +363,7 @@
     "endDate": "01/01/2020",
     "status": "personal",
     "media": "academical-reborn.mp4",
-    "description": "Web app to help students plan their schedule with different subjects from Unviersidad de Los Andes. It started as an event planner and then was modified for doing the above purpose. Sadly it wasn´t used as expected and it was decided to leave it like this",
+    "description": "Web app to help students plan their schedule with different subjects from Universidad de Los Andes. It started as an event planner and then was modified for doing the above purpose. Sadly it wasn´t used as expected and it was decided to leave it like this",
     "organizations": [
       {
         "name": "Universidad de Los Andes",

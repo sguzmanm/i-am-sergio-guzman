@@ -4,14 +4,14 @@
       <chart :addTag="addTag" />
     </div>
 
-    <div class="tags">
+    <div class="tags" ref="tagsRef">
       <div v-for="(tag,index) in state.currentTags" :key="`${tag}_${index}`" class="tag">
         <p>{{tag}}</p>
         <button @click="removeTag(tag)">&times;</button>
       </div>
     </div>
 
-    <div class="cards" ref="cardsRef"  >
+    <div class="cards">
         <div v-if="!state.filteredWorks || state.filteredWorks.length===0" class="cards__empty">
           Remember I love learning new skills; it doesn´t mean that I always have works to show.
         </div>
@@ -83,20 +83,20 @@ export default {
       maxPages: computed(() => state.currentWorks.length),
     });
 
-    const cardsRef = ref(null);
+    const tagsRef = ref(null);
 
     const getPrevPage = () => {
-      window.scrollTo(cardsRef.value.offsetLeft, cardsRef.value.offsetTop);
+      window.scrollTo(tagsRef.value.offsetLeft, tagsRef.value.offsetTop);
       state.currentPage -= 1;
     };
 
     const getNextPage = () => {
-      window.scrollTo(cardsRef.value.offsetLeft, cardsRef.value.offsetTop);
+      window.scrollTo(tagsRef.value.offsetLeft, tagsRef.value.offsetTop);
       state.currentPage += 1;
     };
 
     const goToPage = (page) => {
-      window.scrollTo(cardsRef.value.offsetLeft, cardsRef.value.offsetTop);
+      window.scrollTo(tagsRef.value.offsetLeft, tagsRef.value.offsetTop);
       state.currentPage = page;
     };
 
@@ -113,7 +113,7 @@ export default {
     };
 
     return {
-      state, cardsRef, addTag, removeTag, getPrevPage, getNextPage, goToPage, maxWorks,
+      state, tagsRef, addTag, removeTag, getPrevPage, getNextPage, goToPage, maxWorks,
     };
   },
 };

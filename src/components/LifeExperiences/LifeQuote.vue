@@ -170,6 +170,7 @@ export default {
 
   .life-quote__quote{
     flex:1;
+    flex-direction: column-reverse;
   }
 
 }
