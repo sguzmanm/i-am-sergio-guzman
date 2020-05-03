@@ -38,7 +38,7 @@ This will generate a dist/ folder for you to upload to any static server. In her
 
 - Sergio Guzmán Mayorga: https://github.com/sguzmanm
 
-## Colaborators
+## Collaborators
 
 ### Lina Ruiz: For the coolest logo ever
 - LinkedIn: https://www.linkedin.com/in/lina-marcela-ruiz-mayorga-5b4827192
