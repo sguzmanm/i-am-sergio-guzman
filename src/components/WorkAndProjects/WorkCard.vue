@@ -1,7 +1,7 @@
 <template>
   <div class="card">
-      <div class="card__item card__header">
-          <p>{{work.title}} ( {{workDate}} )</p>
+      <div class="card__header">
+          <h3>{{work.title}} ( {{workDate}} )</h3>
           <div class="card__status" :style="{backgroundColor:`var(${statusColor})`}">
               {{work.status}}
           </div>
@@ -93,9 +93,9 @@ export default {
   justify-content: center;
 
   flex: 1 0 calc(25% - 10px);
-  background-color: var(--background-color);
-  border: 2px solid var(--text-color);
-  color: var(--text-color);
+  background-color: var(--card-color);
+  border-radius:15px;
+  color: var(--background-color);
 
   margin: 20px;
   padding:20px;
@@ -117,7 +117,16 @@ export default {
 }
 
 .card__header{
-    justify-content: space-between;
+  display:flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card__header h3{
+  font-size:25px;
 }
 
 .card__org{
@@ -149,7 +158,7 @@ export default {
 }
 
 .card__img img,.card__full_img img{
-  width: 80%;
+  width: 70%;
 }
 
 .card__status{

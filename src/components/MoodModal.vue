@@ -148,16 +148,17 @@ export default {
 
 .mood > button{
   color: var(--background-color);
-  background: var(--highlight-color);
+  background: var(--highlight-color-2);
   border:none;
   cursor:pointer;
 
-  padding:10px 15px;
+  padding: 5px 20px;
   font-size: 20px;
+  border-radius: 15px;
 }
 
 .mood > button:hover{
-  background: var(--highlight-color-2);
+  background: var(--highlight-color);
 }
 
 @media (max-width: 700px) {

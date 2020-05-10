@@ -3,6 +3,7 @@ export const cssVars = {
   backgroundColor: '--background-color',
   highlightColor1: '--highlight-color',
   highlightColor2: '--highlight-color-2',
+  cardColor: '--card-color',
 };
 
 export const setCurrentStyle = (mood) => {

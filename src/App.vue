@@ -75,8 +75,12 @@ body {
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Lato', sans-serif;
   padding: 20px 50px;
+}
+
+#app h1,#app h2,#app h3,#app h4,#app h5,#app h6{
+  font-family: 'Roboto Slab', serif;
 }
 
 #router-view {
