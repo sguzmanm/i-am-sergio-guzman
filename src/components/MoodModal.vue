@@ -7,7 +7,7 @@
                 <button @click="()=>hideModal()">&times;</button>
             </div>
             <div class="modal__header">
-                Select my mood
+                Change my mood
             </div>
             <div class="modal__body">
                 <div class="mood" v-for="(mood,index) in moods" :key="index">

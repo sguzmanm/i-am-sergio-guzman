@@ -1,7 +1,7 @@
 <template>
   <div class="profile">
     <button @click="showMoods">
-      <i :class="faIcon"></i> Change
+      <i :class="faIcon"></i> Change my mood
     </button>
     <img :src="`${require('@/assets/profile-pics/' + profilePic)}`" />
   </div>
@@ -37,7 +37,7 @@ export default {
   z-index: 1;
 
   padding: 5px 20px;
-  font-size: 30px;
+  font-size: 20px;
 
   display:flex;
   flex-direction: row;
