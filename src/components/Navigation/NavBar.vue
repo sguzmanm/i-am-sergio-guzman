@@ -5,7 +5,7 @@
       </div>
       <div class="nav__profile">
           <button @click="showMoods">
-            <i :class="faIcon"></i> Change
+            <i :class="faIcon"></i> Change my mood
           </button>
           <router-link to="/">
             <img :src="`${require('@/assets/profile-pics/' + profilePic)}`" />
@@ -86,7 +86,7 @@ export default {
   z-index: 1;
 
   padding: 5px 20px;
-  font-size: 20px;
+  font-size: 15px;
 
   display:flex;
   flex-direction: row;
