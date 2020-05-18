@@ -46,7 +46,7 @@ export default {
     return {
       msg: '👋 from the Chart Component',
       height: 300,
-      width: 350,
+      width: 300,
       skillGroups,
     };
   },
@@ -71,14 +71,14 @@ export default {
   methods: {
     calculateCharts(width) {
       if (width < 500) {
-        return 1;
+        return 1.2;
       }
 
       if (width < 700) {
-        return 2;
+        return 2.2;
       }
 
-      return 3;
+      return 4.2;
     },
     selectTag(tag) {
       this.addTag(tag);
@@ -123,7 +123,6 @@ export default {
     flex-direction:row;
 
     overflow-x: scroll;
-
     scrollbar-color: var(--text-color) var(--highlight-color-2);
 }
 
