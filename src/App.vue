@@ -1,19 +1,20 @@
 <template>
-  <div id="app">
+  <div id="app" :class="{'full-screen':isMainPage}">
     <nav-bar
       v-if="!isMainPage"
       :showMoods="()=>showMoods=true"
       :profilePic="currentMood.profilePic"
       :faIcon="currentMood.faIcon"
     />
-    <router-view id="router-view" />
-    <!--Bottom Components-->
+
     <profile-picture
       v-if="isMainPage"
       :showMoods="()=>showMoods=true"
       :profilePic="currentMood.profilePic"
       :faIcon="currentMood.faIcon"
     />
+    <router-view id="router-view" />
+    <!--Bottom Components-->
     <social-media />
     <simple-footer v-if="!isMainPage"/>
 
@@ -77,6 +78,17 @@ body {
 #app {
   font-family: 'Lato', sans-serif;
   padding: 20px 50px;
+
+  overflow-y: auto;
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#app.full-screen{
+  height:100%;
 }
 
 #app h1,#app h2,#app h3,#app h4,#app h5,#app h6{
@@ -87,12 +99,18 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  overflow-y: auto;
+  width:100%;
+  overflow-y:auto;
 }
 
 @media (max-width: 700px) {
   #app{
-    padding-right:0px;
+    padding:0px;
+  }
+
+  #app.full-screen{
+    width:100%;
+    height:100%;
   }
 }
 

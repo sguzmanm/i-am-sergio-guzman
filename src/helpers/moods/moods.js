@@ -5,16 +5,18 @@ const HOUR_SPLIT = ':';
 const getMinutes = (timeString) => parseInt(timeString[0], 10) * 60 + parseInt(timeString[1], 10);
 
 const dateIsInCurrentMood = (mood, currentDate) => {
-  const startDate = mood.startDate ? new Date(mood.startDate) : currentDate;
-  const endDate = mood.endDate ? new Date(mood.endDate) : currentDate;
+  const currentDateAdjusted = currentDate;
+  currentDateAdjusted.setHours(currentDate.getHours + new Date().getTimezoneOffset() - (-5)); // TODO: Change this when timezone is fixed on back
+  const startDate = mood.startDate ? new Date(mood.startDate) : currentDateAdjusted;
+  const endDate = mood.endDate ? new Date(mood.endDate) : currentDateAdjusted;
 
-  if (startDate > currentDate || endDate < currentDate) {
+  if (startDate > currentDateAdjusted || endDate < currentDateAdjusted) {
     return false;
   }
 
   const startTime = mood.startTime.split(HOUR_SPLIT);
   const endTime = mood.endTime.split(HOUR_SPLIT);
-  const currentTime = currentDate.getHours() * 60 + currentDate.getMinutes();
+  const currentTime = currentDateAdjusted.getHours() * 60 + currentDateAdjusted.getMinutes();
 
   if (
     getMinutes(startTime) > currentTime

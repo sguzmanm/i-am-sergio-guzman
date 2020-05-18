@@ -93,7 +93,7 @@ button.social__icon:hover {
   opacity:1;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .social {
     top:calc(33vh - 100px);
 

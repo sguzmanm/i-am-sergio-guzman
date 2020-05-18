@@ -28,7 +28,7 @@ export default {
 
 .profile img {
   border-radius: 50%;
-  width: 15%;
+  width: 40%;
 }
 
 .profile button {
@@ -68,12 +68,6 @@ export default {
 @media (max-width: 300px) {
   .profile img{
     width:100%;
-  }
-}
-
-@media (max-width: 700px) {
-  .profile img{
-    width:60%;
   }
 }
 </style>
