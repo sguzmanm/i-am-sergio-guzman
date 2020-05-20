@@ -53,11 +53,11 @@ export default {
 }
 
 .panel h1{
-  font-size: 30px;
+  font-size: 2rem;
 }
 
 .panel p{
-  font-size:20px;
+  font-size: 1.5rem;
 }
 
 .panel a,
@@ -73,13 +73,17 @@ export default {
 .links{
   width:100%;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
 .links > .link{
   cursor:pointer;
-  padding:10px 20px;
+  text-align: center;
+
+  font-size: 20px;
+  padding:5px 20px;
   margin:0 30px;
 
   text-decoration: none;
@@ -110,6 +114,28 @@ export default {
 @media (max-width: 380px) {
   .panel{
     padding:0;
+  }
+
+  .links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .links > .link{
+    cursor:pointer;
+    padding:10px 20px;
+    margin:5px 0;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    background-color: var(--highlight-color-2);
+    color: var(--background-color);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
   }
 }
 </style>

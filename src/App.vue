@@ -73,6 +73,7 @@ export default {
 body {
   color: var(--text-color);
   background-color: var(--background-color);
+  margin: 0;
 }
 
 #app {
@@ -88,7 +89,10 @@ body {
 }
 
 #app.full-screen{
-  height:100%;
+  max-width: 100vw;
+
+  padding:0 50px;
+  height: 100vh;
 }
 
 #app h1,#app h2,#app h3,#app h4,#app h5,#app h6{
@@ -98,27 +102,24 @@ body {
 #router-view {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  align-items: flex-start;
+  justify-content: center;
+
   width:100%;
-  overflow-y:auto;
 }
 
 @media (max-width: 700px) {
   #app{
     padding:0px;
   }
-
-  #app.full-screen{
-    width:100%;
-    height:100%;
-  }
 }
 
-@media (max-width: 500px) {
-  #app {
-    padding-bottom:150px;
+@media (max-width: 360px) {
+  #app, #app.full-screen {
     padding-left:0;
     padding-right:0;
+    max-height: auto;
+    height:auto;
   }
 }
 </style>

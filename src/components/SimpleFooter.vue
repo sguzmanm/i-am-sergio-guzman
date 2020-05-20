@@ -114,7 +114,7 @@ export default {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 360px) {
   .footer {
     width:none;
   }

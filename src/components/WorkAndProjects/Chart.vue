@@ -70,7 +70,7 @@ export default {
   },
   methods: {
     calculateCharts(width) {
-      if (width < 500) {
+      if (width < 360) {
         return 1.2;
       }
 

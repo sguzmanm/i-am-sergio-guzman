@@ -120,6 +120,10 @@ export default {
 </script>
 
 <style scoped>
+  .skills,.tags{
+    max-width:100%;
+  }
+
   .cards{
     margin-top:10px;
     display:flex;
