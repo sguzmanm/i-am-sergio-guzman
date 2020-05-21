@@ -104,6 +104,7 @@ export default {
       const index = state.currentTags.indexOf(tag);
       if (index !== -1) { return; }
 
+      state.currentPage = 1;
       state.currentTags.push(tag);
     };
 

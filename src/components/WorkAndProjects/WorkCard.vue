@@ -1,41 +1,45 @@
 <template>
   <div class="card">
       <div class="card__header">
-          <h3>{{work.title}} ( {{workDate}} )</h3>
-          <div class="card__status" :style="{backgroundColor:`var(${statusColor})`}">
-              {{work.status}}
-          </div>
-      </div>
-      <div class="card__item card__org"
-        v-for="organization in work.organizations" :key="`${work.title}_${organization.name}`">
-          <div :class="{card__img:!organization.isTrademarkSensitive, card__full_img: organization.isTrademarkSensitive}">
-            <img :src="organization.logo" loading="lazy" :alt="`Company logo for ${organization.name}`"/>
-          </div>
-          <p v-show="!organization.isTrademarkSensitive">{{organization.name}}</p>
-      </div>
-      <media-preview :media="`work-and-projects/${work.media?work.media:placeholder}`"
-        :alt="work.title"/>
-      <div class="card__content">
-        <p>{{work.description}} </p>
-        <p v-if="!work.links">I don´t have a link to show you here :/</p>
-        <a v-if="work.links && work.links.demo"
-            :href="work.links.demo" target="_blank">Check it out here</a><br>
-        <a v-if="work.links && work.links.code"
-            :href="work.links.code" target="_blank">This is the code</a>
-        <a v-if="work.links && work.links.company"
-            :href="work.links.company" target="_blank">In any case this is the company link</a><br>
-
+        <media-preview :media="`work-and-projects/${work.media?work.media:placeholder}`"
+          :alt="work.title"/>
       </div>
 
+      <div class="card__body">
+        <h2>{{work.title}}</h2>
+
+        <div class="card__tags">
+            <div class="card__tag" v-for="(tag,index) in work.tags" :key="index">
+                {{tag}}
+            </div>
+        </div>
+
+        <div class="card__content">
+          <p>{{work.description}} <strong>I worked this on {{workDate}}</strong> </p>
+
+          <p v-if="!work.links">I don´t have a link to show you here :/</p>
+          <a v-if="work.links && work.links.demo"
+              :href="work.links.demo" target="_blank">Check it out here</a><br>
+          <a v-if="work.links && work.links.code"
+              :href="work.links.code" target="_blank">This is the code</a>
+          <a v-if="work.links && work.links.company"
+              :href="work.links.company" target="_blank">In any case this is the company link</a><br>
+        </div>
+
+        <div class="card__item card__org"
+          v-for="organization in work.organizations" :key="`${work.title}_${organization.name}`">
+            <div :class="{card__img:!organization.isTrademarkSensitive, card__full_img: organization.isTrademarkSensitive}">
+              <img :src="organization.logo" loading="lazy" :alt="`Company logo for ${organization.name}`"/>
+            </div>
+            <p v-show="!organization.isTrademarkSensitive">{{organization.name}}</p>
+        </div>
+      </div>
   </div>
 </template>
 
 <script>
 import MediaPreview from '@/components/WorkAndProjects/MediaPreview.vue';
 import { ref, computed } from '@vue/composition-api';
-
-const finalStates = ['college', 'work', 'work open source', 'personal'];
-const [successStyleVariable, failedStyleVariable] = ['--highlight-color-2', '--highlight-color'];
 
 const areDatesEqual = (firstDate, secondDate) => firstDate.getMonth() === secondDate.getMonth();
 
@@ -64,21 +68,13 @@ export default {
         return startDate.toLocaleDateString('en-US', options);
       }
 
-      return `${startDate.toLocaleDateString('en-US', options)} - ${endDate.toLocaleDateString('en-US', options)}`;
-    });
-
-    const statusColor = computed(() => {
-      if (finalStates.find((el) => el === work.status)) {
-        return successStyleVariable;
-      }
-
-      return failedStyleVariable;
+      return `${startDate.toLocaleDateString('en-US', options)} to ${endDate.toLocaleDateString('en-US', options)}`;
     });
 
     const placeholder = ref('placeholder.jpeg');
 
     return {
-      isTrademarkSensitive, workDate, statusColor, placeholder,
+      isTrademarkSensitive, workDate, placeholder,
     };
   },
 };
@@ -90,7 +86,7 @@ export default {
   flex-direction: column;
   text-align: justify;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 
   flex: 1 0 calc(25% - 10px);
   background-color: var(--card-color);
@@ -98,8 +94,8 @@ export default {
   color: var(--background-color);
 
   margin: 20px;
-  padding:20px;
-  max-width: 80%;
+  max-width: 30%;
+  border-radius: 20px;
 }
 
 .card__item{
@@ -111,9 +107,32 @@ export default {
   font-size: 20px;
 }
 
+.card__header{
+  width:100%;
+}
+
+.card__body {
+  padding:20px;
+}
+
 .card__item p{
   padding: 0 20px;
   font-weight: bold;
+}
+
+.card__tags{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card__tag{
+  flex:1;
+  max-width: 40%;
+  text-align:center;
+
+  margin:5px;
+  background-color:var(--highlight-color-2);
 }
 
 .card__header{
@@ -161,7 +180,7 @@ export default {
   width: 70%;
 }
 
-.card__status{
+.card__tag{
   border-radius:5px;
   font: bold 15px Sans-Serif;
   text-align: center;
@@ -190,11 +209,11 @@ export default {
   color: var(--highlight-color-2)
 }
 
-@media (max-width: 700px) {
+@media (max-width: 715px) {
   .card{
     margin: 20px 0px;
-    flex: 1;
-    max-width: none;
+    flex: 1 0 calc(100% - 10px);
+    max-width: 100%;
   }
 
   .card__item{

@@ -86,7 +86,7 @@ export default {
   z-index: 1;
 
   padding: 5px 20px;
-  font-size: 15px;
+  font-size: 20px;
 
   display:flex;
   flex-direction: row;

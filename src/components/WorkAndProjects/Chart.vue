@@ -71,14 +71,14 @@ export default {
   methods: {
     calculateCharts(width) {
       if (width < 360) {
-        return 1.2;
+        return 1.5;
       }
 
       if (width < 700) {
-        return 2.2;
+        return 2.5;
       }
 
-      return 4.2;
+      return 3.5;
     },
     selectTag(tag) {
       this.addTag(tag);
