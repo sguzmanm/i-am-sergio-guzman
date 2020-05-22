@@ -88,6 +88,7 @@ export default {
   padding: 10px;
   margin: 15px 0;
   display:flex;
+  width:95%;
 }
 
 .life-quote__image{

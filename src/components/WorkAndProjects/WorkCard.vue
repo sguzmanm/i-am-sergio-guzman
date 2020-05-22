@@ -6,16 +6,17 @@
       </div>
 
       <div class="card__body">
-        <h2>{{work.title}}</h2>
-
-        <div class="card__tags">
-            <div class="card__tag" v-for="(tag,index) in work.tags" :key="index">
-                {{tag}}
-            </div>
-        </div>
+        <h3>{{work.title}}</h3>
 
         <div class="card__content">
-          <p>{{work.description}} <strong>I worked this on {{workDate}}</strong> </p>
+          <p>
+            {{work.description}}. I worked this on <strong>{{workDate}}</strong>
+            <span v-show="work.organizations && work.organizations.length>0"> with:</span> </p>
+          <ul v-show="work.organizations && work.organizations.length>0">
+            <li v-for="organization in work.organizations" :key="`${work.title}_${organization.name}`">
+              {{organization.name}}
+            </li>
+          </ul>
 
           <p v-if="!work.links">I don´t have a link to show you here :/</p>
           <a v-if="work.links && work.links.demo"
@@ -26,13 +27,12 @@
               :href="work.links.company" target="_blank">In any case this is the company link</a><br>
         </div>
 
-        <div class="card__item card__org"
-          v-for="organization in work.organizations" :key="`${work.title}_${organization.name}`">
-            <div :class="{card__img:!organization.isTrademarkSensitive, card__full_img: organization.isTrademarkSensitive}">
-              <img :src="organization.logo" loading="lazy" :alt="`Company logo for ${organization.name}`"/>
+        <div class="card__tags">
+            <div class="card__tag" v-for="(tag,index) in work.tags" :key="index">
+                {{tag}}
             </div>
-            <p v-show="!organization.isTrademarkSensitive">{{organization.name}}</p>
         </div>
+
       </div>
   </div>
 </template>
@@ -104,7 +104,7 @@ export default {
   width: 100%;
   align-items: center;
 
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 .card__header{
@@ -124,15 +124,34 @@ export default {
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: start;
 }
 
 .card__tag{
   flex:1;
-  max-width: 40%;
-  text-align:center;
+  width: auto;
+  max-width:50%;
 
   margin:5px;
   background-color:var(--highlight-color-2);
+  border-radius:1rem;
+
+  white-space: nowrap;
+  text-align: center;
+  font-size:0.9rem;
+  text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+
+  position: relative;
+  padding: 7px 35px;
+
+  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+
+  color: var(--card-color);
+  background-color: var(--highlight-color);
 }
 
 .card__header{
@@ -180,25 +199,8 @@ export default {
   width: 70%;
 }
 
-.card__tag{
-  border-radius:5px;
-  font: bold 15px Sans-Serif;
-  text-align: center;
-  text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
-
-  position: relative;
-  padding: 7px 35px;
-
-  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
-  -moz-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
-  box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
-
-  color: var(--background-color);
-  background-color: var(--highlight-color-2);
-}
-
 .card__content{
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 .card__content a,a:visited{
@@ -209,7 +211,7 @@ export default {
   color: var(--highlight-color-2)
 }
 
-@media (max-width: 715px) {
+@media (max-width: 900px) {
   .card{
     margin: 20px 0px;
     flex: 1 0 calc(100% - 10px);
@@ -218,6 +220,10 @@ export default {
 
   .card__item{
     flex-direction: column-reverse;
+  }
+
+  .card__tag{
+    max-width: none;
   }
 }
 

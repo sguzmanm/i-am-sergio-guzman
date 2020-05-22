@@ -292,11 +292,10 @@
     },
     "tags": [
       "Android Studio",
-      "Firebase Functions",
-      "Android Studio",
       "VS Code",
-      "Kotlin",
-      "JS"
+      "Firebase Functions",
+      "JS",
+      "Kotlin"
     ]
   },
   {
@@ -471,12 +470,6 @@
     "status": "in progress",
     "media": "i-am-sergio-guzman.png",
     "description": "This is my personal webpage to show who I am to the world. I used Vue with Vue X and Vue Composition API just for testing",
-    "organizations": [
-      {
-        "name": "Me",
-        "logo": "https://raw.githubusercontent.com/sguzmanm/i-am-sergio-guzman/master/public/favicon.ico"
-      }
-    ],
     "links": {
       "code": "https://github.com/sguzmanm/i-am-sergio-guzman",
       "demo": "https://i-am-sergio-guzman.herokuapp.com/"
