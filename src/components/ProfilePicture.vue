@@ -1,9 +1,9 @@
 <template>
   <div class="profile">
+    <img :src="`${require('@/assets/profile-pics/' + profilePic)}`" />
     <button @click="showMoods">
       <i :class="faIcon"></i> Change my mood
     </button>
-    <img :src="`${require('@/assets/profile-pics/' + profilePic)}`" />
   </div>
 </template>
 
@@ -28,12 +28,12 @@ export default {
 
 .profile img {
   border-radius: 50%;
-  width: 15%;
+  width: 40%;
 }
 
 .profile button {
   position: relative;
-  top: 20px;
+  bottom: 20px;
   z-index: 1;
 
   padding: 5px 20px;
@@ -66,12 +66,6 @@ export default {
 }
 
 @media (max-width: 300px) {
-  .profile img{
-    width:100%;
-  }
-}
-
-@media (max-width: 700px) {
   .profile img{
     width:60%;
   }

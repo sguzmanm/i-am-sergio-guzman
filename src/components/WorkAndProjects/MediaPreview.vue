@@ -24,17 +24,17 @@ export default {
 
 <style scoped>
   .media{
-    margin:10px;
+    width:100%;
   }
 
   .media,video,img{
-    max-height:25vh;
+    max-height:40vh;
     width:auto;
     max-width: 100%;
+    border-radius: 20px 20px 0 0;
   }
 
   .media img{
-    border-radius: 20px;
     background: white;
   }
 </style>

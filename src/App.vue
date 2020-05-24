@@ -1,19 +1,20 @@
 <template>
-  <div id="app">
+  <div id="app" :class="{'full-screen':isMainPage}">
     <nav-bar
       v-if="!isMainPage"
       :showMoods="()=>showMoods=true"
       :profilePic="currentMood.profilePic"
       :faIcon="currentMood.faIcon"
     />
-    <router-view id="router-view" />
-    <!--Bottom Components-->
+
     <profile-picture
       v-if="isMainPage"
       :showMoods="()=>showMoods=true"
       :profilePic="currentMood.profilePic"
       :faIcon="currentMood.faIcon"
     />
+    <router-view id="router-view" />
+    <!--Bottom Components-->
     <social-media />
     <simple-footer v-if="!isMainPage"/>
 
@@ -72,11 +73,26 @@ export default {
 body {
   color: var(--text-color);
   background-color: var(--background-color);
+  margin: 0;
 }
 
 #app {
   font-family: 'Lato', sans-serif;
   padding: 20px 50px;
+
+  overflow-y: auto;
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#app.full-screen{
+  max-width: 100vw;
+
+  padding:0 50px;
+  height: 100vh;
 }
 
 #app h1,#app h2,#app h3,#app h4,#app h5,#app h6{
@@ -86,21 +102,24 @@ body {
 #router-view {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  overflow-y: auto;
+  align-items: flex-start;
+  justify-content: center;
+
+  width:100%;
 }
 
 @media (max-width: 700px) {
   #app{
-    padding-right:0px;
+    padding:0px;
   }
 }
 
-@media (max-width: 500px) {
-  #app {
-    padding-bottom:150px;
+@media (max-width: 360px) {
+  #app, #app.full-screen {
     padding-left:0;
     padding-right:0;
+    max-height: auto;
+    height:auto;
   }
 }
 </style>

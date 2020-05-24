@@ -4,12 +4,12 @@
         <router-link class="nav__regular" to="/work-and-projects" exact>Work and projects</router-link>
       </div>
       <div class="nav__profile">
-          <button @click="showMoods">
-            <i :class="faIcon"></i> Change my mood
-          </button>
           <router-link to="/">
             <img :src="`${require('@/assets/profile-pics/' + profilePic)}`" />
           </router-link>
+          <button @click="showMoods">
+            <i :class="faIcon"></i> Change my mood
+          </button>
       </div>
       <div class="nav__container left">
         <router-link class="nav__regular" to="/life-experiences" exact>Life experiences</router-link>
@@ -82,7 +82,7 @@ export default {
 
 .nav__profile button {
   position: relative;
-  top: 20px;
+  bottom: 20px;
   z-index: 1;
 
   padding: 5px 20px;
@@ -134,7 +134,7 @@ export default {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 360px) {
   .nav{
     position:fixed;
     bottom:0;

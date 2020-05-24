@@ -33,7 +33,7 @@ export default {
     const pages = computed(() => {
       const [currentPage, maxPages] = [props.currentPage, props.maxPages];
       const resultPages = [currentPage];
-      const maxNavPages = currentWidth.value > 500 ? 5 : 1;
+      const maxNavPages = currentWidth.value > 360 ? 5 : 1;
 
       let i = 1;
       let isAdded;

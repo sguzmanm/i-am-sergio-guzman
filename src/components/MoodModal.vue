@@ -81,7 +81,6 @@ export default {
 }
 
 .modal__content{
-  border-radius: 5px;
   max-width: 50%;
 
   background-color:var(--text-color);

@@ -13,7 +13,7 @@
 
     <div class="cards">
         <div v-if="!state.filteredWorks || state.filteredWorks.length===0" class="cards__empty">
-          Remember I love learning new skills; it doesn´t mean that I always have works to show.
+          Remember I love learning new skills; it doesn´t mean that I always have works to show you where I use them.
         </div>
         <work-card v-for="(work,index) in state.filteredWorks" :key="`${work.title}_${index}`"
           :work="work"/>
@@ -104,6 +104,7 @@ export default {
       const index = state.currentTags.indexOf(tag);
       if (index !== -1) { return; }
 
+      state.currentPage = 1;
       state.currentTags.push(tag);
     };
 
@@ -120,6 +121,10 @@ export default {
 </script>
 
 <style scoped>
+  .skills,.tags{
+    max-width:100%;
+  }
+
   .cards{
     margin-top:10px;
     display:flex;
