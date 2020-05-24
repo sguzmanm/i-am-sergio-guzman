@@ -65,11 +65,11 @@
       },
       {
         "title": "React Native",
-        "level": 50
+        "level": 30
       },
       {
         "title": "Spring Boot",
-        "level": 40
+        "level": 20
       }
     ]
   },
@@ -137,10 +137,6 @@
       {
         "title": "Amazon S3",
         "level": 80
-      },
-      {
-        "title": "Firebase Storage",
-        "level": 40
       }
     ]
   },
@@ -169,12 +165,12 @@
     "name": "Cloud Functions",
     "skills": [
       {
-        "title": "Amazon Lambda",
-        "level": 80
-      },
-      {
         "title": "Firebase Functions",
         "level": 50
+      },
+      {
+        "title": "Amazon Lambda",
+        "level": 80
       }
     ]
   },

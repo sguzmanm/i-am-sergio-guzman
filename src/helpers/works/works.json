@@ -108,6 +108,7 @@
       "Java",
       "Virtual Box",
       "Shell",
+      "MySQL",
       "IntelliJ IDEA",
       "VS Code",
       "Rabbit MQ"
@@ -408,6 +409,7 @@
       "AWS",
       "Docker",
       "Golang",
+      "Shell",
       "Amazon SQS",
       "VS Code"
     ]
@@ -417,7 +419,7 @@
     "startDate": "07/01/2019",
     "status": "private work",
     "media": "golang-http.png",
-    "description": "The title says it all. I helped with the code generation for retrieving information from public websites automatically with scheduling provided by AWS Lambdas. I can´t post any code or sources since this is private",
+    "description": "The title says it all. I´ve helped with the code for retrieving information from public websites automatically with scheduling or on-demand with AWS Lambdas. I can´t post any code or sources since this is private",
     "organizations": [
       {
         "name": "Truora Inc",
@@ -435,32 +437,6 @@
       "DynamoDB",
       "Amazon SNS",
       "Amazon SQS",
-      "VS Code"
-    ]
-  },
-  {
-    "title": "Frontend and backend language translation",
-    "startDate": "09/01/2019",
-    "endDate": "09/01/2019",
-    "status": "private work",
-    "media": "golang-http.png",
-    "description": "I helped my team to translate the backend and frontend labels of our system. In the frontend VueX and i18n were used",
-    "organizations": [
-      {
-        "name": "Truora Inc",
-        "logo": "https://assets.website-files.com/5b559a554de48fbcb01fd277/5e7b965c9f321c70930032fc__Main.svg",
-        "isTrademarkSensitive": true
-      }
-    ],
-    "links": {
-      "company": "https://www.truora.com/"
-    },
-    "tags": [
-      "Amazon Lambda",
-      "AWS",
-      "Golang",
-      "Vue",
-      "VueX",
       "VS Code"
     ]
   },

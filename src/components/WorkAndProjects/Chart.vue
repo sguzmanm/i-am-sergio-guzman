@@ -45,8 +45,8 @@ export default {
   data() {
     return {
       msg: '👋 from the Chart Component',
-      height: 300,
-      width: 300,
+      height: 400,
+      width: 400,
       skillGroups,
     };
   },

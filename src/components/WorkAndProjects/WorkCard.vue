@@ -121,6 +121,7 @@ export default {
 }
 
 .card__tags{
+  margin-top:5px;
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -141,7 +142,6 @@ export default {
   white-space: nowrap;
   text-align: center;
   font-size:0.9rem;
-  text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
 
   position: relative;
   padding: 7px 35px;
