@@ -6,7 +6,7 @@
       </h1>
       <p>
         I am a passionate SW Developer currently working at <a href="https://www.truora.com" target="_blank">{{ 'TRUORA' }}</a> who loves comic books and videogames and is a child at heart.
-        I love creating stuff and learning new things everyday and above all my family and friends.
+        I love creating stuff and learning new things everyday, and above all, I love my family and friends.
       </p>
       <p> With this page I wanna show you who I am,
         some of my <router-link to="/work-and-projects">finest works to date</router-link> from the last couple of years, and

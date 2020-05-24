@@ -3,7 +3,7 @@
     :style="{flexDirection:currentDirection}"
     v-animate.repeat.fade="isRight?'slide-from-left':'slide-from-right'">
       <div class="life-quote__image">
-        <img loading="lazy" :src="quote.image" :alt="`Image for ${quote.category} experience`"/>
+        <image-view :src="quote.image" :alt="`Image for ${quote.category} experience`"/>
         <p>{{quote.category}}</p>
       </div>
       <div class="life-quote__quote">
@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import ImageView from '@/components/LazyLoading/ImageView.vue';
 import { ref, computed } from '@vue/composition-api';
 
 const cardMobileWidth = 700;
@@ -32,6 +33,9 @@ export default {
     getPreviousQuote: Function,
     getNextQuote: Function,
     isRight: Boolean,
+  },
+  components: {
+    ImageView,
   },
   setup(props) {
     const currentWidth = ref(window.innerWidth);
@@ -102,14 +106,6 @@ export default {
   align-items: center;
 }
 
-.life-quote__image img,.life-quote__image p{
-  margin:0;
-}
-
-.life-quote__image img{
-  max-height:200px;
-}
-
 .life-quote__image p{
   background-color: var(--highlight-color);
   color:var(--text-color);
@@ -118,6 +114,7 @@ export default {
   text-align:center;
 
   width:100%;
+  margin:0;
 }
 
 .life-quote__quote{
@@ -164,23 +161,9 @@ export default {
     flex:1;
   }
 
-  .life-quote__image img{
-    max-height: 300px;
-    max-width: 100%;
-  }
-
   .life-quote__quote{
     flex:1;
     flex-direction: column-reverse;
   }
-
-}
-
-  @media (max-width: 380px) {
-    .life-quote__image img{
-      max-height:200px;
-      max-width:100%;
-    }
-
 }
 </style>
