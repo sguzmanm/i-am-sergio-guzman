@@ -6,15 +6,12 @@ import org.litote.kmongo.coroutine.* //NEEDED! import KMongo coroutine extension
 import org.litote.kmongo.eq
 import java.lang.Exception
 import java.net.URLEncoder
+import java.time.LocalTime
 
 data class Mood(val title: String, val faIcon:String, val textColor:String, val cardColor:String, val backgroundColor:String,
-                val highlightColor1:String, val highlightColor2:String, val profilePic:String, val startTime:String, val endTime:String )
+                val highlightColor1:String, val highlightColor2:String, val profilePic:String, val startTime:LocalTime, val endTime:LocalTime )
 
-val user=URLEncoder.encode("","utf-8")
-val password=URLEncoder.encode("","utf-8")
-
-val client = KMongo.createClient("mongodb+srv://${user}:${password}@picrossvs-xa3gu.mongodb.net/test?retryWrites=true&w=majority").coroutine //use coroutine extension
-val database = client.getDatabase("moods") //normal java driver usage
+val database = Database.getDbClient().getDatabase("moods") //normal java driver usage
 val col = database.getCollection<Mood>() //KMongo extension method
 
 fun createMood(mood: Mood){
@@ -45,13 +42,5 @@ fun getMoods() = runBlocking {
         e.printStackTrace()
         throw DatabaseError.ERROR_DATABASE_FAILED
     }
-}
-
-fun main() {
-    createMood(Mood("Test","fa-awesome","#fff","#f00","#ff0",
-    "#000","#fff","sergi.com","18:00","22:00"))
-
-    println("Get all")
-    getMoods().forEach { println("Hello there $it") }
 }
 

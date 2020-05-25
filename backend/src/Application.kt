@@ -10,10 +10,17 @@ import io.ktor.http.ContentType
 import io.ktor.http.HttpHeaders
 import io.ktor.http.HttpMethod
 import io.ktor.response.respondText
-import io.ktor.routing.get
-import io.ktor.routing.routing
+import io.ktor.routing.*
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
+import com.sguzmanm.resources.*
+import io.ktor.gson.gson
+import io.ktor.server.engine.commandLineEnvironment
+import java.text.DateFormat
+
+fun Routing.api(){
+    apiMoods()
+}
 
 @Suppress("unused") // Referenced in application.conf
 @kotlin.jvm.JvmOverloads
@@ -34,18 +41,26 @@ fun Application.module(testing: Boolean = false) {
         anyHost() // @TODO: Don't do this in production if possible. Try to limit it.
     }
 
+    install(ContentNegotiation) {
+        gson {
+            setDateFormat(DateFormat.LONG)
+            setPrettyPrinting()
+        }
+    }
+
+    install(Routing) {
+        api()
+    }
+
+
     val client = HttpClient(Jetty) {
     }
 }
 
 fun main(args: Array<String>): Unit{
-    val port = if(System.getenv("PORT")!=null) {Integer.parseInt(System.getenv("PORT"))} else 8080
-    val server = embeddedServer(Netty, port) {
-        routing {
-            get("/") {
-                call.respondText("Hello, world!", ContentType.Text.Html)
-            }
-        }
-    }
-    server.start(wait = true)
+    val port = if(System.getenv("PORT")!=null) {Integer.parseInt(System.getenv("PORT"))} else 8082
+
+    val server = embeddedServer(Netty, commandLineEnvironment(args))
+    server.start()
+
 }
