@@ -22,6 +22,12 @@ sourceSets {
     test.resources.srcDirs = ['testresources']
 }
 
+configure([compileKotlin, compileTestKotlin]) {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
 repositories {
     mavenLocal()
     jcenter()
@@ -30,6 +36,7 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    // Ktor
     implementation "io.ktor:ktor-server-netty:$ktor_version"
     implementation "ch.qos.logback:logback-classic:$logback_version"
     implementation "io.ktor:ktor-server-core:$ktor_version"
@@ -37,4 +44,7 @@ dependencies {
     implementation "io.ktor:ktor-client-core-jvm:$ktor_version"
     implementation "io.ktor:ktor-client-jetty:$ktor_version"
     testImplementation "io.ktor:ktor-server-tests:$ktor_version"
+
+    // KMongo
+    compile "org.litote.kmongo:kmongo-coroutine:$kmongo_version"
 }

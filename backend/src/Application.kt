@@ -15,18 +15,6 @@ import io.ktor.routing.routing
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 
-
-fun main(args: Array<String>): Unit{
-    val server = embeddedServer(Netty, 8080) {
-        routing {
-            get("/") {
-                call.respondText("Hello, world!", ContentType.Text.Html)
-            }
-        }
-    }
-    server.start(wait = true)
-}
-
 @Suppress("unused") // Referenced in application.conf
 @kotlin.jvm.JvmOverloads
 fun Application.module(testing: Boolean = false) {
@@ -48,6 +36,16 @@ fun Application.module(testing: Boolean = false) {
 
     val client = HttpClient(Jetty) {
     }
-
 }
 
+fun main(args: Array<String>): Unit{
+    val port = if(System.getenv("PORT")!=null) {Integer.parseInt(System.getenv("PORT"))} else 8080
+    val server = embeddedServer(Netty, port) {
+        routing {
+            get("/") {
+                call.respondText("Hello, world!", ContentType.Text.Html)
+            }
+        }
+    }
+    server.start(wait = true)
+}
