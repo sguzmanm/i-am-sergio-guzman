@@ -2,6 +2,7 @@ package com.sguzmanm.db
 
 import io.github.cdimascio.dotenv.dotenv
 import org.litote.kmongo.coroutine.CoroutineClient
+import org.litote.kmongo.coroutine.CoroutineDatabase
 import org.litote.kmongo.coroutine.coroutine
 import org.litote.kmongo.reactivestreams.KMongo
 import java.net.URLEncoder
@@ -14,9 +15,10 @@ object Database {
     val password: String = URLEncoder.encode(dotEnv["DB_PASSWORD"],"utf-8")
 
     private val client = KMongo.createClient("mongodb+srv://${user}:${password}@${host}?retryWrites=true&w=majority").coroutine //use coroutine extension
+    private val database = client.getDatabase("i-am-sergio-guzman") //normal java driver usage
 
-    fun getDbClient(): CoroutineClient {
-        return client
+    fun getDatabase(): CoroutineDatabase {
+        return database
     }
 
 }

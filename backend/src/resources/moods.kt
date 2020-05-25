@@ -11,6 +11,7 @@ import io.ktor.routing.get
 import io.ktor.routing.route
 
 import com.sguzmanm.db.getMoods
+import io.ktor.auth.authenticate
 import io.ktor.request.receive
 import io.ktor.response.header
 import io.ktor.response.respond
@@ -24,11 +25,14 @@ fun Routing.apiMoods() {
             call.response.header("Context-Type", "application/json")
             call.respond(moodList)
         }
-        post {
-            val mood= call.receive<Mood>()
-            createMood(mood)
-            call.response.header("Context-Type", "application/json")
-            call.respondText("OK")
+
+        authenticate ("admin"){
+            post {
+                val mood= call.receive<Mood>()
+                createMood(mood)
+                call.response.header("Context-Type", "application/json")
+                call.respondText("OK")
+            }
         }
     }
 }

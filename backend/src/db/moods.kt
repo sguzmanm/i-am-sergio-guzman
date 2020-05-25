@@ -11,8 +11,7 @@ import java.time.LocalTime
 data class Mood(val title: String, val faIcon:String, val textColor:String, val cardColor:String, val backgroundColor:String,
                 val highlightColor1:String, val highlightColor2:String, val profilePic:String, val startTime:LocalTime, val endTime:LocalTime )
 
-val database = Database.getDbClient().getDatabase("moods") //normal java driver usage
-val col = database.getCollection<Mood>() //KMongo extension method
+private val col = Database.getDatabase().getCollection<Mood>() //KMongo extension method
 
 fun createMood(mood: Mood){
     //async now
