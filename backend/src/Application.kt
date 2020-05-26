@@ -34,7 +34,6 @@ fun Routing.api(){
 @Suppress("unused") // Referenced in application.conf
 @kotlin.jvm.JvmOverloads
 fun Application.module(testing: Boolean = false) {
-    val dotEnv = dotenv()
     val jwtGenerator = JWTGenerator()
 
     install(CallLogging) {

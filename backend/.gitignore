@@ -6,3 +6,4 @@
 *.ipr
 *.iws
 /.env
+/resources/account.p12
