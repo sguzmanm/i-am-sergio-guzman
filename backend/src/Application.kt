@@ -1,25 +1,18 @@
 package com.sguzmanm
 
 import com.sguzmanm.auth.JWTGenerator
-import com.sguzmanm.db.getUserCredentials
 import io.ktor.application.*
 import io.ktor.request.*
 import io.ktor.features.*
 import org.slf4j.event.*
-import io.ktor.client.*
-import io.ktor.client.engine.jetty.*
-import io.ktor.http.ContentType
 import io.ktor.http.HttpHeaders
 import io.ktor.http.HttpMethod
-import io.ktor.response.respondText
 import io.ktor.routing.*
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 import com.sguzmanm.resources.*
-import io.github.cdimascio.dotenv.dotenv
 import io.ktor.auth.Authentication
 import io.ktor.auth.UserIdPrincipal
-import io.ktor.auth.basic
 import io.ktor.auth.jwt.jwt
 import io.ktor.gson.gson
 import io.ktor.server.engine.commandLineEnvironment
@@ -81,14 +74,9 @@ fun Application.module(testing: Boolean = false) {
     install(Routing) {
         api()
     }
-
-    val client = HttpClient(Jetty) {
-    }
 }
 
 fun main(args: Array<String>): Unit{
-    val port = if(System.getenv("PORT")!=null) {Integer.parseInt(System.getenv("PORT"))} else 8082
-
     val server = embeddedServer(Netty, commandLineEnvironment(args))
     server.start()
 

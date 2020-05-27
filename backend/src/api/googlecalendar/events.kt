@@ -83,10 +83,3 @@ fun getMoods():List<Mood> {
     lastUpdateDate=Date()
     return dailyMoods
 }
-
-fun main() {
-    val moods= getMoods()
-    moods.forEach {
-        println(it)
-    }
-}
