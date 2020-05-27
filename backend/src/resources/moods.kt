@@ -17,11 +17,26 @@ import io.ktor.response.header
 import io.ktor.response.respond
 import io.ktor.routing.post
 
+fun transformMoods(dbMoodList: List<Mood>,calendarMoodList: List<Mood>):List<Mood> {
+    val finalList=dbMoodList.toMutableList()
+    calendarMoodList.forEach {
+        val transformedMood= dbMoodList.find { mood ->  mood.title==it.title } ?: return@forEach
+        transformedMood.startTime=it.startTime
+        transformedMood.endTime=it.endTime
+
+        finalList.add(transformedMood)
+    }
+
+    return finalList
+}
+
 
 fun Routing.apiMoods() {
     route("moods"){
         get {
-            val moodList= getMoods()
+            val dbMoodList= getMoods()
+            val moodList=transformMoods(dbMoodList, com.sguzmanm.api.googlecalendar.getMoods())
+
             call.response.header("Context-Type", "application/json")
             call.respond(moodList)
         }

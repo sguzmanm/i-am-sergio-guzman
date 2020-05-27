@@ -8,8 +8,8 @@ import java.lang.Exception
 import java.net.URLEncoder
 import java.time.LocalTime
 
-data class Mood(val title: String, val faIcon:String, val textColor:String, val cardColor:String, val backgroundColor:String,
-                val highlightColor1:String, val highlightColor2:String, val profilePic:String, val startTime:LocalTime, val endTime:LocalTime )
+data class Mood(val title: String, val faIcon:String="", val textColor:String="", val cardColor:String="", val backgroundColor:String="",
+                val highlightColor1:String="", val highlightColor2:String="", val profilePic:String="", var startTime:LocalTime, var endTime:LocalTime )
 
 private val col = Database.getDatabase().getCollection<Mood>() //KMongo extension method
 
