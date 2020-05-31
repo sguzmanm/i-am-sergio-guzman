@@ -20,14 +20,10 @@ import io.ktor.routing.post
 fun transformMoods(dbMoodList: List<Mood>,calendarMoodList: List<Mood>):List<Mood> {
     val finalList=dbMoodList.toMutableList()
 
-    println("Calendar")
-    println(calendarMoodList)
-
     calendarMoodList.forEach {
         val foundMood = dbMoodList.find { mood ->  mood.title==it.title } ?: return@forEach
         val transformedMood=foundMood.copy()
 
-        println("Transformed mood $transformedMood")
         transformedMood.startTime=it.startTime
         transformedMood.endTime=it.endTime
 
