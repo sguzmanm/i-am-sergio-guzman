@@ -28,7 +28,7 @@ export default {
 
 .profile img {
   border-radius: 50%;
-  width: 40%;
+  max-height: 30vh;
 }
 
 .profile button {

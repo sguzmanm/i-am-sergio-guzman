@@ -72,11 +72,7 @@ fun getMoods():List<Mood> {
 
     val items= getDailyEvents()
     items.forEach {
-        if(it.description == null) {
-            return@forEach
-        }
-
-        val mood= createMood(it.description,it.start,it.end) ?: return@forEach
+        val mood= createMood(it.description?:it.summary,it.start,it.end) ?: return@forEach
         dailyMoods.add(mood)
     }
 

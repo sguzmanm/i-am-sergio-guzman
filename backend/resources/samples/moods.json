@@ -58,5 +58,65 @@
       "minute": 0,
       "second": 0
     }
+  },
+  {
+    "title": "Nature lover",
+    "faIcon": "fas fa-leaf",
+    "textColor": "#05668D",
+    "cardColor": "#05668D",
+    "backgroundColor": "#EDEEC9",
+    "highlightColor1": "#A5BE00",
+    "highlightColor2": "#679436",
+    "profilePic": "profile-pic-nature-lover.jpg"
+  },
+  {
+    "title": "Stuck at meeting",
+    "faIcon": "fas fa-briefcase",
+    "textColor": "#2F3E46",
+    "cardColor": "#2F3E46",
+    "backgroundColor": "#CAD2C5",
+    "highlightColor1": "#52796F",
+    "highlightColor2": "#354F52",
+    "profilePic": "profile-pic-meeting.jpg"
+  },
+  {
+    "title": "Tourist",
+    "faIcon": "fas fa-globe",
+    "textColor": "#03256C",
+    "cardColor": "#03256C",
+    "backgroundColor": "#F5E6E8",
+    "highlightColor1": "#06BEE1",
+    "highlightColor2": "#2F3E46",
+    "profilePic": "profile-pic-tourist.jpg"
+  },
+  {
+    "title": "Gym",
+    "faIcon": "fas fa-running",
+    "textColor": "#2B2D42",
+    "cardColor": "#2B2D42",
+    "backgroundColor": "#EDF2F4",
+    "highlightColor1": "#EF233C",
+    "highlightColor2": "#8D99AE",
+    "profilePic": "profile-pic-gym.jpg"
+  },
+  {
+    "title": "Chilling",
+    "faIcon": "fas fa-hand-peace",
+    "textColor": "#03045E",
+    "cardColor": "#03045E",
+    "backgroundColor": "#CAF0F8",
+    "highlightColor1": "#00B4D8",
+    "highlightColor2": "#0077B6",
+    "profilePic": "profile-pic-chilling.jpg"
+  },
+  {
+    "title": "Gamer",
+    "faIcon": "fas fa-gamepad",
+    "textColor": "#6FFFE9",
+    "cardColor": "#6FFFE9",
+    "backgroundColor": "#0B132B",
+    "highlightColor1": "#3A506B",
+    "highlightColor2": "#5BC0BE",
+    "profilePic": "profile-pic-gamer.jpg"
   }
 ]

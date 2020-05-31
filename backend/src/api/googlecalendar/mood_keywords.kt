@@ -20,5 +20,22 @@ val moodsKeywords:Map<String,String> = mapOf(
     // Movies keywords
     "cinema" to "Movies",
     "movie" to "Movies",
-    "theatre" to "Movies"
+    "theatre" to "Movies",
+
+    // Chill keywords
+    "chill" to "Chilling",
+    "rummy" to "Chilling",
+    "risk" to "Chilling",
+    "parqués" to "Chilling",
+
+        // Gym
+    "gym" to "Gym",
+    "workout" to "Gym",
+    "wod" to "Gym",
+
+    // Gamer keywords
+    "ps4" to "Gamer",
+    "xbox" to "Gamer",
+    "fifa" to "Gamer",
+    "pc" to "Gamer"
 )
