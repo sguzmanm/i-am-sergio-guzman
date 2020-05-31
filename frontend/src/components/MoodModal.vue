@@ -36,7 +36,7 @@ export default {
       'moods',
     );
 
-    const { setCurrentMood } = useActions(['fetchMoods', 'setCurrentMood']);
+    const { setCurrentMood } = useActions(['setCurrentMood']);
 
     return { currentMood, moods, setCurrentMood };
   },

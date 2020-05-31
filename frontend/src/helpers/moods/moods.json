@@ -8,8 +8,16 @@
     "highlightColor1": "#5bc0eb",
     "highlightColor2": "#f4d35e",
     "profilePic": "profile-pic.png",
-    "startTime": "18:00",
-    "endTime": "22:00"
+    "startTime": {
+      "hour": 18,
+      "minute": 0,
+      "second": 0
+    },
+    "endTime": {
+      "hour": 22,
+      "minute": 0,
+      "second": 0
+    }
   },
   {
     "title": "It´s still morning...",
@@ -20,8 +28,16 @@
     "highlightColor1": "#F77F00",
     "highlightColor2": "#D62828",
     "profilePic": "profile-pic-sleepy.jpg",
-    "startTime": "00:00",
-    "endTime": "10:00"
+    "startTime": {
+      "hour": 0,
+      "minute": 0,
+      "second": 0
+    },
+    "endTime": {
+      "hour": 10,
+      "minute": 0,
+      "second": 0
+    }
   },
   {
     "title": "Working",
@@ -32,8 +48,16 @@
     "highlightColor1": "#998FC7",
     "highlightColor2": "#502F4C",
     "profilePic": "profile-pic-work.jpg",
-    "startTime": "10:00",
-    "endTime": "18:00"
+    "startTime": {
+      "hour": 10,
+      "minute": 0,
+      "second": 0
+    },
+    "endTime": {
+      "hour": 18,
+      "minute": 0,
+      "second": 0
+    }
   },
   {
     "title": "Nature lover",
@@ -43,9 +67,7 @@
     "backgroundColor": "#EDEEC9",
     "highlightColor1": "#A5BE00",
     "highlightColor2": "#679436",
-    "profilePic": "profile-pic-nature-lover.jpg",
-    "startTime": "10:00",
-    "endTime": "18:00"
+    "profilePic": "profile-pic-nature-lover.jpg"
   },
   {
     "title": "Stuck at meeting",
@@ -55,9 +77,7 @@
     "backgroundColor": "#CAD2C5",
     "highlightColor1": "#52796F",
     "highlightColor2": "#354F52",
-    "profilePic": "profile-pic-meeting.jpg",
-    "startTime": "10:00",
-    "endTime": "18:00"
+    "profilePic": "profile-pic-meeting.jpg"
   },
   {
     "title": "Tourist",
@@ -67,9 +87,7 @@
     "backgroundColor": "#F5E6E8",
     "highlightColor1": "#06BEE1",
     "highlightColor2": "#2F3E46",
-    "profilePic": "profile-pic-tourist.jpg",
-    "startTime": "10:00",
-    "endTime": "18:00"
+    "profilePic": "profile-pic-tourist.jpg"
   },
   {
     "title": "Gym",
@@ -79,9 +97,7 @@
     "backgroundColor": "#EDF2F4",
     "highlightColor1": "#EF233C",
     "highlightColor2": "#8D99AE",
-    "profilePic": "profile-pic-gym.jpg",
-    "startTime": "10:00",
-    "endTime": "18:00"
+    "profilePic": "profile-pic-gym.jpg"
   },
   {
     "title": "Chilling",
@@ -91,9 +107,7 @@
     "backgroundColor": "#CAF0F8",
     "highlightColor1": "#00B4D8",
     "highlightColor2": "#0077B6",
-    "profilePic": "profile-pic-chilling.jpg",
-    "startTime": "10:00",
-    "endTime": "18:00"
+    "profilePic": "profile-pic-chilling.jpg"
   },
   {
     "title": "Gamer",
@@ -103,8 +117,6 @@
     "backgroundColor": "#0B132B",
     "highlightColor1": "#3A506B",
     "highlightColor2": "#5BC0BE",
-    "profilePic": "profile-pic-gamer.jpg",
-    "startTime": "10:00",
-    "endTime": "18:00"
+    "profilePic": "profile-pic-gamer.jpg"
   }
 ]

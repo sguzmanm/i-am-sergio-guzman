@@ -1,34 +1,42 @@
 <template>
   <div id="app" :class="{'full-screen':isMainPage}">
+    
+    <loading v-show="loading"/>
+
     <nav-bar
-      v-if="!isMainPage"
+      v-if="!isMainPage && !loading"
       :showMoods="()=>showMoods=true"
       :profilePic="currentMood.profilePic"
       :faIcon="currentMood.faIcon"
     />
 
     <profile-picture
-      v-if="isMainPage"
+      v-if="isMainPage && !loading"
       :showMoods="()=>showMoods=true"
       :profilePic="currentMood.profilePic"
       :faIcon="currentMood.faIcon"
     />
-    <router-view id="router-view" />
+    <router-view v-show="!loading" id="router-view" />
     <!--Bottom Components-->
-    <social-media />
-    <simple-footer v-if="!isMainPage"/>
+    <social-media v-show="!loading" />
+    <simple-footer v-if="!isMainPage && !loading"/>
 
-    <mood-modal v-if="showMoods" :hideModal="()=>showMoods=false"/>
+    <mood-modal v-if="showMoods && !loading" :hideModal="()=>showMoods=false"/>
+
+    </div>
   </div>
 </template>
 
 <script>
 import useMoods from '@/compositions/useMoods';
-import { ref } from '@vue/composition-api';
+
+import { ref, onMounted } from '@vue/composition-api';
+
 import { createNamespacedHelpers } from 'vuex-composition-helpers/dist';
 import { getCurrentMood } from '@/helpers/moods/moods';
 
 import NavBar from '@/components/Navigation/NavBar.vue';
+import Loading from '@/components/Loading.vue';
 import ProfilePicture from '@/components/ProfilePicture.vue';
 import SocialMedia from '@/components/SocialMedia.vue';
 import SimpleFooter from '@/components/SimpleFooter.vue';
@@ -38,21 +46,26 @@ export default {
   setup(props, { root }) {
     const { isMainPage, currentMood, moods } = useMoods(root);
 
-    const { useActions } = createNamespacedHelpers(
+    const { useState, useActions } = createNamespacedHelpers(
       root.$store,
       'moods',
     );
 
+    const { loading } = useState(['loading']);
     const { fetchMoods, setCurrentMood } = useActions(['fetchMoods', 'setCurrentMood']);
-    fetchMoods();
-    setCurrentMood(getCurrentMood(moods.value));
+
+    onMounted(async () => {
+      await fetchMoods();
+      setCurrentMood(getCurrentMood(moods.value));
+    });
 
     const showMoods = ref(false);
     return {
-      isMainPage, currentMood, moods, showMoods,
+      isMainPage, loading, currentMood, moods, showMoods,
     };
   },
   components: {
+    Loading,
     NavBar,
     ProfilePicture,
     SocialMedia,

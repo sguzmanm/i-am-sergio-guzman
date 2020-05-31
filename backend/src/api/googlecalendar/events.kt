@@ -7,6 +7,7 @@ import com.google.api.services.calendar.model.EventDateTime
 import com.google.api.services.calendar.model.Events
 import com.sguzmanm.db.Mood
 import io.github.cdimascio.dotenv.dotenv
+import io.ktor.util.toLowerCasePreservingASCIIRules
 import java.time.LocalDateTime
 import java.time.ZoneId
 import java.util.*
@@ -44,8 +45,10 @@ fun getDailyEvents():List<Event>{
 }
 
 fun createMood(description:String,start:EventDateTime, end:EventDateTime):Mood?{
+    val normalizedDescription=description.toLowerCase() // FIXME: Find a better way to normalize this
+    
     moodsKeywords.keys.forEach {
-        if(description.contains(it)){
+        if(normalizedDescription.contains(it)){
             val startTime= LocalDateTime.ofInstant(
                 Date(start.dateTime.value).toInstant(),
                 ZoneId.systemDefault()

@@ -2,28 +2,30 @@ const { MOODS_KEY, getItem, setItem } = require('../localStorage');
 
 const HOUR_SPLIT = ':';
 
-const getMinutes = (timeString) => parseInt(timeString[0], 10) * 60 + parseInt(timeString[1], 10);
+const getMinutes = (hours, minutes) => hours * 60 + minutes;
 
-const dateIsInCurrentMood = (mood, currentDate) => {
+
+const getStartDateDifference = (mood, currentDate) => {
+  if (!mood.startTime || !mood.endTime) {
+    return;
+  }
+
   const startDate = mood.startDate ? new Date(mood.startDate) : currentDate;
   const endDate = mood.endDate ? new Date(mood.endDate) : currentDate;
 
   if (startDate > currentDate || endDate < currentDate) {
-    return false;
+    return;
   }
 
-  const startTime = mood.startTime.split(HOUR_SPLIT);
-  const endTime = mood.endTime.split(HOUR_SPLIT);
-  const currentTime = currentDate.getHours() * 60 + currentDate.getMinutes();
+  const startTime = getMinutes(mood.startTime.hour, mood.startTime.minute);
+  const endTime = getMinutes(mood.endTime.hour, mood.endTime.minute);
+  const currentTime = getMinutes(currentDate.getHours(), currentDate.getMinutes());
 
-  if (
-    getMinutes(startTime) > currentTime
-    || getMinutes(endTime) < currentTime
-  ) {
-    return false;
+  if (startTime > currentTime || endTime < currentTime) {
+    return;
   }
 
-  return true;
+  return Math.abs(startTime - currentTime);
 };
 
 module.exports.getCurrentMood = (moods) => {
@@ -35,7 +37,15 @@ module.exports.getCurrentMood = (moods) => {
 
   // Look in file
   const currentDate = new Date();
-  currentMood = moods.find((el) => dateIsInCurrentMood(el, currentDate)) || moods[0];
+  let minDiff = currentDate.getMilliseconds();
+  moods.forEach((mood) => {
+    const time = getStartDateDifference(mood, currentDate);
+    if (time && time < minDiff) {
+      minDiff = time;
+      currentMood = mood;
+    }
+  });
+
   setItem(MOODS_KEY, currentMood);
 
   return currentMood;
