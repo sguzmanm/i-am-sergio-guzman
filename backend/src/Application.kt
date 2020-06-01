@@ -11,13 +11,33 @@ import io.ktor.routing.*
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 import com.sguzmanm.resources.*
+import com.sguzmanm.server.SinglePageApplication
 import io.ktor.auth.Authentication
 import io.ktor.auth.UserIdPrincipal
 import io.ktor.auth.jwt.jwt
 import io.ktor.gson.gson
+import io.ktor.http.content.files
+import io.ktor.http.content.resource
+import io.ktor.http.content.static
+import io.ktor.http.content.staticRootFolder
 import io.ktor.server.engine.commandLineEnvironment
+import java.io.File
 import java.text.DateFormat
 
+
+/**
+ * Static content routing
+ */
+fun Routing.staticContent() {
+    static {
+        staticRootFolder = File("../frontend")
+        files("dist")
+    }
+}
+
+/**
+ * API Content
+ */
 fun Routing.api(){
     apiMoods()
     apiUsers()
@@ -71,13 +91,19 @@ fun Application.module(testing: Boolean = false) {
         }
     }
 
-    install(Routing) {
+    install(SinglePageApplication){
+        defaultPage = "index.html"
+        folderPath = "dist"
+        spaRoute = ""
+        useFiles = true
+    }
+
+    routing {
         api()
     }
 }
 
-fun main(args: Array<String>): Unit{
+fun main(args: Array<String>){
     val server = embeddedServer(Netty, commandLineEnvironment(args))
     server.start()
-
 }

@@ -46,7 +46,7 @@ fun getDailyEvents():List<Event>{
 
 fun createMood(description:String,start:EventDateTime, end:EventDateTime):Mood?{
     val normalizedDescription=description.toLowerCase() // FIXME: Find a better way to normalize this
-    
+
     moodsKeywords.keys.forEach {
         if(normalizedDescription.contains(it)){
             val startTime= LocalDateTime.ofInstant(
