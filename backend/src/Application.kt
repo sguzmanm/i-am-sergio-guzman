@@ -16,24 +16,8 @@ import io.ktor.auth.Authentication
 import io.ktor.auth.UserIdPrincipal
 import io.ktor.auth.jwt.jwt
 import io.ktor.gson.gson
-import io.ktor.http.content.files
-import io.ktor.http.content.resource
-import io.ktor.http.content.static
-import io.ktor.http.content.staticRootFolder
 import io.ktor.server.engine.commandLineEnvironment
-import java.io.File
 import java.text.DateFormat
-
-
-/**
- * Static content routing
- */
-fun Routing.staticContent() {
-    static {
-        staticRootFolder = File("../frontend")
-        files("dist")
-    }
-}
 
 /**
  * API Content
