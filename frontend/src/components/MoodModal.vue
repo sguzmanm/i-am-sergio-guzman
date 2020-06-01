@@ -10,7 +10,7 @@
                 Change my mood
             </div>
             <div class="modal__body">
-                <div class="mood" v-for="(mood,index) in moods" :key="index">
+                <div class="mood" v-for="(mood,index) in filteredMoods" :key="index">
                     <div>
                         <i :class="mood.faIcon"></i>
                         <p>{{mood.title}}</p>
@@ -38,7 +38,16 @@ export default {
 
     const { setCurrentMood } = useActions(['setCurrentMood']);
 
-    return { currentMood, moods, setCurrentMood };
+    const filteredMoods=[];
+    moods.value.forEach(mood=>{
+      if (!filteredMoods.find(el=>el.title===mood.title)){
+        filteredMoods.push(mood)
+      }
+    })
+
+    console.log(filteredMoods);
+
+    return { currentMood, filteredMoods, setCurrentMood };
   },
   props: {
     hideModal: Function,

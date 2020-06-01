@@ -1,7 +1,5 @@
 const { MOODS_KEY, getItem, setItem } = require('../localStorage');
 
-const HOUR_SPLIT = ':';
-
 const getMinutes = (hours, minutes) => hours * 60 + minutes;
 
 
@@ -36,11 +34,14 @@ module.exports.getCurrentMood = (moods) => {
   }
 
   // Look in file
+  currentMood = moods[0];
   const currentDate = new Date();
-  let minDiff = currentDate.getMilliseconds();
+  let minDiff = currentDate.getDate();
   moods.forEach((mood) => {
+    console.log(mood);
     const time = getStartDateDifference(mood, currentDate);
     if (time && time < minDiff) {
+      console.log("Replace");
       minDiff = time;
       currentMood = mood;
     }
