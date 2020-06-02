@@ -55,6 +55,7 @@ This will generate a dist/ folder for you to upload to any static server. In her
 
 ### Home
 
+
 ![Home page image](./preview/i-am-sergio-guzman.png "Home page")
 
 
