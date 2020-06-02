@@ -6,8 +6,7 @@ import com.google.api.services.calendar.model.Event
 import com.google.api.services.calendar.model.EventDateTime
 import com.google.api.services.calendar.model.Events
 import com.sguzmanm.db.Mood
-import io.github.cdimascio.dotenv.dotenv
-import io.ktor.util.toLowerCasePreservingASCIIRules
+import com.sguzmanm.shared.getEnvString
 import java.time.LocalDateTime
 import java.time.ZoneId
 import java.util.*
@@ -17,7 +16,6 @@ private const val MAX_DIFF=24*60*60*1000 // 1 day
 
 private var lastUpdateDate:Date = Date()
 private var dailyMoods= mutableListOf<Mood>()
-private val dotEnv = dotenv()
 
 fun getTimeWithHours(hour:Int,min:Int):Calendar{
     val calendar= Calendar.getInstance()
@@ -36,7 +34,7 @@ fun getDailyEvents():List<Event>{
     val dayEnd=DateTime(calendar.time)
 
     // List the next 10 events from the primary calendar.
-    val events: Events = service.events().list(dotEnv["GOOGLE_CALENDAR_USER_CALENDAR"])
+    val events: Events = service.events().list(getEnvString("GOOGLE_CALENDAR_USER_CALENDAR"))
             .setTimeMin(dayStart)
             .setTimeMax(dayEnd)
             .execute()
