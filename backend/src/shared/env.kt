@@ -1,5 +1,6 @@
 package com.sguzmanm.shared
 
+import io.github.cdimascio.dotenv.DotEnvException
 import io.github.cdimascio.dotenv.dotenv
 
 fun getEnvString(key: String):String{
@@ -12,7 +13,7 @@ fun getEnvString(key: String):String{
 
         return ""
     }
-    catch(e:Error){
+    catch(e:DotEnvException){
         println("Using fallback for $key")
         val value=System.getenv(key)
         if(value!=null){
