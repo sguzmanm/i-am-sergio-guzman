@@ -11,5 +11,8 @@
 *.iml
 *.ipr
 *.iws
+
 /.env
 /resources/account.p12
+/resources/account.json
+/account.json
