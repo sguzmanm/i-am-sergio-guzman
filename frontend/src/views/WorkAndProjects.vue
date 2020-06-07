@@ -186,9 +186,9 @@ export default {
     }
 
     .tag{
-      min-width:none;
-      max-width:none;
-          flex: 1 0 calc(40% - 10px);
+      min-width:auto;
+      max-width:auto;
+      flex: 1 0 calc(40% - 10px);
 
     }
   }

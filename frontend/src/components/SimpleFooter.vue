@@ -116,7 +116,8 @@ export default {
 
 @media (max-width: 360px) {
   .footer {
-    width:none;
+    width:auto;
+    padding-bottom:150px;
   }
 }
 </style>

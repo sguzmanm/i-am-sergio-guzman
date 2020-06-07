@@ -126,9 +126,7 @@ export default {
   .nav__profile{
     flex:1;
   }
-}
 
-@media (max-width: 700px) {
   .nav__regular{
     padding: 10px;
   }

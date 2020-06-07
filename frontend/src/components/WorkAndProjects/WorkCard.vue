@@ -223,7 +223,7 @@ export default {
   }
 
   .card__tag{
-    max-width: none;
+    max-width: auto;
   }
 }
 

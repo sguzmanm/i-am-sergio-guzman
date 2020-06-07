@@ -16,13 +16,12 @@
       :profilePic="currentMood.profilePic"
       :faIcon="currentMood.faIcon"
     />
+    
     <router-view v-show="!loading" id="router-view" />
-    <!--Bottom Components-->
-    <social-media v-show="!loading" />
     <simple-footer v-if="!isMainPage && !loading"/>
 
+    <social-media v-show="!loading" />
     <mood-modal v-if="showMoods && !loading" :hideModal="()=>showMoods=false"/>
-
     </div>
   </div>
 </template>
@@ -133,6 +132,10 @@ body {
   #app, #app.full-screen {
     padding-left:0;
     padding-right:0;
+  }
+
+  #app.full-screen {
+      height:auto;  
   }
 }
 </style>
