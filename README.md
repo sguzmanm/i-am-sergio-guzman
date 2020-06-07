@@ -12,7 +12,28 @@ Finally for animations I used vue-animate-scroll and CSS trnasitions.
 
 ## How to run
 
-First of all install it
+The new version for I Am Sergio Guzman includes a backend made with ktor (Kotlin coroutines-based framework), so there are two steps to run this project locally: 
+
+### Backend
+For this to work you need to have java and kotlin installed in your machine, please check if these commands work:
+```
+java -version
+kotlin -version
+```
+
+If they don't please check how to install kotlin with the [official docs](https://kotlinlang.org/docs/tutorials/command-line.html) or if you´re a Windows user, [this awesome guide](https://downlinko.com/download-install-kotlin-windows.html)
+
+Now then, go to the backend folder and build the gradle project with:
+```
+gradle build
+```
+
+If it doesn´t work check how to install gradle [here](https://gradle.org/install/)
+
+And finally run the file located in **Application.kt**. TO make things easier you can always use [IntelliJ IDEA](https://kotlinlang.org/docs/tutorials/getting-started.html) to automate the entire process.
+
+### Frontend
+
 ```
 npm install
 ```
@@ -33,7 +54,18 @@ Finally for building it to deploy on a static server use:
 npm run build
 ```
 
-This will generate a dist/ folder for you to upload to any static server. In here I used a CI with Heroku so that everytime there is a successful deploy on master the webpage is updated.
+This will generate a dist/ folder for you to upload to any static server and automatically copy these files to a public folder on the backend directory to deploy. With Heroku I´m using the following commands to deploy directly to the server: 
+
+***Normal push***
+```
+git subtree push --prefix backend heroku master
+```
+
+***Force push***
+```
+git subtree split --prefix master backend
+git push heroku <GENERATED ID>:master --force
+```
 
 
 ## Authors
