@@ -43,9 +43,14 @@ export default {
 </script>
 
 <style scoped>
+.home{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .panel {
   margin: auto;
-  padding: 0px 150px;
 }
 
 .panel h1,.panel p {
@@ -105,17 +110,7 @@ export default {
   background-color: var(--highlight-color);
 }
 
-@media (max-width: 700px) {
-  .panel{
-    padding:0;
-  }
-}
-
 @media (max-width: 380px) {
-  .panel{
-    padding:0;
-  }
-
   .links{
     display: flex;
     flex-direction: column;

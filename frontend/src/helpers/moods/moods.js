@@ -33,15 +33,15 @@ module.exports.getCurrentMood = (moods) => {
     return currentMood;
   }
 
-  // Look in file
+  // Look in fetched moods
   currentMood = moods[0];
+
   const currentDate = new Date();
-  let minDiff = currentDate.getDate();
+  let minDiff = Date.now();
+
   moods.forEach((mood) => {
-    console.log(mood);
     const time = getStartDateDifference(mood, currentDate);
     if (time && time < minDiff) {
-      console.log("Replace");
       minDiff = time;
       currentMood = mood;
     }

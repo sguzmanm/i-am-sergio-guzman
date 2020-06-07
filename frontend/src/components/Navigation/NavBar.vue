@@ -5,7 +5,7 @@
       </div>
       <div class="nav__profile">
           <router-link to="/">
-            <img :src="`${require('@/assets/profile-pics/' + profilePic)}`" />
+            <img :src="profilePic?`${require('@/assets/profile-pics/' + profilePic)}`:''" />
           </router-link>
           <button @click="showMoods">
             <i :class="faIcon"></i> Change my mood

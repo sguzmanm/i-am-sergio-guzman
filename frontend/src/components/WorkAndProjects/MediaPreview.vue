@@ -1,24 +1,29 @@
 <template>
   <div class="media">
     <video v-if="media.includes('.mp4')" muted loop autoplay>
-          <source loading="lazy" :src="`${require('@/assets/' + media)}`"
-                  type="video/mp4">
+        <source loading="lazy" :src="`${require('@/assets/' + media)}`"
+                type="video/mp4">
 
-          Sorry, your browser doesn't support embedded videos.
-      </video>
-      <img v-else loading="lazy" :src="`${require('@/assets/' + media)}`" :alt="'Demo image for '+alt"/>
+        Sorry, your browser doesn't support embedded videos.
+    </video>
+    <img v-else loading="lazy" :src="`${require('@/assets/' + media)}`" :alt="'Demo image for '+alt"/>
   </div>
 
 
 </template>
 
 <script>
+import ImageView from '@/components/LazyLoading/ImageView.vue';
+
 export default {
   name: 'MediaPreview',
   props: {
     media: String,
     alt: String,
   },
+  components:{
+    ImageView,
+  }
 };
 </script>
 

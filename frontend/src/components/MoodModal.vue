@@ -45,8 +45,6 @@ export default {
       }
     })
 
-    console.log(filteredMoods);
-
     return { currentMood, filteredMoods, setCurrentMood };
   },
   props: {

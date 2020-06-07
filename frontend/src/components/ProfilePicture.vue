@@ -1,6 +1,6 @@
 <template>
   <div class="profile">
-    <img :src="`${require('@/assets/profile-pics/' + profilePic)}`" />
+    <img :src="profilePic?`${require('@/assets/profile-pics/' + profilePic)}`:''" />
     <button @click="showMoods">
       <i :class="faIcon"></i> Change my mood
     </button>

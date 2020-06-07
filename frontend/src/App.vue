@@ -124,6 +124,8 @@ body {
 @media (max-width: 700px) {
   #app{
     padding:0px;
+    max-height: auto;
+    height:auto;
   }
 }
 
@@ -131,8 +133,6 @@ body {
   #app, #app.full-screen {
     padding-left:0;
     padding-right:0;
-    max-height: auto;
-    height:auto;
   }
 }
 </style>

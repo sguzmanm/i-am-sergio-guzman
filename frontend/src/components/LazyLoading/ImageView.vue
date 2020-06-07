@@ -1,5 +1,5 @@
 <template>
-  <figure v-lazyload class="image__wrapper">
+  <figure v-lazyload class="image__wrapper" :class="{rounded:rounded}">
     <image-spinner/>
     <img
       class="image__item"
@@ -24,6 +24,7 @@ export default {
       type: String,
       required: true,
     },
+    rounded: Boolean, 
     maxHeight: Number,
   },
   directives: {
@@ -38,6 +39,10 @@ export default {
 </script>
 
 <style scoped>
+.rounded img{
+  border-radius: 50%;
+}
+
 .image__wrapper{
   margin:0;
 
