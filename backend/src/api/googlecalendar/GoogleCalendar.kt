@@ -22,7 +22,6 @@ object GoogleCalendar {
     private const val CREDENTIALS_FILE_PATH = "account.json"
 
     private val JSON_FACTORY: JsonFactory = JacksonFactory.getDefaultInstance()
-    private val SCOPES = listOf(CalendarScopes.CALENDAR_READONLY)
 
     private var service:Calendar
 
