@@ -7,12 +7,16 @@
         "level": 60
       },
       {
+        "title": "TS",
+        "level": 60
+      },
+      {
         "title": "Golang",
         "level": 80
       },
       {
         "title": "Java",
-        "level": 40
+        "level": 70
       },
       {
         "title": "Python",
@@ -24,7 +28,11 @@
       },
       {
         "title": "Kotlin",
-        "level": 70
+        "level": 60
+      },
+      {
+        "title": "Swift",
+        "level": 30
       },
       {
         "title": "C/C++",
@@ -137,6 +145,10 @@
       {
         "title": "Amazon S3",
         "level": 80
+      },
+      {
+        "title": "Amazon Rekognition",
+        "level": 50
       }
     ]
   },
@@ -145,11 +157,11 @@
     "skills": [
       {
         "title": "Rabbit MQ",
-        "level": 40
+        "level": 20
       },
       {
         "title": "Mosquitto MQTT",
-        "level": 60
+        "level": 30
       },
       {
         "title": "Amazon SQS",
@@ -170,7 +182,7 @@
       },
       {
         "title": "Amazon Lambda",
-        "level": 80
+        "level": 90
       }
     ]
   },
@@ -182,8 +194,12 @@
         "level": 80
       },
       {
+        "title": "XCode",
+        "level": 30
+      },
+      {
         "title": "Unity",
-        "level": 40
+        "level": 20
       },
       {
         "title": "VS Code",
@@ -191,7 +207,7 @@
       },
       {
         "title": "IntelliJ IDEA",
-        "level": 30
+        "level": 40
       }
     ]
   }

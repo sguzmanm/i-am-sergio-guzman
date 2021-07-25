@@ -1,50 +1,71 @@
 <template>
   <div class="card">
-      <div class="card__header">
-        <media-preview :media="`work-and-projects/${work.media?work.media:placeholder}`"
-          :alt="work.title"/>
+    <div class="card__header">
+      <media-preview
+        :media="`work-and-projects/${work.media ? work.media : placeholder}`"
+        :alt="work.title"
+      />
+    </div>
+
+    <div class="card__body">
+      <h3>{{ work.title }}</h3>
+
+      <div class="card__content">
+        <p>
+          {{ work.description }}. I've worked this
+          <strong>{{ workDate }}</strong>
+          <span v-show="work.organizations && work.organizations.length > 0">
+            with:</span
+          >
+        </p>
+        <ul v-if="work.organizations && work.organizations.length > 0">
+          <li
+            v-for="organization in work.organizations"
+            :key="`${work.title}_${organization.name}`"
+          >
+            {{ organization.name }}
+          </li>
+        </ul>
+
+        <p v-if="!work.links">I don´t have a link to show you here :/</p>
+        <a
+          v-if="work.links && work.links.demo"
+          :href="work.links.demo"
+          target="_blank"
+          >Check it out here</a
+        ><br />
+        <a
+          v-if="work.links && work.links.code"
+          :href="work.links.code"
+          target="_blank"
+          >This is the code</a
+        >
+        <a
+          v-if="work.links && work.links.company"
+          :href="work.links.company"
+          target="_blank"
+          >In any case this is the company link</a
+        ><br />
       </div>
 
-      <div class="card__body">
-        <h3>{{work.title}}</h3>
-
-        <div class="card__content">
-          <p>
-            {{work.description}}. I worked this on <strong>{{workDate}}</strong>
-            <span v-show="work.organizations && work.organizations.length>0"> with:</span> </p>
-          <ul v-show="work.organizations && work.organizations.length>0">
-            <li v-for="organization in work.organizations" :key="`${work.title}_${organization.name}`">
-              {{organization.name}}
-            </li>
-          </ul>
-
-          <p v-if="!work.links">I don´t have a link to show you here :/</p>
-          <a v-if="work.links && work.links.demo"
-              :href="work.links.demo" target="_blank">Check it out here</a><br>
-          <a v-if="work.links && work.links.code"
-              :href="work.links.code" target="_blank">This is the code</a>
-          <a v-if="work.links && work.links.company"
-              :href="work.links.company" target="_blank">In any case this is the company link</a><br>
+      <div class="card__tags">
+        <div class="card__tag" v-for="(tag, index) in work.tags" :key="index">
+          {{ tag }}
         </div>
-
-        <div class="card__tags">
-            <div class="card__tag" v-for="(tag,index) in work.tags" :key="index">
-                {{tag}}
-            </div>
-        </div>
-
       </div>
+    </div>
   </div>
 </template>
 
 <script>
-import MediaPreview from '@/components/WorkAndProjects/MediaPreview.vue';
-import { ref, computed } from '@vue/composition-api';
+import MediaPreview from "@/components/WorkAndProjects/MediaPreview.vue";
+import { ref, computed } from "@vue/composition-api";
 
-const areDatesEqual = (firstDate, secondDate) => firstDate.getMonth() === secondDate.getMonth();
+const areDatesEqual = (firstDate, secondDate) =>
+  firstDate.getMonth() === secondDate.getMonth();
 
 export default {
-  name: 'WorkCard',
+  name: "WorkCard",
   props: {
     work: Object,
   },
@@ -52,37 +73,48 @@ export default {
     MediaPreview,
   },
   setup({ work }) {
-    const orgs = ['Truora'];
+    const orgs = ["Truora"];
     const isTrademarkSensitive = (organizationName) => {
-      if (!organizationName) { return false; }
+      if (!organizationName) {
+        return false;
+      }
 
       return orgs.includes(organizationName);
     };
 
     const workDate = computed(() => {
-      const options = { year: 'numeric', month: 'long' };
+      const options = { year: "numeric", month: "long" };
       const startDate = new Date(work.startDate);
-      const endDate = work.endDate ? new Date(work.endDate) : new Date();
-
-      if (endDate !== null && areDatesEqual(startDate, endDate)) {
-        return startDate.toLocaleDateString('en-US', options);
+      if (!work.endDate) {
+        return `since ${startDate.toLocaleDateString("en-US", options)}`;
       }
 
-      return `${startDate.toLocaleDateString('en-US', options)} to ${endDate.toLocaleDateString('en-US', options)}`;
+      const endDate = new Date(work.endDate);
+
+      if (endDate !== null && areDatesEqual(startDate, endDate)) {
+        return `on ${startDate.toLocaleDateString("en-US", options)}`;
+      }
+
+      return `from ${startDate.toLocaleDateString(
+        "en-US",
+        options
+      )} to ${endDate.toLocaleDateString("en-US", options)}`;
     });
 
-    const placeholder = ref('placeholder.jpeg');
+    const placeholder = ref("placeholder.jpeg");
 
     return {
-      isTrademarkSensitive, workDate, placeholder,
+      isTrademarkSensitive,
+      workDate,
+      placeholder,
     };
   },
 };
 </script>
 
 <style scoped>
-.card{
-  display:flex;
+.card {
+  display: flex;
   flex-direction: column;
   text-align: justify;
   align-items: center;
@@ -90,7 +122,7 @@ export default {
 
   flex: 1 0 calc(25% - 10px);
   background-color: var(--card-color);
-  border-radius:15px;
+  border-radius: 15px;
   color: var(--background-color);
 
   margin: 20px;
@@ -98,8 +130,8 @@ export default {
   border-radius: 20px;
 }
 
-.card__item{
-  display:flex;
+.card__item {
+  display: flex;
   flex-direction: row;
   width: 100%;
   align-items: center;
@@ -107,22 +139,22 @@ export default {
   font-size: 1rem;
 }
 
-.card__header{
-  width:100%;
+.card__header {
+  width: 100%;
 }
 
 .card__body {
-  padding:20px;
+  padding: 20px;
 }
 
-.card__item p{
+.card__item p {
   padding: 0 20px;
   font-weight: bold;
 }
 
-.card__tags{
-  margin-top:5px;
-  display:flex;
+.card__tags {
+  margin-top: 5px;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 
@@ -130,32 +162,32 @@ export default {
   justify-content: start;
 }
 
-.card__tag{
-  flex:1;
+.card__tag {
+  flex: 1;
   width: auto;
-  max-width:50%;
+  max-width: 50%;
 
-  margin:5px;
-  background-color:var(--highlight-color-2);
-  border-radius:1rem;
+  margin: 5px;
+  background-color: var(--highlight-color-2);
+  border-radius: 1rem;
 
   white-space: nowrap;
   text-align: center;
-  font-size:0.9rem;
+  font-size: 0.9rem;
 
   position: relative;
   padding: 7px 35px;
 
-  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
-  -moz-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
-  box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
 
   color: var(--card-color);
   background-color: var(--highlight-color);
 }
 
-.card__header{
-  display:flex;
+.card__header {
+  display: flex;
   flex-direction: column;
 
   align-items: center;
@@ -163,68 +195,69 @@ export default {
   text-align: center;
 }
 
-.card__header h3{
-  font-size:25px;
+.card__header h3 {
+  font-size: 25px;
 }
 
-.card__org{
+.card__org {
   justify-content: flex-start;
 }
 
-.card__img{
+.card__img {
   border-radius: 50%;
   background-color: white;
   width: 10%;
-  padding:10px;
-  margin:10px;
+  padding: 10px;
+  margin: 10px;
 
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.card__full_img{
+.card__full_img {
   background-color: white;
   border-radius: 20px;
   width: 100%;
-  padding:10px;
-  margin:10px;
+  padding: 10px;
+  margin: 10px;
 
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.card__img img,.card__full_img img{
+.card__img img,
+.card__full_img img {
   width: 70%;
 }
 
-.card__content{
+.card__content {
   font-size: 1rem;
 }
 
-.card__content a,a:visited{
+.card__content a,
+a:visited {
   color: var(--highlight-color);
 }
 
-.card__content a:hover{
-  color: var(--highlight-color-2)
+.card__content a:hover {
+  color: var(--highlight-color-2);
 }
 
 @media (max-width: 900px) {
-  .card{
+  .card {
     margin: 20px 0px;
     flex: 1 0 calc(100% - 10px);
     max-width: 100%;
   }
 
-  .card__item{
+  .card__item {
     flex-direction: column-reverse;
   }
 
-  .card__tag{
+  .card__tag {
     max-width: auto;
   }
 }
-
 </style>

@@ -417,9 +417,10 @@
   {
     "title": "Automated information retrieval from web pages",
     "startDate": "07/01/2019",
+    "endDate": "12/31/2020",
     "status": "private work",
     "media": "golang-http.png",
-    "description": "The title says it all. I´ve helped with the code for retrieving information from public websites automatically with scheduling or on-demand with AWS Lambdas. I can´t post any code or sources since this is private",
+    "description": "The title says it all. I´ve helped with the code for retrieving information from public websites automatically with scheduling services and on-demand running in AWS Lambdas. I can´t post any code or sources since this is private",
     "organizations": [
       {
         "name": "Truora Inc",
@@ -458,6 +459,123 @@
       "JS",
       "VS Code",
       "Heroku"
+    ]
+  },
+  {
+    "title": "Shared Libraries on Serverless",
+    "startDate": "12/01/2020",
+    "endDate": "01/15/2021",
+    "status": "private work",
+    "media": "golang-http.png",
+    "description": "In order to avoid making multiple deployments of AWS Lambda services everytime we changed anything on our code libraries, I uploaded all hardcoded data into S3 and created a library to access this.",
+    "organizations": [
+      {
+        "name": "Truora Inc",
+        "logo": "https://assets.website-files.com/5b559a554de48fbcb01fd277/5e7b965c9f321c70930032fc__Main.svg",
+        "isTrademarkSensitive": true
+      }
+    ],
+    "links": {
+      "company": "https://www.truora.com/"
+    },
+    "tags": [
+      "Amazon Lambda",
+      "Amazon S3",
+      "AWS",
+      "Golang",
+      "VS Code"
+    ]
+  },
+  {
+    "title": "Digital Identity History Dashboard",
+    "startDate": "02/01/2021",
+    "endDate": "05/01/2021",
+    "status": "private work",
+    "media": "golang-http.png",
+    "description": "Development of the history dashboard for Truora's Digital Identity product, including dynamic visualization of cards per multiple validators: face and voice recognition, document validation, phone and email authentication, enterprise data validation and identity questions",
+    "organizations": [
+      {
+        "name": "Truora Inc",
+        "logo": "https://assets.website-files.com/5b559a554de48fbcb01fd277/5e7b965c9f321c70930032fc__Main.svg",
+        "isTrademarkSensitive": true
+      }
+    ],
+    "links": {
+      "company": "https://www.truora.com/"
+    },
+    "tags": [
+      "Vue",
+      "VueX",
+      "TS",
+      "VS Code"
+    ]
+  },
+  {
+    "title": "Dynamic Face Validation Filters",
+    "startDate": "03/01/2021",
+    "endDate": "05/01/2021",
+    "status": "private work",
+    "media": "golang-http.png",
+    "description": "Architecture to ensure the application of filters to protect the dientity of the persons during validations in Truora's DI product.",
+    "organizations": [
+      {
+        "name": "Truora Inc",
+        "logo": "https://assets.website-files.com/5b559a554de48fbcb01fd277/5e7b965c9f321c70930032fc__Main.svg",
+        "isTrademarkSensitive": true
+      }
+    ],
+    "links": {
+      "company": "https://www.truora.com/"
+    },
+    "tags": [
+      "AWS",
+      "DynamoDB",
+      "Amazon S3",
+      "Amazon SNS",
+      "Amazon Rekognition",
+      "VS Code"
+    ]
+  },
+  {
+    "title": "Implementation of native Android SDK builds for document and face validation",
+    "startDate": "05/01/2021",
+    "status": "private work",
+    "media": "golang-http.png",
+    "description": "Help in the implementation of document, face match and liveness views for using as part of a SDK built in VIPER for Android mobile apps",
+    "organizations": [
+      {
+        "name": "Truora Inc",
+        "logo": "https://assets.website-files.com/5b559a554de48fbcb01fd277/5e7b965c9f321c70930032fc__Main.svg",
+        "isTrademarkSensitive": true
+      }
+    ],
+    "links": {
+      "company": "https://www.truora.com/"
+    },
+    "tags": [
+      "Java",
+      "Android Studio"
+    ]
+  },
+  {
+    "title": "Implementation of native iOS SDK builds for document validation",
+    "startDate": "06/01/2021",
+    "status": "private work",
+    "media": "golang-http.png",
+    "description": "Help in the implementation of document core architecture and views for using as part of a SDK built in VIPER for iOS mobile apps",
+    "organizations": [
+      {
+        "name": "Truora Inc",
+        "logo": "https://assets.website-files.com/5b559a554de48fbcb01fd277/5e7b965c9f321c70930032fc__Main.svg",
+        "isTrademarkSensitive": true
+      }
+    ],
+    "links": {
+      "company": "https://www.truora.com/"
+    },
+    "tags": [
+      "Swift",
+      "XCode"
     ]
   }
 ]
