@@ -56,7 +56,7 @@ export default {
     const { fetchWorks } = useActions(['fetchWorks']);
     fetchWorks();
 
-    const maxWorks = 6;
+    const maxWorks = 9;
 
     const state = reactive({
       currentPage: 1,
@@ -70,12 +70,15 @@ export default {
         const filteredWorks = sortedWorks.filter((e) => {
           for (let i = 0; i < state.currentTags.length; i += 1) {
             const currentTag = state.currentTags[i];
+            console.log(e.title)
+            console.log(currentTag, e.tags)
             if (!e.tags.find((element) => element === currentTag)) { return false; }
           }
           return true;
         });
 
-        return filteredWorks;
+        console.log(filteredWorks);
+        return filteredWorks.sort(compareWorks);
       }),
       filteredWorks: computed(() => {
         const startIndex = maxWorks * (state.currentPage - 1);

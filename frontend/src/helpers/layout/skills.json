@@ -156,11 +156,11 @@
     "name": "Message Queues",
     "skills": [
       {
-        "title": "Rabbit MQ",
-        "level": 20
+        "title": "RabbitMQ",
+        "level": 30
       },
       {
-        "title": "Mosquitto MQTT",
+        "title": "Mosquitto",
         "level": 30
       },
       {

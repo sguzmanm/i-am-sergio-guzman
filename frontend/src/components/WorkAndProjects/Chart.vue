@@ -115,7 +115,7 @@ export default {
           r: d.r,
           x: d.x,
           y: d.y,
-          title: d.data.title ? d.data.title.replaceAll(' ', '\n') : 'Unknown',
+          title: d.data.title,
           fill,
           stroke: 'grey',
         };

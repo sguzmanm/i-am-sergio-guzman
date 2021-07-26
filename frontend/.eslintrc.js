@@ -8,12 +8,6 @@ module.exports = {
     'no-console': 'off',
     'no-debugger': 'off',
     'linebreak-style': ['error'],
-    'max-len': [
-      'warn', 
-      {
-        'limit': 120, 
-        'ignore-pattern': "^import [^,]+ from |^export | implements"
-      }
-    ],
+    'max-len': [1, {'code': 120, 'tabWidth': 4, 'ignoreUrls': true}]
   },
 };

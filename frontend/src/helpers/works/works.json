@@ -177,6 +177,7 @@
     },
     "tags": [
       "Python",
+      "Heroku",
       "Firebase Cloud Firestore",
       "Vue",
       "VS Code"
@@ -438,6 +439,45 @@
       "DynamoDB",
       "Amazon SNS",
       "Amazon SQS",
+      "VS Code",
+      "Terraform"
+    ]
+  },
+  {
+    "title": "BrowZ: My thesis",
+    "startDate": "01/01/2020",
+    "endDate": "07/01/2020",
+    "status": "college",
+    "media": "",
+    "description": "My thesis was... awesome. I still remember all those afternoons talking to my best friend in college about how we would implement it, and we focused all our efforts on developing a simple app that could compare a web app across different browsers and sizes, and highlight the differences among them. There's too much work to be done but I'm proud of what we accomplished.",
+    "links": {
+      "code": "https://github.com/sguzmanm/browz"
+    },
+    "tags": [
+      "JS",
+      "Docker",
+      "Vagrant",
+      "Vue",
+      "VS Code"
+    ]
+  },
+  {
+    "title": "SeneCare multi-uses developer",
+    "startDate": "06/01/2020",
+    "endDate": "12/01/2020",
+    "status": "college",
+    "media": "senecare.png",
+    "description": "Just before receiving my major certificate in Universidad de Los Andes, one of our teachers was tasked to create a mobile app that tooka dvantage of Contact Tracing to know if a student had been in contact with someone who was infected with COVID-19. With this SeneCare was born and I worked in an Express backend to receive requests, a Vue JS dashboard for doctors and a mobile app for students that takes advantage of Bluetooth to use the Contact Tracing algorithm",
+    "links": {
+      "demo": "https://thesoftwaredesignlab.github.io/Senecare/"
+    },
+    "tags": [
+      "Express",
+      "Kotlin",
+      "JS",
+      "TS",
+      "Vue",
+      "Android Studio",
       "VS Code"
     ]
   },
@@ -462,31 +502,6 @@
     ]
   },
   {
-    "title": "Shared Libraries on Serverless",
-    "startDate": "12/01/2020",
-    "endDate": "01/15/2021",
-    "status": "private work",
-    "media": "golang-http.png",
-    "description": "In order to avoid making multiple deployments of AWS Lambda services everytime we changed anything on our code libraries, I uploaded all hardcoded data into S3 and created a library to access this.",
-    "organizations": [
-      {
-        "name": "Truora Inc",
-        "logo": "https://assets.website-files.com/5b559a554de48fbcb01fd277/5e7b965c9f321c70930032fc__Main.svg",
-        "isTrademarkSensitive": true
-      }
-    ],
-    "links": {
-      "company": "https://www.truora.com/"
-    },
-    "tags": [
-      "Amazon Lambda",
-      "Amazon S3",
-      "AWS",
-      "Golang",
-      "VS Code"
-    ]
-  },
-  {
     "title": "Digital Identity History Dashboard",
     "startDate": "02/01/2021",
     "endDate": "05/01/2021",
@@ -504,6 +519,10 @@
       "company": "https://www.truora.com/"
     },
     "tags": [
+      "AWS",
+      "AWS Lambdas",
+      "Golang",
+      "DynamoDB",
       "Vue",
       "VueX",
       "TS",
@@ -516,7 +535,7 @@
     "endDate": "05/01/2021",
     "status": "private work",
     "media": "golang-http.png",
-    "description": "Architecture to ensure the application of filters to protect the dientity of the persons during validations in Truora's DI product.",
+    "description": "Architecture for applying dynamic filters to the faces of persons in uploaded images",
     "organizations": [
       {
         "name": "Truora Inc",
@@ -529,19 +548,22 @@
     },
     "tags": [
       "AWS",
+      "AWS Lambdas",
+      "Golang",
       "DynamoDB",
       "Amazon S3",
       "Amazon SNS",
       "Amazon Rekognition",
+      "Python",
       "VS Code"
     ]
   },
   {
-    "title": "Implementation of native Android SDK builds for document and face validation",
+    "title": "Implementation of native Android and iOS SDKs for face and document validation",
     "startDate": "05/01/2021",
     "status": "private work",
     "media": "golang-http.png",
-    "description": "Help in the implementation of document, face match and liveness views for using as part of a SDK built in VIPER for Android mobile apps",
+    "description": "Help in the implementation of document, face match and liveness views for using as part of a SDK built in VIPER for Android and iOS mobile apps. Our client's don't have to worry about making the UI or managing permissions since we do it all for them.",
     "organizations": [
       {
         "name": "Truora Inc",
@@ -554,27 +576,8 @@
     },
     "tags": [
       "Java",
-      "Android Studio"
-    ]
-  },
-  {
-    "title": "Implementation of native iOS SDK builds for document validation",
-    "startDate": "06/01/2021",
-    "status": "private work",
-    "media": "golang-http.png",
-    "description": "Help in the implementation of document core architecture and views for using as part of a SDK built in VIPER for iOS mobile apps",
-    "organizations": [
-      {
-        "name": "Truora Inc",
-        "logo": "https://assets.website-files.com/5b559a554de48fbcb01fd277/5e7b965c9f321c70930032fc__Main.svg",
-        "isTrademarkSensitive": true
-      }
-    ],
-    "links": {
-      "company": "https://www.truora.com/"
-    },
-    "tags": [
       "Swift",
+      "Android Studio",
       "XCode"
     ]
   }
