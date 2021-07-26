@@ -58,14 +58,13 @@
 </template>
 
 <script>
-import MediaPreview from "@/components/WorkAndProjects/MediaPreview.vue";
-import { ref, computed } from "@vue/composition-api";
+import MediaPreview from '@/components/WorkAndProjects/MediaPreview.vue';
+import { ref, computed } from '@vue/composition-api';
 
-const areDatesEqual = (firstDate, secondDate) =>
-  firstDate.getMonth() === secondDate.getMonth();
+const areDatesEqual = (firstDate, secondDate) => firstDate.getMonth() === secondDate.getMonth();
 
 export default {
-  name: "WorkCard",
+  name: 'WorkCard',
   props: {
     work: Object,
   },
@@ -73,7 +72,7 @@ export default {
     MediaPreview,
   },
   setup({ work }) {
-    const orgs = ["Truora"];
+    const orgs = ['Truora'];
     const isTrademarkSensitive = (organizationName) => {
       if (!organizationName) {
         return false;
@@ -83,25 +82,25 @@ export default {
     };
 
     const workDate = computed(() => {
-      const options = { year: "numeric", month: "long" };
+      const options = { year: 'numeric', month: 'long' };
       const startDate = new Date(work.startDate);
       if (!work.endDate) {
-        return `since ${startDate.toLocaleDateString("en-US", options)}`;
+        return `since ${startDate.toLocaleDateString('en-US', options)}`;
       }
 
       const endDate = new Date(work.endDate);
 
       if (endDate !== null && areDatesEqual(startDate, endDate)) {
-        return `on ${startDate.toLocaleDateString("en-US", options)}`;
+        return `on ${startDate.toLocaleDateString('en-US', options)}`;
       }
 
       return `from ${startDate.toLocaleDateString(
-        "en-US",
-        options
-      )} to ${endDate.toLocaleDateString("en-US", options)}`;
+        'en-US',
+        options,
+      )} to ${endDate.toLocaleDateString('en-US', options)}`;
     });
 
-    const placeholder = ref("placeholder.jpeg");
+    const placeholder = ref('placeholder.jpeg');
 
     return {
       isTrademarkSensitive,

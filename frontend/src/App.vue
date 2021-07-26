@@ -1,6 +1,6 @@
 <template>
   <div id="app" :class="{'full-screen':isMainPage}">
-    
+
     <loading v-show="loading"/>
 
     <nav-bar
@@ -16,13 +16,12 @@
       :profilePic="currentMood.profilePic"
       :faIcon="currentMood.faIcon"
     />
-    
+
     <router-view v-show="!loading" id="router-view" />
     <simple-footer v-if="!isMainPage && !loading"/>
 
     <social-media v-show="!loading" />
     <mood-modal v-if="showMoods && !loading" :hideModal="()=>showMoods=false"/>
-    </div>
   </div>
 </template>
 
@@ -135,7 +134,7 @@ body {
   }
 
   #app.full-screen {
-      height:auto;  
+      height:auto;
   }
 }
 </style>

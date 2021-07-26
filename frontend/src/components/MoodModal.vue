@@ -38,12 +38,12 @@ export default {
 
     const { setCurrentMood } = useActions(['setCurrentMood']);
 
-    const filteredMoods=[];
-    moods.value.forEach(mood=>{
-      if (!filteredMoods.find(el=>el.title===mood.title)){
-        filteredMoods.push(mood)
+    const filteredMoods = [];
+    moods.value.forEach((mood) => {
+      if (!filteredMoods.find((el) => el.title === mood.title)) {
+        filteredMoods.push(mood);
       }
-    })
+    });
 
     return { currentMood, filteredMoods, setCurrentMood };
   },

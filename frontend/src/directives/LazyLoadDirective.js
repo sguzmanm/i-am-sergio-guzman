@@ -14,7 +14,7 @@ const findSpinnerChild = (el) => {
 const lazyLoadingHook = (el) => {
   function loadImage() {
     const imageElement = Array.from(el.children).find(
-      (node) => node.nodeName === 'IMG' || node.nodeName === "SOURCE",
+      (node) => node.nodeName === 'IMG' || node.nodeName === 'SOURCE',
     );
     if (!imageElement) {
       return;

@@ -2,7 +2,7 @@ const isValidMood = (mood) => mood.faIcon && mood.profilePic;
 
 export const loading = (state) => {
   state.loading = true;
-}
+};
 
 export const setError = (state, message) => {
   state.error = message;

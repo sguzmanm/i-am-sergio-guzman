@@ -12,7 +12,7 @@
         some of my <router-link to="/work-and-projects">finest works to date</router-link> from the last couple of years, and
         <router-link to="/life-experiences">my life experiences</router-link>.
         I´m usually available from {{currentWorkingHours}} but
-        be sure to check my current mood if you are not sure.
+        be sure to check my current mood if it's not clear.
       </p>
     </div>
     <div class="links">
@@ -36,7 +36,7 @@ export default {
     const toHours = new Date();
     toHours.setUTCHours(22, 0, 0);
 
-    const currentWorkingHours = ref(`${fromHours.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} to ${toHours.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`);
+    const currentWorkingHours = ref(`${fromHours.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} COL to ${toHours.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} COL`);
     return { publicPath, currentWorkingHours };
   },
 };

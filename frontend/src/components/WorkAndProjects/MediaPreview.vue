@@ -21,9 +21,9 @@ export default {
     media: String,
     alt: String,
   },
-  components:{
+  components: {
     ImageView,
-  }
+  },
 };
 </script>
 

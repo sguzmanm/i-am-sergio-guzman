@@ -37,12 +37,12 @@
 </template>
 
 <script>
-import * as d3 from "d3";
+import * as d3 from 'd3';
 
-const skillGroups = require("@/helpers/layout/skills.json");
+const skillGroups = require('@/helpers/layout/skills.json');
 
 export default {
-  name: "PackChart",
+  name: 'PackChart',
   props: {
     addTag: Function,
   },
@@ -56,12 +56,12 @@ export default {
   created() {
     this.colourScale = d3
       .scaleOrdinal()
-      .range(["#5EAFC6", "#FE9922", "#93c464", "#75739F"]);
+      .range(['#5EAFC6', '#FE9922', '#93c464', '#75739F']);
 
     window.onresize = () => {
       if (
-        !this.$refs.chartContainer ||
-        !this.$refs.chartContainer.clientWidth
+        !this.$refs.chartContainer
+        || !this.$refs.chartContainer.clientWidth
       ) {
         return;
       }
@@ -105,7 +105,7 @@ export default {
       const output = packChart(packData).descendants();
       return output.map((d, i) => {
         const fill = this.colourScale(d.data.level);
-        let response = { id: i + 1 };
+        const response = { id: i + 1 };
         if (i === 0) {
           return response;
         }
@@ -115,9 +115,9 @@ export default {
           r: d.r,
           x: d.x,
           y: d.y,
-          title: d.data.title ? d.data.title.replaceAll(" ", "\n") : "Unknown",
+          title: d.data.title ? d.data.title.replaceAll(' ', '\n') : 'Unknown',
           fill,
-          stroke: "grey",
+          stroke: 'grey',
         };
       });
     },

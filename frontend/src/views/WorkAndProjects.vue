@@ -13,7 +13,8 @@
 
     <div class="cards">
         <div v-if="!state.filteredWorks || state.filteredWorks.length===0" class="cards__empty">
-          Remember I love learning new skills; it doesn´t mean that I always have works to show you where I use them.
+          Remember I love learning new skills; it doesn´t mean that
+          I always have works to show you where I use them.
         </div>
         <work-card v-for="(work,index) in state.filteredWorks" :key="`${work.title}_${index}`"
           :work="work"/>

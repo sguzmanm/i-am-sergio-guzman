@@ -24,7 +24,7 @@ export default {
       type: String,
       required: true,
     },
-    rounded: Boolean, 
+    rounded: Boolean,
     maxHeight: Number,
   },
   directives: {

@@ -2,7 +2,7 @@
 export const defaultState = {
   currentMood: {},
   moods: [],
-  error: "",
+  error: '',
   loading: false,
 };
 
