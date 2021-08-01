@@ -1,10 +1,10 @@
 <template>
     <div class="modal">
-      <div class="modal__backdrop" @click="()=>hideModal()"/>
+      <div class="modal__backdrop" @click="hideModal"/>
       <div class="modal__wrapper">
         <div class="modal__content">
             <div class="modal__close">
-                <button @click="()=>hideModal()">&times;</button>
+                <button @click="hideModal">&times;</button>
             </div>
             <div class="modal__header">
                 Change my mood
@@ -55,14 +55,19 @@ export default {
 
 <style>
 .modal{
-  z-index:1;
+  z-index:2;
 
   top:0;
   left:0;
   position:fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal__backdrop{
+  z-index:1;
   background-color:black;
   opacity:0.6;
 
@@ -76,19 +81,14 @@ export default {
 .modal__wrapper{
   display:flex;
   position:absolute;
-  top:0;
-  left:0;
   z-index:2;
 
   justify-content: center;
   align-items: center;
-
-  width:100vw;
-  height: 100vh;
 }
 
 .modal__content{
-  max-width: 50%;
+  max-width: 100%;
 
   background-color:var(--text-color);
 }
@@ -128,6 +128,20 @@ export default {
   overflow-y:scroll;
   max-height:50vh;
 }
+
+.modal__body::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+.modal__body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px var(--text-color);
+}
+ 
+.modal__body::-webkit-scrollbar-thumb {
+  background-color: var(--highlight-color);
+  outline: 1px solid var(--background-color);
+}
+
 
 .mood{
   display:flex;

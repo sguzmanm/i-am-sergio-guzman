@@ -138,7 +138,19 @@ export default {
   flex-direction: row;
 
   overflow-x: scroll;
-  scrollbar-color: var(--text-color) var(--highlight-color-2);
+}
+
+.chart::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+.chart::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px var(--highlight-color);
+}
+ 
+.chart::-webkit-scrollbar-thumb {
+  background-color: var(--highlight-color-2);
+  outline: 1px solid var(--text-color);
 }
 
 .chart__item {
