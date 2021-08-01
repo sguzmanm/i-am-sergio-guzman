@@ -564,7 +564,7 @@
     "startDate": "05/01/2021",
     "status": "private work",
     "media": "android-di-sdk.mp4",
-    "description": "Help in the implementation of document, face match and liveness views for using as part of a SDK built in VIPER for Android and iOS mobile apps. Our client's don't have to worry about making the UI or managing permissions since we do it all for them.",
+    "description": "Help in the implementation of document, face match and liveness views for using as part of a SDK built in VIPER for Android and iOS mobile apps. Our client's don't have to worry about making the UI or managing permissions since we do it all for them. In the demo video you'll notice that uploading the first side of the document takes a loooong time, this is a known issue with my Internet provider when I filmed this.. hehe",
     "organizations": [
       {
         "name": "Truora Inc",
