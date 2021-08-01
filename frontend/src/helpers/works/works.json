@@ -492,6 +492,7 @@
       "demo": "https://i-am-sergio-guzman.herokuapp.com/"
     },
     "tags": [
+      "Kotlin",
       "Vue",
       "VueX",
       "HTML",
@@ -502,12 +503,12 @@
     ]
   },
   {
-    "title": "Digital Identity History Dashboard",
+    "title": "Validations History Dashboard",
     "startDate": "02/01/2021",
     "endDate": "05/01/2021",
     "status": "private work",
-    "media": "golang-http.png",
-    "description": "Development of the history dashboard for Truora's Digital Identity product, including dynamic visualization of cards per multiple validators: face and voice recognition, document validation, phone and email authentication, enterprise data validation and identity questions",
+    "media": "validations-dashboard.mp4",
+    "description": "Development of the history dashboard for Truora's Identity Validations, including dynamic visualization of cards per multiple validators: face and voice recognition, document validation, phone and email authentication, enterprise data validation and identity questions",
     "organizations": [
       {
         "name": "Truora Inc",
@@ -534,8 +535,8 @@
     "startDate": "03/01/2021",
     "endDate": "05/01/2021",
     "status": "private work",
-    "media": "golang-http.png",
-    "description": "Architecture for applying dynamic filters to the faces of persons in uploaded images",
+    "media": "validations-filters.jpg",
+    "description": "I designed an architecture for applying dynamic filters to the faces of persons in uploaded images and implemented it with my own team at work",
     "organizations": [
       {
         "name": "Truora Inc",
@@ -562,7 +563,7 @@
     "title": "Implementation of native Android and iOS SDKs for face and document validation",
     "startDate": "05/01/2021",
     "status": "private work",
-    "media": "golang-http.png",
+    "media": "android-di-sdk.mp4",
     "description": "Help in the implementation of document, face match and liveness views for using as part of a SDK built in VIPER for Android and iOS mobile apps. Our client's don't have to worry about making the UI or managing permissions since we do it all for them.",
     "organizations": [
       {

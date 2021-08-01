@@ -140,6 +140,16 @@ export default {
 
 .card__header {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card__header h3 {
+  font-size: 25px;
 }
 
 .card__body {
@@ -183,19 +193,6 @@ export default {
 
   color: var(--card-color);
   background-color: var(--highlight-color);
-}
-
-.card__header {
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.card__header h3 {
-  font-size: 25px;
 }
 
 .card__org {

@@ -106,17 +106,34 @@ body {
   height: 100vh;
 }
 
-#app h1,#app h2,#app h3,#app h4,#app h5,#app h6{
-  font-family: 'Roboto Slab', serif;
+#app .btn__select {
+  cursor:pointer;
+  text-align: center;
+
+  padding:5px 20px;
+  margin:0 30px;
+
+  text-decoration: none;
+  font-weight: bold;
+
+  background-color: var(--highlight-color-2);
+  color: var(--background-color);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
-#router-view {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+#app .btn__select:hover {
+ -webkit-box-shadow: 10px 10px 31px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 31px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 31px 0px rgba(0, 0, 0, 0.75);
 
-  width:100%;
+  color: var(--text-color);
+  background-color: var(--highlight-color);
+}
+
+#app h1,#app h2,#app h3,#app h4,#app h5,#app h6{
+  font-family: 'Roboto Slab', serif;
 }
 
 @media (max-width: 700px) {
@@ -136,5 +153,14 @@ body {
   #app.full-screen {
       height:auto;
   }
+}
+
+#router-view {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  width:100%;
 }
 </style>

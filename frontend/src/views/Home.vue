@@ -16,8 +16,8 @@
       </p>
     </div>
     <div class="links">
-        <router-link class="link" to="/work-and-projects" exact>Checks my finest projects</router-link>
-        <router-link class="link" to="/life-experiences" exact>Look at my life experiences</router-link>
+        <router-link class="btn__select" to="/work-and-projects" exact>Checks my finest projects</router-link>
+        <router-link class="btn__select" to="/life-experiences" exact>Look at my life experiences</router-link>
     </div>
   </div>
 </template>
@@ -83,31 +83,8 @@ export default {
   justify-content: center;
 }
 
-.links > .link{
-  cursor:pointer;
-  text-align: center;
-
+.links > .btn__select{
   font-size: 20px;
-  padding:5px 20px;
-  margin:0 30px;
-
-  text-decoration: none;
-  font-weight: bold;
-
-  background-color: var(--highlight-color-2);
-  color: var(--background-color);
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-}
-
-.links > .link:hover{
-  -webkit-box-shadow: 10px 10px 31px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 31px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 31px 0px rgba(0, 0, 0, 0.75);
-
-  color: var(--text-color);
-  background-color: var(--highlight-color);
 }
 
 @media (max-width: 380px) {
