@@ -33,6 +33,25 @@ fun createMood(mood: Mood){
     }
 }
 
+fun updateMood(mood: Mood){
+    //async now
+    runBlocking {
+        try{
+            col.findOne(Mood::title eq mood.title) ?: throw DatabaseError.ERROR_NOT_FOUND
+
+            col.updateOne(Mood::title eq mood.title, mood)
+        }
+        catch(e: DatabaseError){
+            // Do nothing the error is already controlled
+            print(e.message)
+        }
+        catch (e:Exception){
+            e.printStackTrace()
+            throw DatabaseError.ERROR_DATABASE_FAILED
+        }
+    }
+}
+
 fun getMoods() = runBlocking {
     try{
         return@runBlocking col.find().toList()

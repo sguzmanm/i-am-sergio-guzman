@@ -6,22 +6,17 @@ import io.ktor.application.Application
 import io.ktor.application.call
 import io.ktor.http.ContentType
 import io.ktor.response.respondText
-import io.ktor.routing.Routing
-import io.ktor.routing.get
-import io.ktor.routing.route
 
 import com.sguzmanm.db.getMoods
+import com.sguzmanm.db.updateMood
 import io.ktor.auth.authenticate
 import io.ktor.request.receive
 import io.ktor.response.header
 import io.ktor.response.respond
-import io.ktor.routing.post
+import io.ktor.routing.*
 
 fun transformMoods(dbMoodList: List<Mood>,calendarMoodList: List<Mood>):List<Mood> {
     val finalList=dbMoodList.toMutableList()
-
-    println("Calendar")
-    println(calendarMoodList)
 
     calendarMoodList.forEach {
         val foundMood = dbMoodList.find { mood ->  mood.title==it.title } ?: return@forEach
@@ -52,6 +47,13 @@ fun Routing.apiMoods() {
             post {
                 val mood= call.receive<Mood>()
                 createMood(mood)
+                call.response.header("Context-Type", "application/json")
+                call.respondText("OK")
+            }
+
+            put {
+                val mood= call.receive<Mood>()
+                updateMood(mood)
                 call.response.header("Context-Type", "application/json")
                 call.respondText("OK")
             }
