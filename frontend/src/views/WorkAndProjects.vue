@@ -5,34 +5,47 @@
     </div>
 
     <div class="tags" ref="tagsRef">
-      <div v-for="(tag,index) in state.currentTags" :key="`${tag}_${index}`" class="tag">
-        <p>{{tag}}</p>
+      <div
+        v-for="(tag, index) in state.currentTags"
+        :key="`${tag}_${index}`"
+        class="tag"
+      >
+        <p>{{ tag }}</p>
         <button @click="removeTag(tag)">&times;</button>
       </div>
     </div>
 
     <div class="cards">
-        <div v-if="!state.filteredWorks || state.filteredWorks.length===0" class="cards__empty">
-          Remember I love learning new skills; it doesn´t mean that
-          I always have works to show you where I use them.
-        </div>
-        <work-card v-for="(work,index) in state.filteredWorks" :key="`${work.title}_${index}`"
-          :work="work"/>
+      <div
+        v-if="!state.filteredWorks || state.filteredWorks.length === 0"
+        class="cards__empty"
+      >
+        Remember I love learning new skills; it doesn´t mean that I always have
+        works to show you where I use them.
+      </div>
+      <work-card
+        v-for="(work, index) in state.filteredWorks"
+        :key="`${work.title}_${index}`"
+        :work="work"
+      />
     </div>
-    <pagination :backAction="getPrevPage" :nextAction="getNextPage" :goToAction="goToPage"
-      :currentPage="state.currentPage" :maxPages="state.currentWorks.length/maxWorks"/>
+    <pagination
+      :backAction="getPrevPage"
+      :nextAction="getNextPage"
+      :goToAction="goToPage"
+      :currentPage="state.currentPage"
+      :maxPages="state.currentWorks.length / maxWorks"
+    />
   </div>
 </template>
 
 <script>
-import { createNamespacedHelpers } from 'vuex-composition-helpers/dist';
-import {
-  reactive, computed, ref,
-} from '@vue/composition-api';
+import { createNamespacedHelpers } from "vuex-composition-helpers/dist";
+import { reactive, computed, ref } from "@vue/composition-api";
 
-import Chart from '@/components/WorkAndProjects/Chart.vue';
-import WorkCard from '@/components/WorkAndProjects/WorkCard.vue';
-import Pagination from '@/components/Navigation/Pagination.vue';
+import Chart from "@/components/WorkAndProjects/Chart.vue";
+import WorkCard from "@/components/WorkAndProjects/WorkCard.vue";
+import Pagination from "@/components/Navigation/Pagination.vue";
 
 const compareWorks = (a, b) => {
   const dateA = a.endDate ? new Date(a.endDate) : new Date();
@@ -49,11 +62,11 @@ export default {
   setup(props, { root }) {
     const { useState, useActions } = createNamespacedHelpers(
       root.$store,
-      'works',
+      "works"
     );
-    const { works } = useState(['works']);
+    const { works } = useState(["works"]);
 
-    const { fetchWorks } = useActions(['fetchWorks']);
+    const { fetchWorks } = useActions(["fetchWorks"]);
     fetchWorks();
 
     const maxWorks = 9;
@@ -70,14 +83,15 @@ export default {
         const filteredWorks = sortedWorks.filter((e) => {
           for (let i = 0; i < state.currentTags.length; i += 1) {
             const currentTag = state.currentTags[i];
-            console.log(e.title)
-            console.log(currentTag, e.tags)
-            if (!e.tags.find((element) => element === currentTag)) { return false; }
+            console.log(e.title);
+            console.log(currentTag, e.tags);
+            if (!e.tags.find((element) => element === currentTag)) {
+              return false;
+            }
           }
           return true;
         });
 
-        console.log(filteredWorks);
         return filteredWorks.sort(compareWorks);
       }),
       filteredWorks: computed(() => {
@@ -106,7 +120,9 @@ export default {
 
     const addTag = (tag) => {
       const index = state.currentTags.indexOf(tag);
-      if (index !== -1) { return; }
+      if (index !== -1) {
+        return;
+      }
 
       state.currentPage = 1;
       state.currentTags.push(tag);
@@ -118,83 +134,89 @@ export default {
     };
 
     return {
-      state, tagsRef, addTag, removeTag, getPrevPage, getNextPage, goToPage, maxWorks,
+      state,
+      tagsRef,
+      addTag,
+      removeTag,
+      getPrevPage,
+      getNextPage,
+      goToPage,
+      maxWorks,
     };
   },
 };
 </script>
 
 <style scoped>
-  .skills,.tags{
-    max-width:100%;
+.skills,
+.tags {
+  max-width: 100%;
+}
+
+.cards {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+
+  overflow: hidden;
+}
+
+.cards__empty {
+  font-size: 30px;
+  color: var(--text-color);
+  margin: 30px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.tag {
+  background-color: var(--highlight-color);
+  color: var(--text-color);
+  padding: 5px;
+
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  min-width: 50px;
+  max-width: 100px;
+
+  margin: 10px;
+}
+
+.tag:hover {
+  background-color: var(--highlight-color-2);
+}
+
+.tag button {
+  background: none;
+  border: none;
+
+  color: var(--text-color);
+  cursor: pointer;
+
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .cards {
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+    width: 100%;
   }
 
-  .cards{
-    margin-top:10px;
-    display:flex;
-    flex-wrap:wrap;
-
-    overflow: hidden;
+  .tag {
+    min-width: auto;
+    max-width: auto;
+    flex: 1 0 calc(40% - 10px);
   }
-
-  .cards__empty{
-    font-size:30px;
-    color:var(--text-color);
-    margin:30px;
-  }
-
-  .tags{
-    display:flex;
-    flex-wrap:wrap;
-    margin-top:15px;
-  }
-
-  .tag{
-    background-color:var(--highlight-color);
-    color:var(--text-color);
-    padding:5px;
-
-    flex:1;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    min-width:50px;
-    max-width:100px;
-
-    margin:10px;
-  }
-
-  .tag:hover{
-    background-color:var(--highlight-color-2);
-  }
-
-  .tag button{
-    background: none;
-    border:none;
-
-    color:var(--text-color);
-    cursor:pointer;
-
-    font-size:20px;
-    font-weight:bold;
-  }
-
-  @media (max-width: 700px) {
-    .cards{
-      flex-wrap: nowrap;
-      flex-direction: column;
-
-      width: 100%;
-    }
-
-    .tag{
-      min-width:auto;
-      max-width:auto;
-      flex: 1 0 calc(40% - 10px);
-
-    }
-  }
-
+}
 </style>

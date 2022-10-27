@@ -118,5 +118,15 @@
     "highlightColor1": "#3A506B",
     "highlightColor2": "#5BC0BE",
     "profilePic": "profile-pic-gamer.jpg"
+  },
+  {
+    "title": "Concert",
+    "faIcon": "fas fa-guitar",
+    "textColor": "#373740",
+    "cardColor": "#373740",
+    "backgroundColor": "#B8BABF",
+    "highlightColor1": "#5DA684",
+    "highlightColor2": "#65768C",
+    "profilePic": "profile-pic-concert.jpg"
   }
 ]

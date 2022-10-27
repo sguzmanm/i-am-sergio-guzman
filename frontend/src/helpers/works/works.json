@@ -15,10 +15,7 @@
     "links": {
       "demo": "https://www.kongregate.com/games/SergioG482/box-shooter-student-development"
     },
-    "tags": [
-      "C#",
-      "Unity"
-    ]
+    "tags": ["C#", "Unity"]
   },
   {
     "title": "Roller Madness",
@@ -36,10 +33,7 @@
     "links": {
       "demo": "https://www.kongregate.com/games/SergioG482/roller-madness-student-project"
     },
-    "tags": [
-      "C#",
-      "Unity"
-    ]
+    "tags": ["C#", "Unity"]
   },
   {
     "title": "Interest groups",
@@ -53,11 +47,7 @@
         "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/University_of_Los_Andes_logo.svg/243px-University_of_Los_Andes_logo.svg.png"
       }
     ],
-    "tags": [
-      "Java",
-      "JS",
-      "MySQL"
-    ]
+    "tags": ["Java", "JS", "MySQL"]
   },
   {
     "title": "IoT lock architecture contest Yale",
@@ -80,13 +70,7 @@
       "demo": "https://sistemas.uniandes.edu.co/es/inicio/noticias/item/1047-estudiantes-del-disc-ganan-en-concurso-de-yale-assa-abloy-colombia",
       "code": "https://github.com/sguzmanm/201810_02_pipo"
     },
-    "tags": [
-      "Python",
-      "Java",
-      "Mosquitto MQTT",
-      "Redis",
-      "MongoDB"
-    ]
+    "tags": ["Python", "Java", "Mosquitto MQTT", "Redis", "MongoDB"]
   },
   {
     "title": "Research assistance on UnaCloud",
@@ -130,12 +114,7 @@
     "links": {
       "demo": "https://www.facebook.com/IngElectricayElectronicaUniandes/videos/1959330727435255/?t=1858"
     },
-    "tags": [
-      "Python",
-      "React Native",
-      "Firebase Firestore",
-      "VS Code"
-    ]
+    "tags": ["Python", "React Native", "Firebase Firestore", "VS Code"]
   },
   {
     "title": "3R: Datos Abiertos DC Hackathon Colombia",
@@ -153,11 +132,7 @@
     "links": {
       "demo": "https://www.facebook.com/IngElectricayElectronicaUniandes/videos/1959330727435255/?t=1858"
     },
-    "tags": [
-      "Python",
-      "Firebase Firestore",
-      "VS Code"
-    ]
+    "tags": ["Python", "Firebase Firestore", "VS Code"]
   },
   {
     "title": "Senehack: Y4PT Transport Hackathon",
@@ -175,13 +150,7 @@
     "links": {
       "code": "https://github.com/Jularenas/SeneHack"
     },
-    "tags": [
-      "Python",
-      "Heroku",
-      "Firebase Cloud Firestore",
-      "Vue",
-      "VS Code"
-    ]
+    "tags": ["Python", "Heroku", "Firebase Cloud Firestore", "Vue", "VS Code"]
   },
   {
     "title": "Indoor Location inside Universidad De Los Andes",
@@ -199,11 +168,7 @@
     "links": {
       "code": "https://github.com/sguzmanm/Andes"
     },
-    "tags": [
-      "Android Studio",
-      "Java",
-      "Firebase Cloud Firestore"
-    ]
+    "tags": ["Android Studio", "Java", "Firebase Cloud Firestore"]
   },
   {
     "title": "Gaucher Awareness website Colombia",
@@ -221,13 +186,7 @@
     "links": {
       "demo": "https://www.enfermedaddegaucher.com.co/"
     },
-    "tags": [
-      "React",
-      "JS",
-      "CSS",
-      "HTML",
-      "VS Code"
-    ]
+    "tags": ["React", "JS", "CSS", "HTML", "VS Code"]
   },
   {
     "title": "Know HAE website Colombia",
@@ -245,12 +204,7 @@
     "links": {
       "demo": "http://www.pienseaeh.com/index.html"
     },
-    "tags": [
-      "JS",
-      "CSS",
-      "HTML",
-      "VS Code"
-    ]
+    "tags": ["JS", "CSS", "HTML", "VS Code"]
   },
   {
     "title": "Fabry website Colombia, Perú and Ecuador",
@@ -268,13 +222,7 @@
     "links": {
       "demo": "https://www.enfermedaddefabry.com.co/"
     },
-    "tags": [
-      "JS",
-      "CSS",
-      "HTML",
-      "Vue",
-      "VS Code"
-    ]
+    "tags": ["JS", "CSS", "HTML", "Vue", "VS Code"]
   },
   {
     "title": "Bogotá Botanical Garden Android app",
@@ -292,13 +240,7 @@
     "links": {
       "code": "https://gitlab.com/isis3510_201920_team10/kotlin"
     },
-    "tags": [
-      "Android Studio",
-      "VS Code",
-      "Firebase Functions",
-      "JS",
-      "Kotlin"
-    ]
+    "tags": ["Android Studio", "VS Code", "Firebase Functions", "JS", "Kotlin"]
   },
   {
     "title": "Top Image",
@@ -453,13 +395,7 @@
     "links": {
       "code": "https://github.com/sguzmanm/browz"
     },
-    "tags": [
-      "JS",
-      "Docker",
-      "Vagrant",
-      "Vue",
-      "VS Code"
-    ]
+    "tags": ["JS", "Docker", "Vagrant", "Vue", "VS Code"]
   },
   {
     "title": "SeneCare multi-uses developer",
@@ -491,16 +427,7 @@
       "code": "https://github.com/sguzmanm/i-am-sergio-guzman",
       "demo": "https://i-am-sergio-guzman.herokuapp.com/"
     },
-    "tags": [
-      "Kotlin",
-      "Vue",
-      "VueX",
-      "HTML",
-      "CSS",
-      "JS",
-      "VS Code",
-      "Heroku"
-    ]
+    "tags": ["Kotlin", "Vue", "VueX", "HTML", "CSS", "JS", "VS Code", "Heroku"]
   },
   {
     "title": "Validations History Dashboard",
@@ -562,6 +489,7 @@
   {
     "title": "Implementation of native Android and iOS SDKs for face and document validation",
     "startDate": "05/01/2021",
+    "endDate": "16/01/2022",
     "status": "private work",
     "media": "android-di-sdk.mp4",
     "description": "Help in the implementation of document, face match and liveness views for using as part of a SDK built in VIPER for Android and iOS mobile apps. Our client's don't have to worry about making the UI or managing permissions since we do it all for them. In the demo video you'll notice that uploading the first side of the document takes a loooong time, this is a known issue with my Internet provider when I filmed this.. hehe",
@@ -575,11 +503,37 @@
     "links": {
       "company": "https://www.truora.com/"
     },
+    "tags": ["Java", "Swift", "Android Studio", "XCode"]
+  },
+  {
+    "title": "Maintenance of WhatsApp integrations with identity validations",
+    "startDate": "01/16/2022",
+    "status": "private work",
+    "description": "If my 2022 year can be summed up in one word regarding my job, it would be: WhatsApp. With the new vision of Truora we've focused on allowing customers to create their own flows with identity verfications (document and face validations, custom questions, OTPs, CRMs, etc) and the whole architecture that supports this, that communicates with other providers, that handles the UX... is the one I've maintained and improved day after day. All I can say is that I've added tons of stuff, logics for retries, functional and E2E tests, use of media and other stuff",
+    "organizations": [
+      {
+        "name": "Truora Inc",
+        "logo": "https://assets.website-files.com/5b559a554de48fbcb01fd277/5e7b965c9f321c70930032fc__Main.svg",
+        "isTrademarkSensitive": true
+      }
+    ],
+    "links": {
+      "company": "https://www.truora.com/"
+    },
     "tags": [
-      "Java",
-      "Swift",
-      "Android Studio",
-      "XCode"
+      "Golang",
+      "Vue",
+      "VueX",
+      "TS",
+      "AWS",
+      "Terraform",
+      "Amazon S3",
+      "DynamoDB",
+      "Amazon SNS",
+      "Amazon SQS",
+      "Redis",
+      "Amazon Lambda",
+      "Bitbucket Pipelines"
     ]
   }
 ]
