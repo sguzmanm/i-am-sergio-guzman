@@ -17,9 +17,11 @@
   "scripts": {
     "serve": "vue-cli-service serve --mode production",
     "serve:staging": "vue-cli-service serve --mode development",
+    "copy_and_delete": "npm run delete:build && npm run copy:build",
     "copy:build": "node ./node_modules/cpy-cli/cli.js ./dist/ ../backend/ --parents",
     "delete:build": "node ./node_modules/rimraf/bin.js ../backend/dist --preserve-root",
-    "build": "vue-cli-service build && npm run delete:build && npm run copy:build",
+    "build": "vue-cli-service build",
+    "postbuild": "if [[ ${DEPLOY_PROVIDER:gh_pages} == \"heroku\" ]]; then npm run copy_and_delete; fi",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
