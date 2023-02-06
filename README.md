@@ -59,7 +59,26 @@ Finally for building it to deploy on a static server use:
 npm run build
 ```
 
-This will generate a dist/ folder for you to upload to any static server and automatically copy these files to a public folder on the backend directory to deploy. With Heroku I´m using the following commands to deploy directly to the server:
+This will generate a dist/ folder for you to upload to any static server.
+
+#### GH Pages deploy
+
+**_Normal push_**
+
+```
+git subtree push --prefix frontend/dist origin gh-pages
+```
+
+**_Force push_**
+
+```
+git subtree split --prefix frontend/dist
+git push gh-pages <GENERATED ID>:master --force
+```
+
+#### Heroku deploy
+
+If the DEPLOY_PROVIDER env var is set to "heroku" it will automatically copy these files to a public folder on the backend directory to deploy. With Heroku I´m using the following commands to deploy directly to the server:
 
 **_Configure Heroku CLI_**
 
@@ -76,7 +95,7 @@ git subtree push --prefix backend heroku master
 **_Force push_**
 
 ```
-git subtree split --prefix master backend
+git subtree split --prefix backend
 git push heroku <GENERATED ID>:master --force
 ```
 
